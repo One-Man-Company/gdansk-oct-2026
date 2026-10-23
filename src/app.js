@@ -34,6 +34,10 @@
   function syncThemeBtn() {
     const light = root.getAttribute("data-theme") === "light";
     if (themeBtn) themeBtn.innerHTML = icon(light ? "moon" : "sun");
+    if (window.__map) {
+      window.__map.setStyle(light ? STYLE_LIGHT : STYLE_DARK);
+      window.__map.once("styledata", () => setTimeout(renderMap, 150));
+    }
   }
   if (themeBtn) themeBtn.addEventListener("click", () => {
     const light = root.getAttribute("data-theme") === "light";
@@ -52,9 +56,12 @@
     tabs.forEach(t => t.classList.toggle("on", t.dataset.tab === target.id));
     if (push !== false) history.replaceState(null, "", "#" + target.id);
     window.scrollTo(0, 0);
-    if (target.id === "map" && window.__map) {
-      [60, 250, 700].forEach(ms => setTimeout(() => { window.__map.resize(); renderMap(); }, ms));
-      setTimeout(() => { if (!window.__mapFitted && window.__fitAll) { window.__fitAll(); window.__mapFitted = true; } }, 320);
+    if (target.id === "map") {
+      if (!window.__map) initMap();
+      if (window.__map) {
+        [60, 250, 700].forEach(ms => setTimeout(() => { window.__map.resize(); renderMap(); }, ms));
+        setTimeout(() => { if (!window.__mapFitted && window.__fitAll) { window.__fitAll(); window.__mapFitted = true; } }, 340);
+      }
     }
   }
   tabs.forEach(t => t.addEventListener("click", () => show(t.dataset.tab)));
@@ -197,7 +204,8 @@
   }
 
   /* ---------- map (MapLibre + OpenFreeMap, no key) ---------- */
-  const STYLE_LIGHT = "https://tiles.openfreemap.org/styles/liberty"; // one detailed basemap; dark mode is a canvas filter
+  const STYLE_LIGHT = "https://tiles.openfreemap.org/styles/liberty";
+  const STYLE_DARK = "https://tiles.openfreemap.org/styles/dark";
 
   function initMap() {
     const el = $("#map");
@@ -205,7 +213,7 @@
     if (!window.maplibregl) { el.innerHTML = '<div style="padding:20px">Map could not load. All places are listed in the Places tab.</div>'; return; }
     const map = new maplibregl.Map({
       container: "map",
-      style: STYLE_LIGHT,
+      style: root.getAttribute("data-theme") === "light" ? STYLE_LIGHT : STYLE_DARK,
       center: [18.63, 54.36], zoom: 12, attributionControl: false
     });
     window.__map = map;
@@ -319,5 +327,5 @@
   buildChips();
   renderList();
   renderEat();
-  initMap();
+  if (document.getElementById("map").classList.contains("on")) initMap();
 })();

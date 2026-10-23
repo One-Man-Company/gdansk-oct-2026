@@ -253,7 +253,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--mut);fon
 [data-theme="light"] .clusters{border-color:#fff;box-shadow:0 3px 10px rgba(20,30,50,.3)}
 
 /* dark map: invert the vector canvas so labels stay readable */
-[data-theme="dark"] #map .maplibregl-canvas{filter:invert(1) hue-rotate(180deg) brightness(.88) contrast(.92) saturate(.85)}
+[data-theme="dark"] #map .maplibregl-canvas{filter:brightness(1.22) contrast(1.04)}
 </style>
 </head>
 <body>
@@ -1001,6 +1001,10 @@ window.PLACES=PLACES; window.CATS=CATS; window.WEATHER=WEATHER;
   function syncThemeBtn() {
     const light = root.getAttribute("data-theme") === "light";
     if (themeBtn) themeBtn.innerHTML = icon(light ? "moon" : "sun");
+    if (window.__map) {
+      window.__map.setStyle(light ? STYLE_LIGHT : STYLE_DARK);
+      window.__map.once("styledata", () => setTimeout(renderMap, 150));
+    }
   }
   if (themeBtn) themeBtn.addEventListener("click", () => {
     const light = root.getAttribute("data-theme") === "light";
@@ -1019,9 +1023,12 @@ window.PLACES=PLACES; window.CATS=CATS; window.WEATHER=WEATHER;
     tabs.forEach(t => t.classList.toggle("on", t.dataset.tab === target.id));
     if (push !== false) history.replaceState(null, "", "#" + target.id);
     window.scrollTo(0, 0);
-    if (target.id === "map" && window.__map) {
-      [60, 250, 700].forEach(ms => setTimeout(() => { window.__map.resize(); renderMap(); }, ms));
-      setTimeout(() => { if (!window.__mapFitted && window.__fitAll) { window.__fitAll(); window.__mapFitted = true; } }, 320);
+    if (target.id === "map") {
+      if (!window.__map) initMap();
+      if (window.__map) {
+        [60, 250, 700].forEach(ms => setTimeout(() => { window.__map.resize(); renderMap(); }, ms));
+        setTimeout(() => { if (!window.__mapFitted && window.__fitAll) { window.__fitAll(); window.__mapFitted = true; } }, 340);
+      }
     }
   }
   tabs.forEach(t => t.addEventListener("click", () => show(t.dataset.tab)));
@@ -1164,7 +1171,8 @@ window.PLACES=PLACES; window.CATS=CATS; window.WEATHER=WEATHER;
   }
 
   /* ---------- map (MapLibre + OpenFreeMap, no key) ---------- */
-  const STYLE_LIGHT = "https://tiles.openfreemap.org/styles/liberty"; // one detailed basemap; dark mode is a canvas filter
+  const STYLE_LIGHT = "https://tiles.openfreemap.org/styles/liberty";
+  const STYLE_DARK = "https://tiles.openfreemap.org/styles/dark";
 
   function initMap() {
     const el = $("#map");
@@ -1172,7 +1180,7 @@ window.PLACES=PLACES; window.CATS=CATS; window.WEATHER=WEATHER;
     if (!window.maplibregl) { el.innerHTML = '<div style="padding:20px">Map could not load. All places are listed in the Places tab.</div>'; return; }
     const map = new maplibregl.Map({
       container: "map",
-      style: STYLE_LIGHT,
+      style: root.getAttribute("data-theme") === "light" ? STYLE_LIGHT : STYLE_DARK,
       center: [18.63, 54.36], zoom: 12, attributionControl: false
     });
     window.__map = map;
@@ -1286,7 +1294,7 @@ window.PLACES=PLACES; window.CATS=CATS; window.WEATHER=WEATHER;
   buildChips();
   renderList();
   renderEat();
-  initMap();
+  if (document.getElementById("map").classList.contains("on")) initMap();
 })();
 </script>
 </body>
