@@ -235,3 +235,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--mut);fon
 .clusters span{font-variant-numeric:tabular-nums}
 .clusters:active{transform:scale(.94)}
 [data-theme="light"] .clusters{border-color:#fff;box-shadow:0 3px 10px rgba(20,30,50,.3)}
+
+/* dark map: invert the vector canvas so labels stay readable */
+[data-theme="dark"] #map .maplibregl-canvas{filter:invert(1) hue-rotate(180deg) brightness(.88) contrast(.92) saturate(.85)}

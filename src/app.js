@@ -34,10 +34,6 @@
   function syncThemeBtn() {
     const light = root.getAttribute("data-theme") === "light";
     if (themeBtn) themeBtn.innerHTML = icon(light ? "moon" : "sun");
-    if (window.__map) {
-      window.__map.setStyle(light ? STYLE_LIGHT : STYLE_DARK);
-      window.__map.once("styledata", () => setTimeout(renderMap, 120));
-    }
   }
   if (themeBtn) themeBtn.addEventListener("click", () => {
     const light = root.getAttribute("data-theme") === "light";
@@ -201,8 +197,7 @@
   }
 
   /* ---------- map (MapLibre + OpenFreeMap, no key) ---------- */
-  const STYLE_DARK = "https://tiles.openfreemap.org/styles/fiord";
-  const STYLE_LIGHT = "https://tiles.openfreemap.org/styles/liberty";
+  const STYLE_LIGHT = "https://tiles.openfreemap.org/styles/liberty"; // one detailed basemap; dark mode is a canvas filter
 
   function initMap() {
     const el = $("#map");
@@ -210,7 +205,7 @@
     if (!window.maplibregl) { el.innerHTML = '<div style="padding:20px">Map could not load. All places are listed in the Places tab.</div>'; return; }
     const map = new maplibregl.Map({
       container: "map",
-      style: root.getAttribute("data-theme") === "light" ? STYLE_LIGHT : STYLE_DARK,
+      style: STYLE_LIGHT,
       center: [18.63, 54.36], zoom: 12, attributionControl: false
     });
     window.__map = map;
