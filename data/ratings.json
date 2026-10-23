@@ -1,0 +1,646 @@
+{
+ "dlugitarg": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "artus": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "greenGate": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "mariacka": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "mariackastreet": {
+  "rating": 4.9,
+  "matched": null
+ },
+ "zuraw": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "soldek": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "okm": {
+  "rating": 4.5,
+  "matched": "Maritime Culture Centre. Branch of the National Maritime Museum"
+ },
+ "miiws": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "ecs": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "ambermuzeum": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "ratusz": {
+  "rating": 4.9,
+  "matched": "Main Town Hall"
+ },
+ "uphagen": {
+  "rating": 4.3,
+  "matched": null
+ },
+ "mng": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "opatow": {
+  "rating": 3.8,
+  "matched": null
+ },
+ "hevelianum": {
+  "rating": 4.8,
+  "matched": "Góra Gradowa"
+ },
+ "westerplatte": {
+  "rating": 4.7,
+  "matched": "Westerplatte"
+ },
+ "wisloujscie": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "latarnia": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "oliwa": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "katarzyna": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "mikolaj": {
+  "rating": 4.9,
+  "matched": null
+ },
+ "teatrszekspira": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "amberSky": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "filharmonia": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "opera": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "teatrwybrzeze": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "kino": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "stocznia": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "zaspa": {
+  "rating": 4.6,
+  "matched": "Murale w dzielnicy Zaspa"
+ },
+ "spichlerze": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "placSolidarnosci": {
+  "rating": 4.7,
+  "matched": "Monument to the Fallen Shipyard Workers of 1970"
+ },
+ "oliwapark": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "zoo": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "brzezno": {
+  "rating": 4.7,
+  "matched": "Brzezno Beach"
+ },
+ "jelitkowo": {
+  "rating": 4.8,
+  "matched": "Jelitkowo Beach"
+ },
+ "stogi": {
+  "rating": 4.6,
+  "matched": "Plaża Stogi"
+ },
+ "sobieszewo": {
+  "rating": 4.7,
+  "matched": "Bird Reserve Ptasi Raj"
+ },
+ "pacholek": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "dolinaradosci": {
+  "rating": 4.8,
+  "matched": "Dolina Radości"
+ },
+ "sopotplaza": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "orlowo": {
+  "rating": 4.9,
+  "matched": null
+ },
+ "motlawa": {
+  "rating": null,
+  "matched": "n/a (area/venue not listed)"
+ },
+ "gradowa": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "orunski": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "mewialacha": {
+  "rating": 4.8,
+  "matched": "Mewia Łacha Reserve"
+ },
+ "mandu": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "neptun": {
+  "rating": 3.4,
+  "matched": null
+ },
+ "brovarnia": {
+  "rating": 4.3,
+  "matched": null
+ },
+ "rybapila": {
+  "rating": 4.2,
+  "matched": "Ryba piła i tańczyła Brzezno park"
+ },
+ "tawerna": {
+  "rating": 4.4,
+  "matched": null
+ },
+ "kubicki": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "rajcy": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "bowke": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "zafishowani": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "gambas": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "pobitegary": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "zielonapapuga": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "pueblo": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "holatapas": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "chinkalnia": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "gyozilla": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "pyrabar": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "przystan": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "rybakowka": {
+  "rating": 4.7,
+  "matched": "Rybakówka"
+ },
+ "mnietorybka": {
+  "rating": 4.5,
+  "matched": "Mnie to Rybka - restauracja"
+ },
+ "kos": {
+  "rating": 4.4,
+  "matched": "Restauracja KOS"
+ },
+ "canis": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "mono": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "manna68": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "avocado": {
+  "rating": 4.7,
+  "matched": "Avocado Vegan Bistro"
+ },
+ "pomelo": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "swojskismak": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "hacjenda": {
+  "rating": 4.2,
+  "matched": null
+ },
+ "fellini": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "sanmarco": {
+  "rating": 4.2,
+  "matched": null
+ },
+ "lacantina": {
+  "rating": 4.7,
+  "matched": "Restauracja Trattoria La Cantina Kuchnia włoska"
+ },
+ "faro": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "burgermania": {
+  "rating": 4.5,
+  "matched": "Burgermania"
+ },
+ "grulle": {
+  "rating": null,
+  "matched": "n/a (area/venue not listed)"
+ },
+ "republika": {
+  "rating": 4.1,
+  "matched": null
+ },
+ "motlava": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "neighbours": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "eliksir": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "wozownia": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "rekawiczka": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "panorama": {
+  "rating": 4.4,
+  "matched": "Panorama –Restauracja z widokiem"
+ },
+ "targrybny": {
+  "rating": 4.4,
+  "matched": null
+ },
+ "sushi7": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "adong": {
+  "rating": 4.2,
+  "matched": null
+ },
+ "unicorn": {
+  "rating": 3.0,
+  "matched": "Unicorn String Quartet"
+ },
+ "faloviec": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "zagroda": {
+  "rating": 4.2,
+  "matched": null
+ },
+ "drukarnia": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "retro": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "fika": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "kawana": {
+  "rating": 4.9,
+  "matched": null
+ },
+ "sowa": {
+  "rating": 2.8,
+  "matched": null
+ },
+ "pankejk": {
+  "rating": 4.1,
+  "matched": null
+ },
+ "latto": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "mammamia": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "kotka": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "pozegnanie": {
+  "rating": 4.9,
+  "matched": null
+ },
+ "corten": {
+  "rating": 4.2,
+  "matched": null
+ },
+ "fukafe": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "flisak": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "jozefk": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "winston": {
+  "rating": 4.9,
+  "matched": null
+ },
+ "ogarna107": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "pixel": {
+  "rating": 4.9,
+  "matched": null
+ },
+ "tiki": {
+  "rating": 4.9,
+  "matched": null
+ },
+ "pijalnia": {
+  "rating": 4.2,
+  "matched": null
+ },
+ "ministerstwo": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "labeerynt": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "redlight": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "lawendowa": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "cybermachina": {
+  "rating": 4.3,
+  "matched": null
+ },
+ "gameover": {
+  "rating": 4.4,
+  "matched": "Game Over Podgarbary"
+ },
+ "cooltura": {
+  "rating": 4.1,
+  "matched": null
+ },
+ "bunkier": {
+  "rating": 4.3,
+  "matched": null
+ },
+ "sassy": {
+  "rating": 4.2,
+  "matched": null
+ },
+ "poolsalon": {
+  "rating": 3.7,
+  "matched": null
+ },
+ "elektrykow": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "b90": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "mechpomar": {
+  "rating": 4.3,
+  "matched": null
+ },
+ "zappio": {
+  "rating": 5.0,
+  "matched": null
+ },
+ "irish": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "notocyk": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "literacka": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "pg4": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "winosc": {
+  "rating": 4.9,
+  "matched": null
+ },
+ "zinnejbeczki": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "polufka": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "graciarnia": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "u7": {
+  "rating": 4.4,
+  "matched": null
+ },
+ "gokart": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "kartcenter": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "axe": {
+  "rating": 5.0,
+  "matched": null
+ },
+ "shooting": {
+  "rating": 4.5,
+  "matched": null
+ },
+ "escape1": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "escape2": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "aquapark": {
+  "rating": 3.9,
+  "matched": null
+ },
+ "kolibki": {
+  "rating": 4.6,
+  "matched": null
+ },
+ "ergo": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "rejs": {
+  "rating": 3.9,
+  "matched": "Żegluga Gdańska Sp. z o.o."
+ },
+ "sopot": {
+  "rating": 4.3,
+  "matched": null
+ },
+ "operalesna": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "gdyniaships": {
+  "rating": 4.7,
+  "matched": null
+ },
+ "gdyniaaq": {
+  "rating": 4.2,
+  "matched": null
+ },
+ "kamiennagora": {
+  "rating": 4.7,
+  "matched": "Kamienna Góra observation point"
+ },
+ "malbork": {
+  "rating": 4.8,
+  "matched": null
+ },
+ "hel": {
+  "rating": 4.7,
+  "matched": "Hel Peninsula"
+ },
+ "westerplatteboat": {
+  "rating": 4.7,
+  "matched": "Westerplatte"
+ },
+ "flat": {
+  "rating": null,
+  "err": "no close frame received or sent"
+ },
+ "tram": {
+  "rating": null,
+  "err": "no close frame received or sent"
+ },
+ "lewiatan": {
+  "rating": null,
+  "err": "no close frame received or sent"
+ },
+ "zabka": {
+  "rating": null,
+  "err": "no close frame received or sent"
+ },
+ "apteka": {
+  "rating": null,
+  "err": "no close frame received or sent"
+ },
+ "glowny": {
+  "rating": null,
+  "err": "no close frame received or sent"
+ },
+ "airport": {
+  "rating": null,
+  "err": "no close frame received or sent"
+ },
+ "hospital": {
+  "rating": null,
+  "err": "no close frame received or sent"
+ }
+}

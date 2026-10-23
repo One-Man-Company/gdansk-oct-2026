@@ -1,0 +1,389 @@
+<!-- ================= PLAN ================= -->
+<section class="page on" id="plan">
+  <div class="wrap">
+    <div class="hero">
+      <div class="kicker">Šeškinė trip · 5 friends · Gdańsk</div>
+      <h1>Three days in Gdańsk,<br>built around the weather.</h1>
+      <p class="sub">24–26 October 2026 · base at ul. Jacka Malczewskiego 89, Siedlce · Saturday dry, Sunday a gale, Monday the best day.</p>
+      <div class="chips">
+        <span class="chip">162 places, 152 rated</span>
+        <span class="chip">5–12 °C</span>
+        <span class="chip">≈650–850 zł pp</span>
+        <span class="chip">18 zł / 24 h tram pass</span>
+      </div>
+    </div>
+
+    <div class="wx" id="wxstrip"></div>
+    <p class="tiny mut" style="margin:7px 0 0">Forecast: Open-Meteo, fetched 23 Oct 2026 07:35. Re-check the night before — October shifts by 1–2 °C.</p>
+
+    <div class="card tight" style="margin-top:12px">
+      <div class="stat">
+        <div class="s"><b>Sat</b><span>Dry · sunset 17:27</span></div>
+        <div class="s"><b>Sun</b><span>Rain PM · 62 km/h</span></div>
+        <div class="s"><b>Mon</b><span>Dry · free museums</span></div>
+      </div>
+      <p style="margin:10px 0 0;font-size:13px">
+        <b>Saturday</b> is the only reliable outdoor day — Old Town on foot, sunset on the water, then the bar crawl.
+        <b>Sunday</b> is a write-off outdoors: museum at 10:00, indoor activity at 14:30, concert or long dinner.
+        <b>Monday</b> is free-museum day (Amber Museum + Town Hall cost 0 zł), Oliwa's organ at 11:00, then the airport by 21:30.
+      </p>
+    </div>
+
+    <div class="days" id="daytabs">
+      <button class="day on" data-day="d1"><b>Sat 24</b><span>Arrival · dry</span></button>
+      <button class="day" data-day="d2"><b>Sun 25</b><span>Storm · indoor</span></button>
+      <button class="day" data-day="d3"><b>Mon 26</b><span>Free · fly late</span></button>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="daypanel" data-panel="d1">
+      <div class="callout good"><b>Go outside.</b> Zero rain, cloud falls to 7% by 20:00, wind 14 km/h. Timings assume you land 09:00–10:00 — land later and skip the tower.</div>
+      <div class="tl">
+        <div class="tli"><t>09:30 · LAND AT GDN</t><h4>Airport → flat</h4>
+          <p>Cabin bags: SKM train + tram 10, 24–30 zł for five, ~60 min. Checked bags: one Uber/Bolt <b>XL</b>, ~114 zł, 18 min. Two taxis would be 198–240 zł.</p>
+          <div class="tm"><span>18–60 min</span><span>24–130 zł total</span></div></div>
+        <div class="tli"><t>11:15 · DROP BAGS</t><h4>Flat + first shop</h4>
+          <p>Check-in may be 15:00 — ask the host for early bag drop. Then Lewiatan (open Sat to 22:00): breakfast, water, beer, ~120 zł for five. <b>Shop today</b> — Sunday is a trading ban.</p>
+          <div class="tm"><span>45 min</span><span>~120 zł</span></div></div>
+        <div class="tli"><t>12:15 · INTO TOWN</t><h4>Tram 10/12 from Zakopiańska</h4>
+          <p>300 m from the flat. Buy an <b>18 zł 24 h pass</b> each in Jakdojade or GoPay. Get off at Brama Wyżynna or Hucisko.</p>
+          <div class="tm"><span>10–12 min</span><span>18 zł pp</span></div></div>
+        <div class="tli"><t>12:45 · LUNCH</t><h4><a href="#r-neptun" data-row="neptun">Bar mleczny Neptun</a></h4>
+          <p>Borscht, pierogi, breaded pork, compote — 20–30 zł for a full hot meal in the middle of the tourist zone. Order at the counter, collect at the hatch.</p>
+          <div class="tm"><span>40 min</span><span>20–30 zł pp</span></div></div>
+        <div class="tli"><t>13:45 · OLD TOWN</t><h4>Długi Targ → Artus Court → Green Gate → Mariacka</h4>
+          <p>The whole Hanseatic set piece in 400 m. Meet at Neptune; walk Mariacka for amber at 20–30% below Długi Targ prices.</p>
+          <div class="tm"><span>75 min</span><span>free</span><span>~1.5 km</span></div></div>
+        <div class="tli"><t>15:00 · ST MARY'S</t><h4>Basilica + tower</h4>
+          <p>Church free, <b>tower 20 zł</b>, 400 steps, the best rooftop view. The astronomical clock performs at 11:57 daily (you will miss it today).</p>
+          <div class="tm"><span>60 min</span><span>0–20 zł</span></div></div>
+        <div class="tli"><t>16:15 · WATERFRONT</t><h4>The Crane & Długie Pobrzeże</h4>
+          <p>Embankment, medieval crane, granaries, coffee. This is the postcard — come back at blue hour for the real shot.</p>
+          <div class="tm"><span>45 min</span><span>free</span></div></div>
+        <div class="tli"><t>17:00 · SUNSET 17:27</t><h4>Ołowianka loop or Góra Gradowa</h4>
+          <p><b>A:</b> footbridge to Ołowianka, look back at the lit Old Town, return over the other bridge. <b>B:</b> Góra Gradowa for a 360° panorama with a beer. <b>C:</b> AmberSky wheel, 42 zł.</p>
+          <div class="tm"><span>45–60 min</span><span>0–42 zł</span></div></div>
+        <div class="tli"><t>19:30 · DINNER</t><h4><a href="#r-brovarnia" data-row="brovarnia">Brovarnia</a></h4>
+          <p>Brewery in a converted granary, copper tanks, river views, big tables. Book for five at 19:30 and ask for a window seat.</p>
+          <div class="tm"><span>2 h</span><span>70–90 zł pp</span></div></div>
+        <div class="tli"><t>21:00 · CRAWL</t><h4>Five stops, 1 km</h4>
+          <p><a href="#r-flisak" data-row="flisak">Flisak'76</a> cocktails → <a href="#r-jozefk" data-row="jozefk">Józef K.</a> beer → <a href="#r-ministerstwo" data-row="ministerstwo">Ministerstwo Śledzia</a> herring + shot → <a href="#r-pijalnia" data-row="pijalnia">Pijalnia</a> 8 zł shots → <a href="#r-pixel" data-row="pixel">Pixel</a> cocktails to finish.</p>
+          <div class="tm"><span>3–4 h</span><span>100–150 zł pp</span></div></div>
+        <div class="tli alt"><t>00:30 · IF YOU STILL HAVE LEGS</t><h4>Cooltura (to 06:00) or Sassy (club)</h4>
+          <p>Cooltura is the cheap, open-late alternative 5 minutes from the centre. Sassy is the dressed-up rooftop-turned-club on the water.</p>
+          <div class="tm"><span>0–40 zł entry</span></div></div>
+      </div>
+      <details><summary>Saturday alternatives</summary>
+        <ul>
+          <li><b>Landing after 12:00?</b> Skip lunch, go straight to the Old Town, dinner at 20:00, cut the crawl to three stops.</li>
+          <li><b>Water instead of the tower:</b> Motława boat loop, 50–80 zł, 50–90 min, last boats ~17:00–18:00.</li>
+          <li><b>Concert instead of bars:</b> Ergo Arena, 18:30, 120–250 zł — but it eats the whole first evening.</li>
+          <li><b>Wrecked from travel?</b> Neptun → St Mary's → sunset → Mandu takeaway → flat. Still a good day.</li>
+        </ul></details>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="daypanel" data-panel="d2" style="display:none">
+      <div class="callout warn"><b>Storm day.</b> Rain 14:00–19:00, 100% at 18:00, gusts to 62 km/h. Boats, the wheel, the tower and Westerplatte are effectively closed. Sopot is also out — half marathon closes the roads in the morning.</div>
+      <div class="tl">
+        <div class="tli"><t>09:00 · SLOW START</t><h4>Breakfast at the flat</h4>
+          <p>Big shops are closed (trading ban). You bought groceries yesterday. Tram in at 09:45.</p>
+          <div class="tm"><span>1 h</span><span>free</span></div></div>
+        <div class="tli"><t>10:00 · MUSEUM</t><h4><a href="#r-miiws" data-row="miiws">Museum of the Second World War</a> — 33 zł</h4>
+          <p>2.5–3.5 h underground in a building that leans over you. <b>Book the 10:00 slot tonight</b> — Sunday slots sell out. Monday it is closed, so today is the day.</p>
+          <div class="tm"><span>3 h</span><span>33 zł pp</span></div></div>
+        <div class="tli"><t>13:15 · LUNCH</t><h4><a href="#r-mandu" data-row="mandu">Pierogarnia Mandu</a></h4>
+          <p>Book a table for five. Baked and boiled pierogi, 28–45 zł a portion, two kinds feed a hungry person. 6 minutes from the museum.</p>
+          <div class="tm"><span>1 h</span><span>35–45 zł pp</span></div></div>
+        <div class="tli"><t>14:30 · INDOOR FIGHT</t><h4>Pick one</h4>
+          <p><b>A.</b> <a href="#r-u7" data-row="u7">U7 Bowling</a> — 120–150 zł/h per lane, split five ways ~24–30 zł each. <b>B.</b> <a href="#r-axe" data-row="axe">Axe throwing</a> ~85 zł pp. <b>C.</b> <a href="#r-shooting" data-row="shooting">Shooting range</a> ~100–150 zł pp. <b>D.</b> <a href="#r-gameover" data-row="gameover">Game Over</a> / <a href="#r-cybermachina" data-row="cybermachina">Cybermachina</a> 40–60 zł pp.</p>
+          <div class="tm"><span>2–3 h</span><span>24–150 zł pp</span></div></div>
+        <div class="tli"><t>19:00 · EVENING</t><h4><a href="#r-filharmonia" data-row="filharmonia">Philharmonic: Joanna Knitter</a></h4>
+          <p>Film music and pop standards in a converted power station on the water. Warm, dry, 90 minutes, ~60–120 zł. Alternative: second bowling session or a film.</p>
+          <div class="tm"><span>2 h</span><span>60–120 zł pp</span></div></div>
+        <div class="tli"><t>21:15 · DINNER</t><h4><a href="#r-ministerstwo" data-row="ministerstwo">Ministerstwo Śledzia i Wódki</a></h4>
+          <p>Herring five ways and flavoured vodka. 3–4 plates to share + a flight, 45–60 zł pp. Four minutes from the Philharmonic.</p>
+          <div class="tm"><span>1.5 h</span><span>45–60 zł pp</span></div></div>
+        <div class="tli alt"><t>22:30 · NIGHTCAP</t><h4>Pixel or Cybermachina</h4>
+          <p>Cocktails if you want to talk, board games if you want to compete. Both open late, both 5 minutes away.</p>
+          <div class="tm"><span>30–50 zł pp</span></div></div>
+      </div>
+      <details><summary>Sunday alternatives</summary>
+        <ul>
+          <li><b>ECS instead of WWII Museum</b> (40 zł, Sun 10–18) — more 1980, less 1939. Do one, not both.</li>
+          <li><b>Sleep in:</b> museum 12:00, late lunch, bowling 16:00, dinner 20:00.</li>
+          <li><b>Hate museums:</b> axe 11:00, long lunch, shooting 15:00, bowling 18:00, dinner.</li>
+          <li><b>Big night:</b> skip the concert, then Elektryków street from 22:00 — outdoors between venues, dress for wind.</li>
+        </ul></details>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="daypanel" data-panel="d3" style="display:none">
+      <div class="callout good"><b>Best day of the three.</b> 12.1 °C, dry, cloud down to 29% by 18:00. The clock is the constraint: airport by 21:30 for a 23:59 flight.</div>
+      <div class="tl">
+        <div class="tli"><t>08:30 · PACK</t><h4>Check out, leave bags</h4>
+          <p>Ask the host to keep them until 18:00, or use the lockers at Gdańsk Główny.</p>
+          <div class="tm"><span>45 min</span></div></div>
+        <div class="tli"><t>09:30 · TO OLIWA</t><h4>SKM or tram 12</h4>
+          <p>SKM from Główny 12 min + 10 min walk, or tram 12 direct in ~35 min. A 75-min ticket is 6 zł; another 24 h pass is 18 zł if you ride three times.</p>
+          <div class="tm"><span>30–40 min</span><span>6–18 zł</span></div></div>
+        <div class="tli"><t>10:15 · THE ORGAN</t><h4><a href="#r-oliwa" data-row="oliwa">Oliwa Cathedral</a> — demo at 11:00</h4>
+          <p>7,896 pipes, moving angels, 20 minutes. October schedule: <b>Mon–Sat 11:00 and 12:00</b>. Arrive 10:45, sit centre-front. Then walk <a href="#r-oliwapark" data-row="oliwapark">Oliwa Park</a>.</p>
+          <div class="tm"><span>1.5 h</span><span>~10 zł</span></div></div>
+        <div class="tli"><t>12:15 · LUNCH</t><h4>Oliwa or the zoo</h4>
+          <p>Cheap lunch near the station, 25–35 zł. The <a href="#r-zoo" data-row="zoo">zoo</a> is 30 zł in October but 2–3 h of hills — pick either the zoo or the museums, not both.</p>
+          <div class="tm"><span>45 min</span><span>25–35 zł</span></div></div>
+        <div class="tli"><t>13:30 · FREE MONDAY</t><h4>Amber Museum + Town Hall — 0 zł</h4>
+          <p>All Muzeum Gdańska branches waive entry on Mondays. <a href="#r-ambermuzeum" data-row="ambermuzeum">Amber Museum</a> (10–18) is the one to do; <a href="#r-ratusz" data-row="ratusz">Town Hall</a> (10–16) has the tower view. Together they would cost 70 zł.</p>
+          <div class="tm"><span>2 h</span><span>free</span></div></div>
+        <div class="tli"><t>15:45 · LAST CHOICE</t><h4>Westerplatte by boat, or Brzeźno pier?</h4>
+          <p><b>Boat:</b> 80/100 zł, 40 min each way, back in the centre ~18:30 — tight. <b>Pier:</b> 20 min by Uber (~35 zł), free, sunset 17:22. Honest answer: pier and a beer, not the boat.</p>
+          <div class="tm"><span>1.5 h</span><span>0–100 zł</span></div></div>
+        <div class="tli"><t>18:15 · LAST DINNER</t><h4>Neptun or Mandu</h4>
+          <p>Fast and good. Be done by 19:45.</p>
+          <div class="tm"><span>1 h</span><span>25–45 zł pp</span></div></div>
+        <div class="tli"><t>20:00 · AIRPORT</t><h4>Uber XL → GDN</h4>
+          <p>18 minutes, 55–70 zł per car. Or SKM from Główny, 4.80 zł pp, ~25 min. Be inside security by <b>22:15</b>.</p>
+          <div class="tm"><span>20–60 min</span><span>5–70 zł</span></div></div>
+      </div>
+      <details><summary>Monday alternatives</summary>
+        <ul>
+          <li><b>Malbork Castle:</b> train 40–50 min, 70 zł, 4–5 h on site. Replaces Oliwa and the museums entirely.</li>
+          <li><b>Gdynia:</b> SKM 25 min, warships 30–35 zł, back by 18:00.</li>
+          <li><b>Rain:</b> swap Oliwa for ECS (open Mon 10–17) and the free museums.</li>
+        </ul></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAP ================= -->
+<section class="page" id="map">
+  <div class="wrap">
+    <h2>Map</h2>
+    <p class="small mut">162 places. Tap a pin for rating, price and links; numbered bubbles group nearby places — tap to zoom.</p>
+    <div class="fbar" id="mapfilters"></div>
+    <div class="mapwrap">
+      <div id="map"></div>
+      <div class="mapbtns">
+        <button id="locate" title="Find me" aria-label="Find me">◎</button>
+        <button id="fitall" title="Fit all" aria-label="Fit all">⤢</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLACES ================= -->
+<section class="page" id="places">
+  <div class="wrap">
+    <h2>Places</h2>
+    <input class="search" id="q" placeholder="Search places — pierogi, amber, beach…" autocomplete="off">
+    <div class="fbar" id="catfilters"></div>
+    <div class="fbar" id="dayfilters"></div>
+    <div class="count" id="count">Loading…</div>
+    <div id="list"></div>
+  </div>
+</section>
+
+<!-- ================= EAT ================= -->
+<section class="page" id="eat">
+  <div class="wrap">
+    <h2>Eat</h2>
+    <p class="small mut">47 restaurants and 12 cafés, sorted by Google rating. Tap any row for hours, price and what to order.</p>
+    <div class="fbar" id="eatfilters"></div>
+    <div class="count" id="eatcount"></div>
+    <div id="eatlist"></div>
+  </div>
+</section>
+
+<!-- ================= DRINK ================= -->
+<section class="page" id="drink">
+  <div class="wrap">
+    <h2>Drink</h2>
+    <p class="small mut">29 bars, pubs and clubs. The crawl route is at the bottom.</p>
+    <div class="fbar" id="drinkfilters"></div>
+    <div class="count" id="drinkcount"></div>
+    <div id="drinklist"></div>
+    <div class="card" style="margin-top:16px">
+      <h3>The crawl — 5 stops, 1 km, ~120 zł</h3>
+      <div class="tw"><table>
+        <thead><tr><th>#</th><th>Stop</th><th>Order</th><th>Damage</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td><b>Flisak'76</b></td><td>Signature cocktail</td><td class="num">30 zł</td></tr>
+          <tr><td class="num">2</td><td><b>Józef K.</b></td><td>Local craft beer</td><td class="num">15 zł</td></tr>
+          <tr><td class="num">3</td><td><b>Ministerstwo Śledzia</b></td><td>Herring plate + shot</td><td class="num">35 zł</td></tr>
+          <tr><td class="num">4</td><td><b>Pijalnia Wódki</b></td><td>Shot + herring snack</td><td class="num">10 zł</td></tr>
+          <tr><td class="num">5</td><td><b>Pixel</b></td><td>Smoky whisky cocktail</td><td class="num">32 zł</td></tr>
+        </tbody></table></div>
+      <p class="small mut" style="margin:8px 0 0">Finish at <b>Cooltura</b> (to 06:00) or <b>Sassy</b> (club, 22:00–05:00).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRANSPORT ================= -->
+<section class="page" id="transport">
+  <div class="wrap">
+    <h2>Transport</h2>
+    <p class="small mut">Base: ul. Jacka Malczewskiego 89, Siedlce — 2.5 km from the Old Town, 2.6 km from Gdańsk Główny.</p>
+
+    <h3 style="margin-top:12px">Airport → the flat, five people</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Option</th><th>Door to door</th><th>Cost for 5</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td><b>Uber / Bolt XL</b><br><span class="tiny mut">6-seat, one car</span></td><td class="num">18–25 min</td><td class="num">110–130 zł</td><td><span class="yes">BEST</span> with luggage</td></tr>
+        <tr><td><b>SKM train + tram 10</b></td><td class="num">55–65 min</td><td class="num">24–30 zł</td><td><span class="yes">CHEAPEST</span> — cabin bags only</td></tr>
+        <tr><td><b>Bus 210 + tram</b></td><td class="num">60–75 min</td><td class="num">24–30 zł</td><td>Backup when trains stop</td></tr>
+        <tr><td><b>UberX × 2</b></td><td class="num">20–30 min</td><td class="num">110–130 zł</td><td>Fine, but you split the group</td></tr>
+        <tr><td><b>Official taxi × 2</b></td><td class="num">18–25 min</td><td class="num">198–240 zł</td><td><span class="no">EXPENSIVE</span> — 99 zł day / 120 zł night per car</td></tr>
+        <tr><td><b>Rental car</b></td><td class="num">30–45 min</td><td class="num">100–300 zł/day</td><td>Only for a Malbork day</td></tr>
+      </tbody></table></div>
+    <div class="callout good"><b>Verdict:</b> Uber XL on arrival (~114 zł, one car, door to door) and again at 20:00 on Monday (~60 zł). Use the 24 h tram pass (18 zł) in between.</div>
+
+    <details><summary>Train route, step by step</summary>
+      <ol>
+        <li>Arrivals → <i>Gdańsk Port Lotniczy</i> station: covered walkway, ~5 min.</li>
+        <li>Ticket in Jakdojade/GoPay or the machine: 4.80 zł single, 6 zł for the 75-min transfer ticket, 18 zł for 24 h.</li>
+        <li>Any SKM/PKM towards Gdańsk Główny, ~25 min (some need a change at Wrzeszcz — same platform).</li>
+        <li>Tram 10 towards Siedlce/Emaus, 4 stops to <b>Zakopiańska</b>, then 300 m walk.</li>
+        <li>Validate on boarding. Inspectors fine on the spot (~150 zł).</li>
+      </ol></details>
+
+    <h3 style="margin-top:18px">Getting around</h3>
+    <div class="grid g2">
+      <div class="card tight"><h3>Trams &amp; buses (ZTM)</h3>
+        <dl class="kv" style="margin-top:6px">
+          <dt>Single</dt><dd>4.80 zł</dd><dt>75-min transfer</dt><dd>6.00 zł</dd>
+          <dt>24-hour pass</dt><dd>18.00 zł</dd><dt>72-hour pass</dt><dd>32.00 zł</dd>
+        </dl>
+        <p class="tiny mut" style="margin:6px 0 0">Trams 10 and 12 from Zakopiańska: 10–12 min to the centre and Gdańsk Główny.</p></div>
+      <div class="card tight"><h3>SKM (Tricity train)</h3>
+        <dl class="kv" style="margin-top:6px">
+          <dt>Sopot</dt><dd>10–13 min · 4.80 zł</dd><dt>Gdynia</dt><dd>25–30 min · ~6 zł</dd>
+          <dt>Airport</dt><dd>25 min · 4.80 zł</dd><dt>Malbork</dt><dd>40–50 min · 15–20 zł</dd>
+        </dl>
+        <p class="tiny mut" style="margin:6px 0 0">Faster and cheaper than driving to Sopot or Gdynia.</p></div>
+      <div class="card tight"><h3>Uber / Bolt</h3>
+        <dl class="kv" style="margin-top:6px">
+          <dt>Flat → Old Town</dt><dd>25–35 zł</dd><dt>Flat → airport</dt><dd>55–70 zł</dd>
+          <dt>Old Town → Sopot</dt><dd>70–90 zł</dd><dt>Night surcharge</dt><dd>+20–30%</dd>
+        </dl>
+        <p class="tiny mut" style="margin:6px 0 0">Always pick XL for five. Compare Bolt and Uber — they differ by 10–15%.</p></div>
+      <div class="card tight"><h3>Car: don't</h3>
+        <p class="small" style="margin-top:6px">Parking in the centre is 7.50 zł for the first hour, charged 09:00–20:00 every day. A car only pays off for Malbork — which does not fit the departure day.</p>
+        <p class="tiny mut" style="margin:0">Rental: 90–150 zł/day economy, 180–300 zł/day for a 7-seater. Fuel ~6.5 zł/l.</p></div>
+    </div>
+
+    <h3 style="margin-top:18px">The midnight flight</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Leave flat</th><th>Mode</th><th>At airport</th><th>Comment</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td class="num">20:00</td><td>Uber/Bolt XL</td><td class="num">20:25</td><td>Safest — 3.5 h buffer</td></tr>
+        <tr><td class="num">20:15</td><td>SKM from Główny</td><td class="num">20:55</td><td>4.80 zł pp, tram to the station first</td></tr>
+        <tr><td class="num">20:45</td><td>Uber X</td><td class="num">21:10</td><td>Fine if security is quick</td></tr>
+        <tr><td class="num">21:30</td><td>anything</td><td class="num">21:55</td><td><span class="no">Too late</span> for a 23:59 departure</td></tr>
+      </tbody></table></div>
+    <p class="small mut" style="margin-top:8px">Install Jakdojade, Bolt and Uber before you fly. Buy tickets in-app and skip the machines.</p>
+  </div>
+</section>
+
+<!-- ================= COSTS ================= -->
+<section class="page" id="costs">
+  <div class="wrap">
+    <h2>Costs</h2>
+    <p class="small mut">Per person, excluding flights and the flat. Lean = milk bars, trams, free sights. Comfortable = restaurants, Ubers, one paid activity a day.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Item</th><th>Lean</th><th>Comfortable</th></tr></thead>
+      <tbody>
+        <tr><td>Day 1 transport</td><td class="num">6 zł</td><td class="num">30 zł</td></tr>
+        <tr><td>Day 1 food</td><td class="num">55 zł</td><td class="num">95 zł</td></tr>
+        <tr><td>Day 1 drinks</td><td class="num">60 zł</td><td class="num">150 zł</td></tr>
+        <tr><td>Day 1 sights</td><td class="num">0 zł</td><td class="num">62 zł</td></tr>
+        <tr><td>Day 2 museum</td><td class="num">33 zł</td><td class="num">33 zł</td></tr>
+        <tr><td>Day 2 food</td><td class="num">60 zł</td><td class="num">95 zł</td></tr>
+        <tr><td>Day 2 activity</td><td class="num">24 zł</td><td class="num">120 zł</td></tr>
+        <tr><td>Day 2 evening</td><td class="num">30 zł</td><td class="num">150 zł</td></tr>
+        <tr><td>Day 3 transport + sights</td><td class="num">22 zł</td><td class="num">40 zł</td></tr>
+        <tr><td>Day 3 food</td><td class="num">50 zł</td><td class="num">80 zł</td></tr>
+        <tr><td>Airport transfer</td><td class="num">5 zł</td><td class="num">14 zł</td></tr>
+        <tr class="hi"><td><b>Total per person</b></td><td class="num"><b>~345 zł</b></td><td class="num"><b>~870 zł</b></td></tr>
+        <tr><td><b>Total for 5</b></td><td class="num">~1,725 zł</td><td class="num">~4,350 zł</td></tr>
+      </tbody></table></div>
+    <p class="small" style="margin-top:8px"><b>Realistic middle: 600–700 zł pp.</b></p>
+
+    <div class="grid g2" style="margin-top:10px">
+      <div class="card tight"><h3>Price cheat-sheet</h3>
+        <dl class="kv" style="margin-top:6px">
+          <dt>Beer 0.5 l</dt><dd>12–18 zł</dd><dt>Vodka shot</dt><dd>8–12 zł</dd>
+          <dt>Cocktail</dt><dd>28–38 zł</dd><dt>Coffee</dt><dd>12–16 zł</dd>
+          <dt>Milk-bar meal</dt><dd>20–28 zł</dd><dt>Restaurant main</dt><dd>45–75 zł</dd>
+          <dt>Pierogi portion</dt><dd>28–45 zł</dd><dt>Museum</dt><dd>15–40 zł</dd>
+          <dt>Tram single / 24 h</dt><dd>4.80 / 18 zł</dd><dt>Uber across centre</dt><dd>25–35 zł</dd>
+        </dl></div>
+      <div class="card tight"><h3>Free</h3>
+        <ul style="margin:0;padding-left:16px;font-size:12.5px">
+          <li>Old Town, Neptune, Artus Court exterior, Green Gate</li>
+          <li>St Mary's church (tower 20 zł)</li>
+          <li>Oliwa Park + cathedral entry</li>
+          <li>Góra Gradowa — best viewpoint</li>
+          <li>Shipyard walk, ECS rooftop, Ołowianka loop</li>
+          <li>Brzeźno pier, Sopot pier (free after 30 Sep)</li>
+          <li>Zaspa murals</li>
+          <li><b>All Muzeum Gdańska branches on Monday</b></li>
+          <li>National Museum on Tuesdays (not your dates)</li>
+        </ul></div>
+    </div>
+    <div class="callout info"><b>Money.</b> Card and Apple/Google Pay work everywhere — bars, trams (via app), museums, taxis. Keep 100–200 zł cash for small bars and milk bars. Currency PLN, ~4.3 zł = €1. Decline ATM currency conversion. Tip 10% in restaurants, round up in bars, nothing in milk bars.</div>
+  </div>
+</section>
+
+<!-- ================= INFO ================= -->
+<section class="page" id="info">
+  <div class="wrap">
+    <h2>Info</h2>
+    <h3>Opening hours — the thing that ruins trips</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Place</th><th>Sat 24</th><th>Sun 25</th><th>Mon 26</th><th>Ticket</th></tr></thead>
+      <tbody>
+        <tr><td>WWII Museum</td><td>10–18 ✓</td><td>10–18 ✓</td><td class="no">CLOSED</td><td class="num">33 zł</td></tr>
+        <tr><td>Solidarity Centre</td><td>10–18 ✓</td><td>10–18 ✓</td><td>10–17 ✓</td><td class="num">40 zł</td></tr>
+        <tr><td>Amber Museum</td><td>10–18 ✓</td><td>10–18 ✓</td><td><b>FREE</b></td><td class="num">35 / 0</td></tr>
+        <tr><td>Town Hall</td><td>10–16 ✓</td><td>10–16 ✓</td><td><b>FREE</b></td><td class="num">35 / 0</td></tr>
+        <tr><td>St Mary's</td><td>8:30–17:30 ✓</td><td>from 11:00 ✓</td><td>8:30–17:30 ✓</td><td class="num">free / 20</td></tr>
+        <tr><td>Oliwa organ</td><td>11:00, 12:00 ✓</td><td>15:00 ✓</td><td>11:00, 12:00 ✓</td><td class="num">~10 zł</td></tr>
+        <tr><td>Zoo</td><td>9–16 ✓</td><td>9–16 ✓</td><td>9–16 ✓</td><td class="num">30 zł</td></tr>
+        <tr><td>Westerplatte</td><td>24/7 ✓</td><td class="no">gale</td><td>24/7 ✓</td><td class="num">free / 80</td></tr>
+        <tr><td>Sopot pier</td><td>24/7 ✓</td><td class="no">marathon AM</td><td>24/7 ✓</td><td class="num">free</td></tr>
+        <tr><td>Bowling U7</td><td>10–01 ✓</td><td>10–24 ✓</td><td>10–24 ✓</td><td class="num">120–170/h</td></tr>
+      </tbody></table></div>
+
+    <div class="grid g2" style="margin-top:10px">
+      <div class="card tight"><h3>Sunday 25 Oct</h3>
+        <p class="small">Trading ban: Biedronka, Lidl and malls are <b>closed</b>. Open: Żabka (06–23), <b>Lewiatan</b> near the flat (09–19), pharmacies on duty, restaurants, bars, museums. <b>Buy food on Saturday.</b></p></div>
+      <div class="card tight"><h3>Emergency</h3>
+        <dl class="kv" style="margin-top:6px"><dt>Emergency</dt><dd>112</dd><dt>Ambulance</dt><dd>999</dd>
+          <dt>Police</dt><dd>997</dd><dt>Pharmacy</dt><dd>Kartuska, 4 min from flat</dd></dl>
+        <p class="tiny mut" style="margin:6px 0 0">Tap water is drinkable. EU citizens: free care with EHIC.</p></div>
+      <div class="card tight"><h3>Five phrases</h3>
+        <ul class="small" style="margin:0;padding-left:16px">
+          <li><b>Dziękuję</b> — thank you</li><li><b>Proszę</b> — please</li>
+          <li><b>Poproszę piwo</b> — one beer, please</li><li><b>Rachunek</b> — the bill</li>
+          <li><b>Na zdrowie</b> — cheers</li></ul></div>
+      <div class="card tight"><h3>Etiquette &amp; safety</h3>
+        <ul class="small" style="margin:0;padding-left:16px">
+          <li>Safe city; watch pockets on trams at night.</li>
+          <li>Open bottles not allowed on trams — fine on the embankment.</li>
+          <li>Clubs: no flip-flops or sports shorts.</li>
+          <li>Quiet in churches; shoulders covered.</li>
+          <li>No smoking indoors — most bars have heated gardens.</li></ul></div>
+    </div>
+
+    <div class="card tight">
+      <h3>Three things that will go wrong</h3>
+      <ol class="small" style="margin:0;padding-left:16px">
+        <li><b>You will be colder than you think.</b> 9 °C with 40 km/h wind feels like 2 °C. Waterproof shell + beanie; keep bar-to-bar hops under 10 minutes.</li>
+        <li><b>Sunday afternoon will be dead outdoors.</b> Book the museum slot and the indoor activity on Saturday night — axe and shooting need 24 h notice.</li>
+        <li><b>You will cut it fine for the flight.</b> Leave the flat at 20:00, eat before 19:45, bags packed by 18:00.</li>
+      </ol>
+    </div>
+    <p class="tiny mut">Prices and hours verified 23 Oct 2026 from official sites; ratings from Google Maps (fetched 23 Oct 2026). Weather: Open-Meteo. Map: OpenFreeMap / OpenStreetMap. Re-check anything you are about to pay for.</p>
+  </div>
+</section>

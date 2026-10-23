@@ -1,13 +1,13 @@
 {
- "name": "Gda\u0144sk 24\u201326 Oct",
- "short_name": "Gda\u0144sk",
+ "name": "\u0160e\u0161kin\u0117 Trip \u2014 Gda\u0144sk",
+ "short_name": "\u0160e\u0161kin\u0117 Trip",
  "start_url": "./index.html",
  "display": "standalone",
- "background_color": "#0a0c11",
- "theme_color": "#0a0c11",
+ "background_color": "#f5f4f0",
+ "theme_color": "#1d5c4c",
  "icons": [
   {
-   "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='42' fill='%23f5b13d'/%3E%3Ctext x='96' y='138' font-size='120' font-family='Helvetica,Arial,sans-serif' font-weight='bold' fill='%231a1205' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E",
+   "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='44' fill='%231d5c4c'/%3E%3Ctext x='96' y='132' font-size='104' font-family='Helvetica,Arial,sans-serif' font-weight='bold' fill='%23fff' text-anchor='middle'%3E%C5%A0%3C/text%3E%3C/svg%3E",
    "sizes": "192x192",
    "type": "image/svg+xml",
    "purpose": "any"
