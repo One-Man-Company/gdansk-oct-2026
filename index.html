@@ -998,8 +998,9 @@ window.PLACES=PLACES; window.CATS=CATS; window.WEATHER=WEATHER;
   function syncThemeBtn() {
     const light = root.getAttribute("data-theme") === "light";
     if (themeBtn) themeBtn.innerHTML = icon(light ? "moon" : "sun");
-    if (window.__map && window.__styleUrl) {
-      window.__map.setStyle(light ? "https://tiles.openfreemap.org/styles/liberty" : "https://tiles.openfreemap.org/styles/dark");
+    if (window.__map) {
+      window.__map.setStyle(light ? STYLE_LIGHT : STYLE_DARK);
+      window.__map.once("styledata", () => setTimeout(renderMap, 120));
     }
   }
   if (themeBtn) themeBtn.addEventListener("click", () => {
@@ -1164,7 +1165,7 @@ window.PLACES=PLACES; window.CATS=CATS; window.WEATHER=WEATHER;
   }
 
   /* ---------- map (MapLibre + OpenFreeMap, no key) ---------- */
-  const STYLE_DARK = "https://tiles.openfreemap.org/styles/dark";
+  const STYLE_DARK = "https://tiles.openfreemap.org/styles/fiord";
   const STYLE_LIGHT = "https://tiles.openfreemap.org/styles/liberty";
 
   function initMap() {

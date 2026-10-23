@@ -1,0 +1,3262 @@
+[
+ {
+  "name": "Mostownia",
+  "kind": "theatre",
+  "street": "Księdza Leona Miszewskiego",
+  "num": "16",
+  "web": "https://most-gdansk.pl/mostownia/",
+  "hours": "",
+  "lat": 54.376235,
+  "lon": 18.614084
+ },
+ {
+  "name": "Pomnik Obrońców Wybrzeża",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.4067012,
+  "lon": 18.6669686
+ },
+ {
+  "name": "Jack’s Bar & Restaurant Fahrenheit Gdańsk",
+  "kind": "bar",
+  "street": "Długi Targ",
+  "num": "39/40",
+  "web": "",
+  "hours": "",
+  "lat": 54.3485255,
+  "lon": 18.6538982
+ },
+ {
+  "name": "Neptun",
+  "kind": "pub",
+  "street": "Długa",
+  "num": "32",
+  "web": "",
+  "hours": "Mo-Fr 07:30-20:00; Sa-Su 10:00-20:00",
+  "lat": 54.3487526,
+  "lon": 18.6516059
+ },
+ {
+  "name": "Flisak'76",
+  "kind": "bar",
+  "street": "Chlebnicka",
+  "num": "9/10",
+  "web": "https://flisak76.wixsite.com/koktajlbar",
+  "hours": "Mo-Th, Su 18:00-01:00; Fr, Sa 18:00-02:00",
+  "lat": 54.3487725,
+  "lon": 18.6546039
+ },
+ {
+  "name": "Józef K.",
+  "kind": "pub",
+  "street": "Piwna",
+  "num": "1/2",
+  "web": "http://www.jozefk.pl",
+  "hours": "Mo-Th, Su 10:00-02:00; Fr, Sa 10:00-04:00",
+  "lat": 54.350352,
+  "lon": 18.6497238
+ },
+ {
+  "name": "Allure Club",
+  "kind": "nightclub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3495849,
+  "lon": 18.6503243
+ },
+ {
+  "name": "Kundel",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3489257,
+  "lon": 18.6522548
+ },
+ {
+  "name": "Muzeum Archeologiczne",
+  "kind": "museum",
+  "street": "Rycerska",
+  "num": "8",
+  "web": "https://archeologia.pl/",
+  "hours": "",
+  "lat": 54.3548344,
+  "lon": 18.6596937
+ },
+ {
+  "name": "Brovarnia",
+  "kind": "pub",
+  "street": "Szafarnia",
+  "num": "9",
+  "web": "https://brovarnia.pl/",
+  "hours": "Mo-Su 13:00-23:00",
+  "lat": 54.34917,
+  "lon": 18.6604752
+ },
+ {
+  "name": "Degustatornia",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3541072,
+  "lon": 18.659589
+ },
+ {
+  "name": "Muzeum Narodowe w Gdańsku o/Zielona Brama",
+  "kind": "museum",
+  "street": "Długi Targ",
+  "num": "24",
+  "web": "",
+  "hours": "",
+  "lat": 54.3478678,
+  "lon": 18.6557171
+ },
+ {
+  "name": "Wzgórze Następcy Tronu",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3731395,
+  "lon": 18.6075964
+ },
+ {
+  "name": "Fibonacci Aperitivo Bar",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3509731,
+  "lon": 18.6503385
+ },
+ {
+  "name": "Cafe Lamus",
+  "kind": "pub",
+  "street": "Lawendowa",
+  "num": "8",
+  "web": "",
+  "hours": "Mo-Su 12:00-02:00",
+  "lat": 54.352784,
+  "lon": 18.6530013
+ },
+ {
+  "name": "Polufka",
+  "kind": "pub",
+  "street": "Konrada Leczkowa",
+  "num": "18",
+  "web": "https://polufka.pl/",
+  "hours": "Mo 16:00-24:00;Tu-Fr 00:00-01:00,16:00-24:00;Sa 00:00-03:00,16:00-24:00;Su 00:00-03:00,18:00-24:00",
+  "lat": 54.379022,
+  "lon": 18.618788
+ },
+ {
+  "name": "Historyczna brama nr 2 Stoczni Gdańskiej",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3605933,
+  "lon": 18.6498296
+ },
+ {
+  "name": "Prawe stanowisko baterii leśnej 1911",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3696128,
+  "lon": 18.7421699
+ },
+ {
+  "name": "Schron baterii leśnej 1911",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3703941,
+  "lon": 18.7383632
+ },
+ {
+  "name": "Kolonia Artystów",
+  "kind": "cafe",
+  "street": "Aleja Grunwaldzka",
+  "num": "51",
+  "web": "http://www.kolonia-artystow.pl/",
+  "hours": "",
+  "lat": 54.3769534,
+  "lon": 18.6118644
+ },
+ {
+  "name": "Góra Ujeścisko",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3285229,
+  "lon": 18.6038317
+ },
+ {
+  "name": "No to Cyk",
+  "kind": "pub",
+  "street": "Chlebnicka",
+  "num": "2",
+  "web": "",
+  "hours": "Mo-Su 16:00+",
+  "lat": 54.348943,
+  "lon": 18.653713
+ },
+ {
+  "name": "Polskie Kino",
+  "kind": "bar",
+  "street": "Szeroka",
+  "num": "97",
+  "web": "",
+  "hours": "",
+  "lat": 54.351246,
+  "lon": 18.6544383
+ },
+ {
+  "name": "Muzeum Bursztynu",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "https://muzeumgdansk.pl/oddzialy-muzeum/muzeum-bursztynu/",
+  "hours": "Mo 12:00-18:00; Tu-Su 10:00-18:00",
+  "lat": 54.3541593,
+  "lon": 18.6499976
+ },
+ {
+  "name": "Schron",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3789054,
+  "lon": 18.7068462
+ },
+ {
+  "name": "Centrum Edukacji Archeologicznej \"Błękitny Baranek\"",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "https://archeologia.pl/archeologia_oddzialy/blekitny-baranek/",
+  "hours": "",
+  "lat": 54.3448232,
+  "lon": 18.6551556
+ },
+ {
+  "name": "Pool Salon",
+  "kind": "pub",
+  "street": "Targ Rybny",
+  "num": "10A",
+  "web": "http://www.pool-salon.pl/",
+  "hours": "16:00-24:00",
+  "lat": 54.3527663,
+  "lon": 18.6575077
+ },
+ {
+  "name": "Ratusz Głównego Miasta",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3487915,
+  "lon": 18.6526589
+ },
+ {
+  "name": "Klubogaleria Bunkier",
+  "kind": "nightclub",
+  "street": "Olejarna",
+  "num": "3",
+  "web": "http://bunkierclub.pl/",
+  "hours": "Su-Th 16:00-02:00; Fr-Sa 16:00-05:00",
+  "lat": 54.3544947,
+  "lon": 18.6547003
+ },
+ {
+  "name": "Parlament",
+  "kind": "nightclub",
+  "street": "Świętego Ducha",
+  "num": "2",
+  "web": "https://parlament.com.pl/",
+  "hours": "",
+  "lat": 54.3511359,
+  "lon": 18.6498358
+ },
+ {
+  "name": "Pijalnia wódki i piwa",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3485696,
+  "lon": 18.6542942
+ },
+ {
+  "name": "Pułapka",
+  "kind": "pub",
+  "street": "Straganiarska",
+  "num": "20",
+  "web": "",
+  "hours": "",
+  "lat": 54.352239,
+  "lon": 18.6562289
+ },
+ {
+  "name": "Underbeer",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3489608,
+  "lon": 18.6481685
+ },
+ {
+  "name": "Pod banderą",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3498083,
+  "lon": 18.6569615
+ },
+ {
+  "name": "Głaz Borkowskiego",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "https://crfop.gdos.gov.pl/CRFOP/widok/viewpomnikprzyrody.jsf?fop=PL.ZIPOP.1393.PP.2261011.6448",
+  "hours": "",
+  "lat": 54.3829214,
+  "lon": 18.5697271
+ },
+ {
+  "name": "Literacka",
+  "kind": "bar",
+  "street": "Mariacka",
+  "num": "50/52",
+  "web": "https://literacka.wixsite.com/literacka",
+  "hours": "",
+  "lat": 54.3499014,
+  "lon": 18.6541338
+ },
+ {
+  "name": "Pub Lawendowa",
+  "kind": "bar",
+  "street": "Lawendowa",
+  "num": "8",
+  "web": "",
+  "hours": "",
+  "lat": 54.3527983,
+  "lon": 18.6528068
+ },
+ {
+  "name": "Dwór Krzyżowniki",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3465081,
+  "lon": 18.5987057
+ },
+ {
+  "name": "Tramwaj Konstal 105Na",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3403722,
+  "lon": 18.6571198
+ },
+ {
+  "name": "Red Light Pub",
+  "kind": "pub",
+  "street": "Piwna",
+  "num": "28/31",
+  "web": "",
+  "hours": "Mo-Fr 00:00-02:00,17:00-24:00; Sa,Su 00:00-04:00,17:00-24:00",
+  "lat": 54.3493821,
+  "lon": 18.6521628
+ },
+ {
+  "name": "Mushrooms lounge bar",
+  "kind": "bar",
+  "street": "Wajdeloty",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.381638,
+  "lon": 18.6086275
+ },
+ {
+  "name": "Encyk Bar",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Mo-Th 17:00-00:00, Fr-Sa 17:00-02:00, Su 17:00-23:00",
+  "lat": 54.3789029,
+  "lon": 18.6168548
+ },
+ {
+  "name": "HiFi",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3773567,
+  "lon": 18.6204446
+ },
+ {
+  "name": "Cooltura",
+  "kind": "bar",
+  "street": "Okopowa",
+  "num": "7",
+  "web": "https://www.facebook.com/CoolturaChmielna101",
+  "hours": "Mo-Su 16:00-06:00",
+  "lat": 54.3487927,
+  "lon": 18.6466252
+ },
+ {
+  "name": "Cafe Szafa",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3520394,
+  "lon": 18.6505155
+ },
+ {
+  "name": "Crackhouse",
+  "kind": "nightclub",
+  "street": "Niterów",
+  "num": "29b",
+  "web": "",
+  "hours": "",
+  "lat": 54.3647777,
+  "lon": 18.6456207
+ },
+ {
+  "name": "Ryba Piła",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Mo-Th 12:00-22:00; Fr 12:00-24:00; Sa 00:00-01:00,12:00-24:00; Su 00:00-01:00,13:00-21:00",
+  "lat": 54.3547064,
+  "lon": 18.645984
+ },
+ {
+  "name": "Pracownia Zegarów Wieżowych",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "http://www.mhmg.pl/oddzial/3/muzeum-nauki-gdanskiej",
+  "hours": "Mo-Su 11:00-19:00",
+  "lat": 54.3539453,
+  "lon": 18.6509319
+ },
+ {
+  "name": "Gazeta Rock Café",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3501279,
+  "lon": 18.6489249
+ },
+ {
+  "name": "Hevelianum",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "http://www.hevelianum.pl",
+  "hours": "Tu-Fr 08:00-16:00; Sa-Su 10:00-18:00",
+  "lat": 54.3564109,
+  "lon": 18.6388477
+ },
+ {
+  "name": "B90",
+  "kind": "nightclub",
+  "street": "Elektryków",
+  "num": "80",
+  "web": "https://www.facebook.com/B90klub",
+  "hours": "",
+  "lat": 54.3645609,
+  "lon": 18.648474
+ },
+ {
+  "name": "Dąb zwycięstwa",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "https://crfop.gdos.gov.pl/CRFOP/widok/viewpomnikprzyrody.jsf?fop=PL.ZIPOP.1393.PP.2261011.7857",
+  "hours": "",
+  "lat": 54.3720925,
+  "lon": 18.6003
+ },
+ {
+  "name": "Loft Pub",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3533316,
+  "lon": 18.6496802
+ },
+ {
+  "name": "Kamienna Śluza",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3389845,
+  "lon": 18.6519551
+ },
+ {
+  "name": "Brama Swietojanska",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3514629,
+  "lon": 18.6578159
+ },
+ {
+  "name": "Wystawa samochodów klasycznych",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3828521,
+  "lon": 18.6053891
+ },
+ {
+  "name": "Mechaniczna Pomarańcza",
+  "kind": "bar",
+  "street": "Do Studzienki",
+  "num": "61",
+  "web": "http://mechanicznapomarancza.com/",
+  "hours": "Mo-Th 10:00-01:00",
+  "lat": 54.3697936,
+  "lon": 18.6101644
+ },
+ {
+  "name": "Craft Cocktails",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3501926,
+  "lon": 18.6510766
+ },
+ {
+  "name": "Stara Apteka",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3510373,
+  "lon": 18.6489174
+ },
+ {
+  "name": "Brama Św. Ducha",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3498701,
+  "lon": 18.6570446
+ },
+ {
+  "name": "Brama Chlebnicka",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3486742,
+  "lon": 18.6561846
+ },
+ {
+  "name": "Brama Straganiarska",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3521692,
+  "lon": 18.6578219
+ },
+ {
+  "name": "Brama Świętojańska",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3514747,
+  "lon": 18.6577523
+ },
+ {
+  "name": "Spichlerz Panna",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3507311,
+  "lon": 18.6589329
+ },
+ {
+  "name": "Spichlerz Miedź",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3508744,
+  "lon": 18.6589452
+ },
+ {
+  "name": "Spichlerz Oliwski",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3509985,
+  "lon": 18.6589903
+ },
+ {
+  "name": "Dom Angielski",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3486082,
+  "lon": 18.6554548
+ },
+ {
+  "name": "Zajazd z XVII w.",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3540398,
+  "lon": 18.6588343
+ },
+ {
+  "name": "Spichlerz Nowa Pakownia",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3492396,
+  "lon": 18.6605247
+ },
+ {
+  "name": "Widok III. Nad Kaczym Dołkiem",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://gzz.gda.pl/mapa?widoki",
+  "hours": "",
+  "lat": 54.372222,
+  "lon": 18.603333
+ },
+ {
+  "name": "Maszt z ORP \"Bolko\"",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "24/7",
+  "lat": 54.3509752,
+  "lon": 18.6595449
+ },
+ {
+  "name": "Pława bezpiecznej wody",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "24/7",
+  "lat": 54.3507338,
+  "lon": 18.6595366
+ },
+ {
+  "name": "Widok II. Podleśna Polana",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://gzz.gda.pl/mapa?widoki",
+  "hours": "",
+  "lat": 54.372724,
+  "lon": 18.588938
+ },
+ {
+  "name": "Widok IV. Wronia Górka",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://gzz.gda.pl/mapa?widoki",
+  "hours": "",
+  "lat": 54.3618198,
+  "lon": 18.6321674
+ },
+ {
+  "name": "Widok V. Spod Ślimaka",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://gzz.gda.pl/mapa?widoki",
+  "hours": "",
+  "lat": 54.3693483,
+  "lon": 18.6039173
+ },
+ {
+  "name": "cafe absinthe",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3510319,
+  "lon": 18.6486584
+ },
+ {
+  "name": "Irish Pub Piwnica",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Mo-Th 16:00-24:00; Fr 15:00-02:00; Sa 13:00-02:00; Su 14:00-24:00",
+  "lat": 54.3493637,
+  "lon": 18.647941
+ },
+ {
+  "name": "Franca",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3504224,
+  "lon": 18.6503143
+ },
+ {
+  "name": "Piwnica Romańska",
+  "kind": "museum",
+  "street": "Plac Dominikański",
+  "num": "1",
+  "web": "https://archeologia.pl/oddzialy/piwnica-romanska",
+  "hours": "",
+  "lat": 54.3524863,
+  "lon": 18.6517587
+ },
+ {
+  "name": "LAbeerYNT",
+  "kind": "pub",
+  "street": "Szeroka",
+  "num": "97",
+  "web": "https://labeerynt.pl/",
+  "hours": "Mo-Th 15:00-01:00; Fr-Sa 12:00-03:00; Su 12:00-00:00",
+  "lat": 54.3512131,
+  "lon": 18.6545028
+ },
+ {
+  "name": "Nadbałtyckie Centrum Kultury",
+  "kind": "arts_centre",
+  "street": "",
+  "num": "",
+  "web": "https://www.nck.org.pl/",
+  "hours": "",
+  "lat": 54.3539034,
+  "lon": 18.6479336
+ },
+ {
+  "name": "Graciarnia",
+  "kind": "pub",
+  "street": "Romana Dmowskiego",
+  "num": "15",
+  "web": "",
+  "hours": "Mo-Su 14:00-23:00; Fr-Sa 14:00-03:30",
+  "lat": 54.3795056,
+  "lon": 18.6071038
+ },
+ {
+  "name": "Quest Rooms",
+  "kind": "escape_game",
+  "street": "Startowa",
+  "num": "4A",
+  "web": "https://questrooms.pl/",
+  "hours": "Mo-Fr 13:00-22:00; Sa,Su 11:30-22:00",
+  "lat": 54.3970761,
+  "lon": 18.5949291
+ },
+ {
+  "name": "Park Na Zboczu",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3460525,
+  "lon": 18.6059473
+ },
+ {
+  "name": "Widok X. \"Natalia\"",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://gzz.gda.pl/mapa?widoki",
+  "hours": "",
+  "lat": 54.3473911,
+  "lon": 18.6337458
+ },
+ {
+  "name": "Widok XI. \"Katarzyna\"",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://gzz.gda.pl/mapa?widoki",
+  "hours": "",
+  "lat": 54.3726891,
+  "lon": 18.6064733
+ },
+ {
+  "name": "Żuraw półbramowy wypadowy",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3604419,
+  "lon": 18.6614094
+ },
+ {
+  "name": "Dom Fahrenheita",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3476773,
+  "lon": 18.652395
+ },
+ {
+  "name": "100cznia",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Tu-Th 13:00-24:00; Mo off, Fr 13:00-02:00, Sa 12:00-02:00, Su 12:00-24:00",
+  "lat": 54.3638741,
+  "lon": 18.6454029
+ },
+ {
+  "name": "Klub B90",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "https://www.b90.pl/",
+  "hours": "",
+  "lat": 54.3645719,
+  "lon": 18.6487821
+ },
+ {
+  "name": "Widok XII. \"Jerzy\"",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://gzz.gda.pl/mapa?widoki",
+  "hours": "",
+  "lat": 54.3190496,
+  "lon": 18.6253928
+ },
+ {
+  "name": "Widok XIII. \"Antoni\"",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://gzz.gda.pl/mapa?widoki",
+  "hours": "",
+  "lat": 54.3687785,
+  "lon": 18.6177212
+ },
+ {
+  "name": "Bastion Żubr",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3391387,
+  "lon": 18.6488992
+ },
+ {
+  "name": "Galeria Starych Zabawek",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "http://stare-zabawki.pl/",
+  "hours": "Tu-Fr 11:00-18:00; Sa-Su 11:00-19:00",
+  "lat": 54.349858,
+  "lon": 18.6513991
+ },
+ {
+  "name": "Medyk",
+  "kind": "nightclub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3611239,
+  "lon": 18.6288478
+ },
+ {
+  "name": "Tka",
+  "kind": "nightclub",
+  "street": "",
+  "num": "",
+  "web": "http://www.tkackaclub.pl",
+  "hours": "We-Sa 21:00-05:00",
+  "lat": 54.3500601,
+  "lon": 18.6487517
+ },
+ {
+  "name": "Wiśniewski",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "https://www.wisniewski.ltd/",
+  "hours": "",
+  "lat": 54.3497453,
+  "lon": 18.6517427
+ },
+ {
+  "name": "Craft Cocktails",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Su-Tu 18:00-01:00; We-Th 18:00-02:00; Fr-Sa 18:00-03:00",
+  "lat": 54.3508503,
+  "lon": 18.655142
+ },
+ {
+  "name": "Muzeum Lechii Gdańsk",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3908437,
+  "lon": 18.6390983
+ },
+ {
+  "name": "Gatsby",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3490291,
+  "lon": 18.6543966
+ },
+ {
+  "name": "Z innej beczki",
+  "kind": "pub",
+  "street": "Wajdeloty",
+  "num": "10/1",
+  "web": "https://www.facebook.com/zinnejbeczki.pub/",
+  "hours": "Mo-Th 16:00-23:00, Fr,Sa 16:00-01:00, Su 16:00-22:00",
+  "lat": 54.3817593,
+  "lon": 18.6104776
+ },
+ {
+  "name": "Winość",
+  "kind": "bar",
+  "street": "Wajdeloty",
+  "num": "21",
+  "web": "",
+  "hours": "Tu-Th 17:00-22:00; Fr,Sa 15:00-24:00; Su 15:00-22:00",
+  "lat": 54.3816142,
+  "lon": 18.6107078
+ },
+ {
+  "name": "Akademicki Klub Politechniki Gdańskiej „Kwadratowa”",
+  "kind": "nightclub",
+  "street": "Siedlicka",
+  "num": "4",
+  "web": "https://www.kwadratowa.pl/",
+  "hours": "Fr,Sa 21:00-04:30",
+  "lat": 54.3707586,
+  "lon": 18.6154962
+ },
+ {
+  "name": "107 Ogarna",
+  "kind": "pub",
+  "street": "Ogarna",
+  "num": "107D",
+  "web": "https://www.facebook.com/107ogarnia",
+  "hours": "Mo-Th 18:00-01:00; Fr-Sa 16:00-02:00; Su 18:00-01:00",
+  "lat": 54.3483589,
+  "lon": 18.6513834
+ },
+ {
+  "name": "Widok na Strzyżę i Zaspę",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3857173,
+  "lon": 18.5762102
+ },
+ {
+  "name": "Żuraw portowy z końca XIX 2.",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "24/7",
+  "lat": 54.3493186,
+  "lon": 18.6600429
+ },
+ {
+  "name": "Żuraw M3",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://facebook.com/zurawm3",
+  "hours": "",
+  "lat": 54.3641009,
+  "lon": 18.6537253
+ },
+ {
+  "name": "Z energią!",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "http://www.hewelianum.pl",
+  "hours": "",
+  "lat": 54.3547799,
+  "lon": 18.6371627
+ },
+ {
+  "name": "Galeria ruchu",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "http://www.hewelianum.pl",
+  "hours": "",
+  "lat": 54.3547529,
+  "lon": 18.6381966
+ },
+ {
+  "name": "Zbiornik Wody \"Stary Sobieski\"",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3690269,
+  "lon": 18.6169129
+ },
+ {
+  "name": "100cznia",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3639092,
+  "lon": 18.6456289
+ },
+ {
+  "name": "Spichlerz Deo Gloria",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3490958,
+  "lon": 18.6577562
+ },
+ {
+  "name": "Sassy",
+  "kind": "nightclub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Fr-Sa 22:00-05:00",
+  "lat": 54.3489945,
+  "lon": 18.6579803
+ },
+ {
+  "name": "Roof Top by Sassy",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Mo-Su 13:00-01:00",
+  "lat": 54.3490781,
+  "lon": 18.6579343
+ },
+ {
+  "name": "Salty Bar",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3490303,
+  "lon": 18.6575822
+ },
+ {
+  "name": "La Muerte",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3496251,
+  "lon": 18.6539243
+ },
+ {
+  "name": "Gdańska Galeria Guntera Grassa",
+  "kind": "gallery",
+  "street": "Szeroka",
+  "num": "37",
+  "web": "",
+  "hours": "Tu-Su 10:00-18:00",
+  "lat": 54.351177,
+  "lon": 18.6537014
+ },
+ {
+  "name": "Widok XV. \"Joanna\"",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://gzz.gda.pl/mapa?widoki",
+  "hours": "",
+  "lat": 54.380822,
+  "lon": 18.5813691
+ },
+ {
+  "name": "Widok XIV. \"Ewelina\"",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://gzz.gda.pl/mapa?widoki",
+  "hours": "",
+  "lat": 54.4077119,
+  "lon": 18.6433272
+ },
+ {
+  "name": "Punkt Humboldta",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.4108412,
+  "lon": 18.6588992
+ },
+ {
+  "name": "Game Over Tkacka",
+  "kind": "bar",
+  "street": "Tkacka",
+  "num": "27",
+  "web": "https://gameover.pub/",
+  "hours": "",
+  "lat": 54.3502491,
+  "lon": 18.649398
+ },
+ {
+  "name": "Pub Zappio",
+  "kind": "pub",
+  "street": "Świętojańska",
+  "num": "49",
+  "web": "http://www.zappio.pl/pub",
+  "hours": "",
+  "lat": 54.3516499,
+  "lon": 18.6569768
+ },
+ {
+  "name": "Widok XVI. \"Maciej\"",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://gzz.gda.pl/mapa?widoki",
+  "hours": "",
+  "lat": 54.3506056,
+  "lon": 18.6225946
+ },
+ {
+  "name": "Ministerstwo Śledzia i Wódki",
+  "kind": "pub",
+  "street": "Targ Drzewny",
+  "num": "3-7",
+  "web": "",
+  "hours": "",
+  "lat": 54.3525603,
+  "lon": 18.648265
+ },
+ {
+  "name": "Muzeum Narodowe w Gdańsku - Oddział Sztuki Nowoczesnej",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "https://www.mng.gda.pl/",
+  "hours": "",
+  "lat": 54.4110362,
+  "lon": 18.5603178
+ },
+ {
+  "name": "WL4 Przestrzeń Sztuki",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3603855,
+  "lon": 18.6610189
+ },
+ {
+  "name": "Stocznia Gdańska w PRL",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3625735,
+  "lon": 18.6549725
+ },
+ {
+  "name": "Ślimak",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3810771,
+  "lon": 18.577236
+ },
+ {
+  "name": "Dystans",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Th-Sa 16:00-03:00",
+  "lat": 54.3642091,
+  "lon": 18.6488355
+ },
+ {
+  "name": "Ulica Elektryków",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Th-Sa 16:00-03:00",
+  "lat": 54.3644727,
+  "lon": 18.6481334
+ },
+ {
+  "name": "SCG Park",
+  "kind": "bar",
+  "street": "Elektryków",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3643057,
+  "lon": 18.6489164
+ },
+ {
+  "name": "Pixel",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "https://instagram.com/pixelcocktail",
+  "hours": "",
+  "lat": 54.3471258,
+  "lon": 18.6582917
+ },
+ {
+  "name": "Sports Pub",
+  "kind": "pub",
+  "street": "Księdza Leona Miszewskiego",
+  "num": "12/13",
+  "web": "",
+  "hours": "",
+  "lat": 54.3770562,
+  "lon": 18.6147892
+ },
+ {
+  "name": "Widok XVIII. \"Totwenek\"",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "https://gzz.gda.pl/mapa?widoki",
+  "hours": "",
+  "lat": 54.3615493,
+  "lon": 18.6123311
+ },
+ {
+  "name": "Zakręt Pięciu Gwizdków",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.4016635,
+  "lon": 18.6811787
+ },
+ {
+  "name": "Zabytkowa grota widokowa",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.4007614,
+  "lon": 18.5612134
+ },
+ {
+  "name": "Głazy narzutowe",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3926581,
+  "lon": 18.5608649
+ },
+ {
+  "name": "Groty szeptów",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.4105469,
+  "lon": 18.561625
+ },
+ {
+  "name": "Dawne stanowisko FLAK (1945)",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3797302,
+  "lon": 18.5779222
+ },
+ {
+  "name": "Grid Arthub",
+  "kind": "arts_centre",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3642174,
+  "lon": 18.6455536
+ },
+ {
+  "name": "Cypelek",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3779919,
+  "lon": 18.5640132
+ },
+ {
+  "name": "Galeria Layup",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3648879,
+  "lon": 18.6448315
+ },
+ {
+  "name": "Moja Wina",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Th-Sa 16:00-03:00",
+  "lat": 54.364376,
+  "lon": 18.6484773
+ },
+ {
+  "name": "Nie Przelewki",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Th-Sa 16:00-03:00",
+  "lat": 54.3643812,
+  "lon": 18.6485853
+ },
+ {
+  "name": "Drizzly Grizzly",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3648187,
+  "lon": 18.6484322
+ },
+ {
+  "name": "Bycze Wzgórze",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3742211,
+  "lon": 18.5726736
+ },
+ {
+  "name": "Czarna Perla",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3524877,
+  "lon": 18.6581474
+ },
+ {
+  "name": "Gdańska Szkoła Artystyczna",
+  "kind": "arts_centre",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Mo-Sa 09:00-21:00; Su 10:00-20:00",
+  "lat": 54.3774616,
+  "lon": 18.6068227
+ },
+ {
+  "name": "Widok na Suchanino",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3604988,
+  "lon": 18.5971297
+ },
+ {
+  "name": "Jägspot",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3509204,
+  "lon": 18.6505445
+ },
+ {
+  "name": "Celtic Pub",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3494917,
+  "lon": 18.6584414
+ },
+ {
+  "name": "Sky Bar",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.34962,
+  "lon": 18.6589988
+ },
+ {
+  "name": "Dom Gdańskiego Browarnika",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3547076,
+  "lon": 18.6598965
+ },
+ {
+  "name": "Muzeum Inkluzji w Bursztynie",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3953312,
+  "lon": 18.5763608
+ },
+ {
+  "name": "Relikty Mostu Weisera",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3825791,
+  "lon": 18.5769117
+ },
+ {
+  "name": "Oblackie Centrum Edukacji i Kultury",
+  "kind": "arts_centre",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3543992,
+  "lon": 18.6468391
+ },
+ {
+  "name": "Widok na Łostowice",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3246522,
+  "lon": 18.5897372
+ },
+ {
+  "name": "Widok na Morenę",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3496788,
+  "lon": 18.5753404
+ },
+ {
+  "name": "Widok na Główne Miasto",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3459374,
+  "lon": 18.6408846
+ },
+ {
+  "name": "Mała Sycylia",
+  "kind": "bar",
+  "street": "Doki",
+  "num": "1",
+  "web": "",
+  "hours": "",
+  "lat": 54.3606769,
+  "lon": 18.6620771
+ },
+ {
+  "name": "Widok na Maćkowy",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3051115,
+  "lon": 18.59576
+ },
+ {
+  "name": "Marynarz",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3813314,
+  "lon": 18.6000634
+ },
+ {
+  "name": "DeJa Vu Muzeum",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "https://dejavumuzeum.pl/",
+  "hours": "Mo-Fr 10:00-18:00; Sa,Su 10:00-20:00",
+  "lat": 54.3472842,
+  "lon": 18.6634396
+ },
+ {
+  "name": "Domin Gdn",
+  "kind": "arts_centre",
+  "street": "",
+  "num": "",
+  "web": "https://domin-gdansk.pl/",
+  "hours": "Mo-Fr 10:00-17:00",
+  "lat": 54.3765316,
+  "lon": 18.6079427
+ },
+ {
+  "name": "Winston Bar",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "https://winstonbar.com/",
+  "hours": "Mo-Th 17:00-24:00; Fr-Sa 17:00-02:00; Su 16:00-24:00",
+  "lat": 54.3493904,
+  "lon": 18.6499338
+ },
+ {
+  "name": "Cybermachina",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "https://www.cybermachina.pl/",
+  "hours": "Mo-Th 16:00-24:00; Fr-Sa 16:00-27:00; Su 16:00-24:00",
+  "lat": 54.3490479,
+  "lon": 18.6462723
+ },
+ {
+  "name": "Podole Wielkie i Przyjaciele",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "https://podolewielkie.pl/",
+  "hours": "Mo-Th 12:00-21:00; Fr,Sa 12:00-22:00; Su 11:00-20:00",
+  "lat": 54.3489935,
+  "lon": 18.6545034
+ },
+ {
+  "name": "Game Over Podgarbary",
+  "kind": "bar",
+  "street": "Podgarbary",
+  "num": "10",
+  "web": "https://gameover.pub/",
+  "hours": "",
+  "lat": 54.3488502,
+  "lon": 18.6472938
+ },
+ {
+  "name": "Widok na Emaus",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3515902,
+  "lon": 18.6053145
+ },
+ {
+  "name": "Galeria Blik",
+  "kind": "gallery",
+  "street": "Podbielańska",
+  "num": "1D",
+  "web": "https://galeriablik.pl",
+  "hours": "Mo-Fr 12:00-18:00; Sa 12:00-17:00",
+  "lat": 54.3543282,
+  "lon": 18.6476327
+ },
+ {
+  "name": "Widok na Brętowo",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3662717,
+  "lon": 18.5745821
+ },
+ {
+  "name": "Escape Time",
+  "kind": "escape_game",
+  "street": "Asesora",
+  "num": "78",
+  "web": "",
+  "hours": "",
+  "lat": 54.3405324,
+  "lon": 18.606359
+ },
+ {
+  "name": "Filip",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3595963,
+  "lon": 18.6474151
+ },
+ {
+  "name": "Scena Teatralna NOT",
+  "kind": "theatre",
+  "street": "Rajska",
+  "num": "6",
+  "web": "https://www.facebook.com/scena.teatralna.not.gda/?locale=pl_PL",
+  "hours": "",
+  "lat": 54.3553503,
+  "lon": 18.6506801
+ },
+ {
+  "name": "Cosma Gallery",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.4020006,
+  "lon": 18.5635793
+ },
+ {
+  "name": "Galeria w Zaułku",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3571899,
+  "lon": 18.6502916
+ },
+ {
+  "name": "Widok na Zakoniczyn",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3230696,
+  "lon": 18.5882945
+ },
+ {
+  "name": "Pionova",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "http://pionova.net.pl/",
+  "hours": "",
+  "lat": 54.3546446,
+  "lon": 18.6544485
+ },
+ {
+  "name": "Tiki Jungle",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Su-Th 17:00-00:00; Fr-Sa 17:00-02:00",
+  "lat": 54.3499865,
+  "lon": 18.6515827
+ },
+ {
+  "name": "Escaperooms.pl",
+  "kind": "escape_game",
+  "street": "",
+  "num": "",
+  "web": "https://escaperooms.pl/",
+  "hours": "",
+  "lat": 54.3896004,
+  "lon": 18.6419361
+ },
+ {
+  "name": "Neon Room",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Mo-Sa 09:00-21:00; Su 10:00-20:00",
+  "lat": 54.4040945,
+  "lon": 18.5873876
+ },
+ {
+  "name": "Cannon",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3387216,
+  "lon": 18.6501265
+ },
+ {
+  "name": "Wirnik Pierwszej Turbiny AEG 10",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3525306,
+  "lon": 18.6606673
+ },
+ {
+  "name": "Sports pub",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3910577,
+  "lon": 18.6404826
+ },
+ {
+  "name": "Pieprz Club",
+  "kind": "nightclub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.358809,
+  "lon": 18.6477803
+ },
+ {
+  "name": "Makieta Muzeum II Wojny Światowej",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.356165,
+  "lon": 18.6597322
+ },
+ {
+  "name": "Sekcje u-boota",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.395289,
+  "lon": 18.6814006
+ },
+ {
+  "name": "Żuraw portowy z końca XIX w.",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3499655,
+  "lon": 18.659881
+ },
+ {
+  "name": "Spojrzenie na Gdańsk",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3497062,
+  "lon": 18.6047044
+ },
+ {
+  "name": "Sea More",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3495573,
+  "lon": 18.655235
+ },
+ {
+  "name": "1minute",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3558814,
+  "lon": 18.6450804
+ },
+ {
+  "name": "Escape Time",
+  "kind": "escape_game",
+  "street": "",
+  "num": "",
+  "web": "https://escapetime.pl/",
+  "hours": "Mo-Su 11:00-21:30",
+  "lat": 54.3909277,
+  "lon": 18.590528
+ },
+ {
+  "name": "Strefa historyczna Wolne Miasto Gdańsk",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "https://muzeumwmg.pl",
+  "hours": "Tu-Su 12:00-17:00",
+  "lat": 54.3482004,
+  "lon": 18.6557062
+ },
+ {
+  "name": "Monk",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3523537,
+  "lon": 18.6471528
+ },
+ {
+  "name": "Off",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3523292,
+  "lon": 18.6472304
+ },
+ {
+  "name": "La Małpa",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3469628,
+  "lon": 18.6409639
+ },
+ {
+  "name": "Gdańskie Centrum Sztuki Współczesnej",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "https://ggm.gda.pl",
+  "hours": "",
+  "lat": 54.3496146,
+  "lon": 18.6521445
+ },
+ {
+  "name": "Gdańska Galeria Miejska 2",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "https://ggm.gda.pl",
+  "hours": "Tu-Su 12:00-19:00",
+  "lat": 54.3472297,
+  "lon": 18.6549767
+ },
+ {
+  "name": "Muzeum Uniwersytetu Gdańskiego",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "https://muzeum.ug.edu.pl",
+  "hours": "",
+  "lat": 54.3535934,
+  "lon": 18.6472688
+ },
+ {
+  "name": "Red Dog Bar",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3484933,
+  "lon": 18.6526913
+ },
+ {
+  "name": "Bar pod Rurami",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3744346,
+  "lon": 18.6274863
+ },
+ {
+  "name": "Winda",
+  "kind": "arts_centre",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3866394,
+  "lon": 18.6284136
+ },
+ {
+  "name": "Galeria ZPAP",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "https://www.zpap-gdansk.pl",
+  "hours": "",
+  "lat": 54.3497844,
+  "lon": 18.6548151
+ },
+ {
+  "name": "Taras widokowy nr 2",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.4033095,
+  "lon": 18.6840494
+ },
+ {
+  "name": "Taras widokowy nr 1",
+  "kind": "viewpoint",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.4036265,
+  "lon": 18.6836115
+ },
+ {
+  "name": "Uwaga Piwo",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.349692,
+  "lon": 18.6519356
+ },
+ {
+  "name": "Tarapaty",
+  "kind": "escape_game",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3830959,
+  "lon": 18.5908344
+ },
+ {
+  "name": "Studio 1",
+  "kind": "nightclub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3476157,
+  "lon": 18.6567177
+ },
+ {
+  "name": "Zbrojownia Sztuki",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3506229,
+  "lon": 18.6493223
+ },
+ {
+  "name": "Galeria ZPAP Dom Liter",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "https://www.zpap-gdansk.pl",
+  "hours": "",
+  "lat": 54.3505078,
+  "lon": 18.6499908
+ },
+ {
+  "name": "Międzynarodowe Stowarzyszenie Bursztynników",
+  "kind": "gallery",
+  "street": "Jana Heweliusza",
+  "num": "31",
+  "web": "https://www.amber.org.pl",
+  "hours": "Mo-Fr 09:00-17:00",
+  "lat": 54.3571421,
+  "lon": 18.6530799
+ },
+ {
+  "name": "Cannon",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3407254,
+  "lon": 18.6452289
+ },
+ {
+  "name": "Cannon",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3406076,
+  "lon": 18.6451428
+ },
+ {
+  "name": "Cannon",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3405848,
+  "lon": 18.64522
+ },
+ {
+  "name": "Cannon",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.338465,
+  "lon": 18.6488184
+ },
+ {
+  "name": "Autone Jan Kołodziej",
+  "kind": "arts_centre",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3650308,
+  "lon": 18.6485396
+ },
+ {
+  "name": "Palladinski",
+  "kind": "arts_centre",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3652065,
+  "lon": 18.6484033
+ },
+ {
+  "name": "100cznia Inside",
+  "kind": "arts_centre",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3642919,
+  "lon": 18.6445381
+ },
+ {
+  "name": "Kasia Ekes",
+  "kind": "arts_centre",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3651443,
+  "lon": 18.6484075
+ },
+ {
+  "name": "Everyday Holiday",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3639851,
+  "lon": 18.6455574
+ },
+ {
+  "name": "Plot Social Club",
+  "kind": "nightclub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3642269,
+  "lon": 18.6456844
+ },
+ {
+  "name": "Anna Songin Mucha",
+  "kind": "arts_centre",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3651456,
+  "lon": 18.6484637
+ },
+ {
+  "name": "Open Doors",
+  "kind": "pub",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3469714,
+  "lon": 18.6594676
+ },
+ {
+  "name": "Gdański Ośrodek Dokumentacji Nauczania Jana Pawła II",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "https://www.opatrznosc.gda.pl/aktualnosci/parafia/85229/gdanski-osrodek-dokumentacji-nauczania-jana-pawla-ii",
+  "hours": "",
+  "lat": 54.4008292,
+  "lon": 18.6101115
+ },
+ {
+  "name": "Bałtycki Teatr Różnorodności",
+  "kind": "theatre",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3483225,
+  "lon": 18.6480767
+ },
+ {
+  "name": "Velvet Vine",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Mo off; Tu-Th 11:00-20:00; Fr-Sa 11:00-22:00; Su 12:00-18:00",
+  "lat": 54.3473611,
+  "lon": 18.6638618
+ },
+ {
+  "name": "Gdańska Galeria Fotografii",
+  "kind": "gallery",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.363216,
+  "lon": 18.6478733
+ },
+ {
+  "name": "Podziemna Pułapka",
+  "kind": "escape_game",
+  "street": "Lilli Wenedy",
+  "num": "18C",
+  "web": "https://podziemnapulapka.pl/",
+  "hours": "Mo-Fr 16:00-21:30; Sa-Su 13:00-21:30",
+  "lat": 54.3866388,
+  "lon": 18.6171505
+ },
+ {
+  "name": "Zamek w Gdańsku",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3538251,
+  "lon": 18.659813
+ },
+ {
+  "name": "Muzeum Poczty Polskiej",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "https://muzeumgdansk.pl/wizyta-w-muzeum-gdanska/oddzialy/",
+  "hours": "Mo 12:00-18:00; Tu-Su 10:00-18:00",
+  "lat": 54.3551386,
+  "lon": 18.6570063
+ },
+ {
+  "name": "Brama Wyżynna",
+  "kind": "attraction",
+  "street": "Wały Jagiellońskie",
+  "num": "2A",
+  "web": "",
+  "hours": "",
+  "lat": 54.3499297,
+  "lon": 18.6465252
+ },
+ {
+  "name": "Bazylika Konkatedralna Wniebowzięcia Najświętszej Maryi Panny",
+  "kind": "place_of_worship",
+  "street": "Podkramarska",
+  "num": "5",
+  "web": "https://bazylikamariacka.gdansk.pl/",
+  "hours": "",
+  "lat": 54.349807,
+  "lon": 18.6530127
+ },
+ {
+  "name": "Muzeum Narodowe w Gdańsku",
+  "kind": "museum",
+  "street": "Toruńska",
+  "num": "1",
+  "web": "https://www.mng.gda.pl/",
+  "hours": "Mo off; Tu-Su 11:00-18:00",
+  "lat": 54.3454991,
+  "lon": 18.6469849
+ },
+ {
+  "name": "Ratusz Głównego Miasta",
+  "kind": "museum",
+  "street": "Długa",
+  "num": "46/47",
+  "web": "",
+  "hours": "We, Fr-Mo 10:00-16:00; Th 10:00-18:00",
+  "lat": 54.3488986,
+  "lon": 18.6526886
+ },
+ {
+  "name": "Dwór Artusa",
+  "kind": "museum",
+  "street": "Długi Targ",
+  "num": "44",
+  "web": "",
+  "hours": "",
+  "lat": 54.3488003,
+  "lon": 18.6533914
+ },
+ {
+  "name": "Dwór Bractwa św. Jerzego",
+  "kind": "attraction",
+  "street": "Targ Węglowy",
+  "num": "27",
+  "web": "",
+  "hours": "",
+  "lat": 54.349809,
+  "lon": 18.6480245
+ },
+ {
+  "name": "Baszta Jacek",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3528474,
+  "lon": 18.6512388
+ },
+ {
+  "name": "Ośrodek Kultury Morskiej",
+  "kind": "museum",
+  "street": "Tokarska",
+  "num": "21/25",
+  "web": "http://www.cmm.pl/osrodek-kultury-morskiej",
+  "hours": "Mo-Su 10:00-18:00",
+  "lat": 54.3508587,
+  "lon": 18.6573391
+ },
+ {
+  "name": "Spichlerz Królewski",
+  "kind": "attraction",
+  "street": "Ołowianka",
+  "num": "1",
+  "web": "",
+  "hours": "",
+  "lat": 54.352075,
+  "lon": 18.6591015
+ },
+ {
+  "name": "Albatros",
+  "kind": "bar",
+  "street": "Chwaszczyńska",
+  "num": "2",
+  "web": "",
+  "hours": "",
+  "lat": 54.375814,
+  "lon": 18.6335315
+ },
+ {
+  "name": "Latarnia Morska Gdańsk Nowy Port",
+  "kind": "attraction",
+  "street": "Przemysłowa",
+  "num": "5",
+  "web": "",
+  "hours": "",
+  "lat": 54.4062779,
+  "lon": 18.6611996
+ },
+ {
+  "name": "Nowy Ratusz",
+  "kind": "townhall",
+  "street": "Wały Jagiellońskie",
+  "num": "1",
+  "web": "",
+  "hours": "",
+  "lat": 54.3524638,
+  "lon": 18.6452709
+ },
+ {
+  "name": "Kościół pw. Świętej Elżbiety",
+  "kind": "place_of_worship",
+  "street": "Elżbietańska",
+  "num": "1",
+  "web": "",
+  "hours": "",
+  "lat": 54.3538727,
+  "lon": 18.6460772
+ },
+ {
+  "name": "Dom Opatów Pelplińskich",
+  "kind": "attraction",
+  "street": "Elżbietańska",
+  "num": "3",
+  "web": "",
+  "hours": "",
+  "lat": 54.3535205,
+  "lon": 18.646927
+ },
+ {
+  "name": "Ratusz Starego Miasta",
+  "kind": "attraction",
+  "street": "Korzenna",
+  "num": "33/35",
+  "web": "",
+  "hours": "",
+  "lat": 54.3539639,
+  "lon": 18.6480183
+ },
+ {
+  "name": "Kościół pw. Świętego Józefa",
+  "kind": "place_of_worship",
+  "street": "Bielańska",
+  "num": "2",
+  "web": "",
+  "hours": "",
+  "lat": 54.3541571,
+  "lon": 18.6471859
+ },
+ {
+  "name": "Wielki Młyn",
+  "kind": "attraction",
+  "street": "Wielkie Młyny",
+  "num": "16",
+  "web": "",
+  "hours": "",
+  "lat": 54.3540329,
+  "lon": 18.6499108
+ },
+ {
+  "name": "Kościół pw. Świętej Katarzyny",
+  "kind": "place_of_worship",
+  "street": "Profesorska",
+  "num": "6",
+  "web": "",
+  "hours": "",
+  "lat": 54.3541241,
+  "lon": 18.6512989
+ },
+ {
+  "name": "Dom Wędkarza",
+  "kind": "attraction",
+  "street": "Rajska",
+  "num": "2",
+  "web": "",
+  "hours": "",
+  "lat": 54.3547808,
+  "lon": 18.6509788
+ },
+ {
+  "name": "Bazylika Świętej Brygidy",
+  "kind": "place_of_worship",
+  "street": "Profesorska",
+  "num": "15",
+  "web": "https://www.brygida.gdansk.pl/",
+  "hours": "Mo-Su 10:00-18:00",
+  "lat": 54.3545988,
+  "lon": 18.6522324
+ },
+ {
+  "name": "Zbrojownia",
+  "kind": "attraction",
+  "street": "Targ Węglowy",
+  "num": "4",
+  "web": "",
+  "hours": "",
+  "lat": 54.3506998,
+  "lon": 18.6490454
+ },
+ {
+  "name": "Baszta Kotwiczników",
+  "kind": "attraction",
+  "street": "Kotwiczników",
+  "num": "20",
+  "web": "",
+  "hours": "",
+  "lat": 54.3464647,
+  "lon": 18.6544765
+ },
+ {
+  "name": "Brama Żuraw",
+  "kind": "attraction",
+  "street": "Szeroka",
+  "num": "67/68",
+  "web": "",
+  "hours": "",
+  "lat": 54.3505667,
+  "lon": 18.6574549
+ },
+ {
+  "name": "Sień Gdańska",
+  "kind": "attraction",
+  "street": "Długi Targ",
+  "num": "43",
+  "web": "",
+  "hours": "",
+  "lat": 54.34872,
+  "lon": 18.6535776
+ },
+ {
+  "name": "Złota Kamienica",
+  "kind": "attraction",
+  "street": "Długi Targ",
+  "num": "41/42",
+  "web": "",
+  "hours": "",
+  "lat": 54.3486676,
+  "lon": 18.6538079
+ },
+ {
+  "name": "Kaplica Królewska",
+  "kind": "place_of_worship",
+  "street": "Świętego Ducha",
+  "num": "58",
+  "web": "",
+  "hours": "",
+  "lat": 54.3503039,
+  "lon": 18.653715
+ },
+ {
+  "name": "Dom Uphagena",
+  "kind": "museum",
+  "street": "Długa",
+  "num": "12",
+  "web": "https://muzeumgdansk.pl/oddzialy-muzeum/dom-uphagena/",
+  "hours": "Tu 10:00-13:00; We, Fr-Su 10:00-16:00; Th 10:00-18:00",
+  "lat": 54.349232,
+  "lon": 18.649272
+ },
+ {
+  "name": "Mała Zbrojownia",
+  "kind": "attraction",
+  "street": "Plac Wałowy",
+  "num": "15",
+  "web": "",
+  "hours": "",
+  "lat": 54.3418303,
+  "lon": 18.6464454
+ },
+ {
+  "name": "Polsat Plus Arena Gdańsk",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "https://polsatplusarenagdansk.pl/",
+  "hours": "",
+  "lat": 54.3899589,
+  "lon": 18.6403314
+ },
+ {
+  "name": "Baszta Łabędź",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3534013,
+  "lon": 18.6580636
+ },
+ {
+  "name": "Sala BHP",
+  "kind": "museum",
+  "street": "Księdza Jerzego Popiełuszki",
+  "num": "6",
+  "web": "https://www.salabhp.pl/",
+  "hours": "10:00-18:00",
+  "lat": 54.3614622,
+  "lon": 18.6519543
+ },
+ {
+  "name": "NOMUS",
+  "kind": "arts_centre",
+  "street": "Stefana Jaracza",
+  "num": "14",
+  "web": "https://nomus.gda.pl/pl/",
+  "hours": "",
+  "lat": 54.3631635,
+  "lon": 18.6480476
+ },
+ {
+  "name": "Mleczny Piotr",
+  "kind": "arts_centre",
+  "street": "Księdza Jerzego Popiełuszki",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3605327,
+  "lon": 18.6618956
+ },
+ {
+  "name": "SS Sołdek",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Mo-Su 10:00-18:00",
+  "lat": 54.3514493,
+  "lon": 18.6586375
+ },
+ {
+  "name": "Baszta Słomiana",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3505268,
+  "lon": 18.6486345
+ },
+ {
+  "name": "Bastion Wilk",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3381201,
+  "lon": 18.6542022
+ },
+ {
+  "name": "Bastion Wyskok",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3386903,
+  "lon": 18.6584196
+ },
+ {
+  "name": "Bastion św. Gertrudy",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3405449,
+  "lon": 18.6453036
+ },
+ {
+  "name": "Bastion Żubr",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3387597,
+  "lon": 18.6497218
+ },
+ {
+  "name": "Brama Nizinna",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3401226,
+  "lon": 18.6474755
+ },
+ {
+  "name": "Palmiarnia",
+  "kind": "attraction",
+  "street": "Opata Jacka Rybińskiego",
+  "num": "12C",
+  "web": "",
+  "hours": "Tu-Su 10:00-18:00",
+  "lat": 54.4107705,
+  "lon": 18.562243
+ },
+ {
+  "name": "Kościół pw. Świętego Jana",
+  "kind": "place_of_worship",
+  "street": "Świętojańska",
+  "num": "51",
+  "web": "",
+  "hours": "10:00-18:00",
+  "lat": 54.3518759,
+  "lon": 18.6563424
+ },
+ {
+  "name": "Złota Brama",
+  "kind": "attraction",
+  "street": "Wełniarska",
+  "num": "27",
+  "web": "",
+  "hours": "",
+  "lat": 54.3496722,
+  "lon": 18.6480215
+ },
+ {
+  "name": "Kościół pw. Świętej Barbary",
+  "kind": "place_of_worship",
+  "street": "Długie Ogrody",
+  "num": "19",
+  "web": "https://www.sw-barbara.vn.pl/",
+  "hours": "",
+  "lat": 54.347975,
+  "lon": 18.663802
+ },
+ {
+  "name": "Brama Żuławska",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.348465,
+  "lon": 18.668955
+ },
+ {
+  "name": "Baszta Mała Stągiewna",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3471725,
+  "lon": 18.659772
+ },
+ {
+  "name": "Baszta Wielka Stągiewna",
+  "kind": "attraction",
+  "street": "Stągiewna",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.347281,
+  "lon": 18.6598835
+ },
+ {
+  "name": "Ojcowska",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3546999,
+  "lon": 18.6229009
+ },
+ {
+  "name": "Park poforteczny „Grodzisko”",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.355364,
+  "lon": 18.6385553
+ },
+ {
+  "name": "AmberSky Gdańsk - Koło Widokowe",
+  "kind": "attraction",
+  "street": "Ołowianka",
+  "num": "1",
+  "web": "http://www.ambersky.pl",
+  "hours": "",
+  "lat": 54.3527267,
+  "lon": 18.6616373
+ },
+ {
+  "name": "Europejskie Centrum Solidarności",
+  "kind": "museum",
+  "street": "Plac Solidarności",
+  "num": "1",
+  "web": "https://www.ecs.gda.pl/",
+  "hours": "May-Sep Mo-Su 10:00-20:00; Oct-Apr Mo-Su 10:00-18:00",
+  "lat": 54.361346,
+  "lon": 18.6494027
+ },
+ {
+  "name": "Dawne Schody Hańby",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3691051,
+  "lon": 18.5939495
+ },
+ {
+  "name": "Dwór Zakoniczyn",
+  "kind": "attraction",
+  "street": "Wieżycka",
+  "num": "40",
+  "web": "",
+  "hours": "",
+  "lat": 54.3235627,
+  "lon": 18.5798805
+ },
+ {
+  "name": "Mała Zbrojownia",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3423596,
+  "lon": 18.6462027
+ },
+ {
+  "name": "Fontanna Neptuna",
+  "kind": "fountain",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3485469,
+  "lon": 18.6532286
+ },
+ {
+  "name": "Bazylika Świętego Mikołaja",
+  "kind": "place_of_worship",
+  "street": "Świętojańska",
+  "num": "72",
+  "web": "https://gdansk.dominikanie.pl/",
+  "hours": "",
+  "lat": 54.3522394,
+  "lon": 18.6521119
+ },
+ {
+  "name": "Elektrownia Wojskowej Składnicy Tranzytowej",
+  "kind": "museum",
+  "street": "Majora Henryka Sucharskiego",
+  "num": "84",
+  "web": "",
+  "hours": "",
+  "lat": 54.40782,
+  "lon": 18.6674176
+ },
+ {
+  "name": "Wieża Więzienna",
+  "kind": "attraction",
+  "street": "Targ Węglowy",
+  "num": "26",
+  "web": "",
+  "hours": "",
+  "lat": 54.3498067,
+  "lon": 18.6474331
+ },
+ {
+  "name": "Bastion Miś",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3401497,
+  "lon": 18.6627164
+ },
+ {
+  "name": "Bastion Królik",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3421027,
+  "lon": 18.6657863
+ },
+ {
+  "name": "Wartownia nr 1",
+  "kind": "museum",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.4060332,
+  "lon": 18.6759864
+ },
+ {
+  "name": "Śluza Kamienna",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3390057,
+  "lon": 18.6518893
+ },
+ {
+  "name": "Bastion św. Elżbiety",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3533305,
+  "lon": 18.6447253
+ },
+ {
+  "name": "Kamienny krąg",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.414017,
+  "lon": 18.5686662
+ },
+ {
+  "name": "Poterna - część górna",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3444902,
+  "lon": 18.6421391
+ },
+ {
+  "name": "Baszta Narożna",
+  "kind": "attraction",
+  "street": "Za Murami",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3485935,
+  "lon": 18.6473531
+ },
+ {
+  "name": "Narodowe Muzeum Morskie",
+  "kind": "museum",
+  "street": "Ołowianka",
+  "num": "9/13",
+  "web": "https://www.nmm.pl/",
+  "hours": "Mo off; Tu,Th,Fr-Su 10:00-17:00; We 13:00-17:00",
+  "lat": 54.3512501,
+  "lon": 18.6590943
+ },
+ {
+  "name": "Katownia",
+  "kind": "attraction",
+  "street": "Targ Węglowy",
+  "num": "26",
+  "web": "",
+  "hours": "",
+  "lat": 54.3498759,
+  "lon": 18.64703
+ },
+ {
+  "name": "Baszta Browarna",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3482888,
+  "lon": 18.6484277
+ },
+ {
+  "name": "Baszta Schultza",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3484345,
+  "lon": 18.6479093
+ },
+ {
+  "name": "Schron dowodzenia baterii wydmowej 1911",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3752695,
+  "lon": 18.723862
+ },
+ {
+  "name": "PG4",
+  "kind": "biergarten",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "Mo-Th 14:00-23:00, Fr,Sa 14:00-01:00, Su 13:00-10:00",
+  "lat": 54.3541111,
+  "lon": 18.6446396
+ },
+ {
+  "name": "Most Chlebowy",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3536979,
+  "lon": 18.6484924
+ },
+ {
+  "name": "Kapsel",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3502064,
+  "lon": 18.647245
+ },
+ {
+  "name": "Fort Góry Gradowej",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3564047,
+  "lon": 18.6393528
+ },
+ {
+  "name": "Silnik główny ze statku m.s. \"Romuald Traugutt\"",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3515982,
+  "lon": 18.6589819
+ },
+ {
+  "name": "Karuzela Gdańska",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3531511,
+  "lon": 18.6579699
+ },
+ {
+  "name": "Ulica Elektryków",
+  "kind": "attraction",
+  "street": "Elektryków",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3645619,
+  "lon": 18.6483279
+ },
+ {
+  "name": "100cznia",
+  "kind": "attraction",
+  "street": "Księdza Jerzego Popiełuszki",
+  "num": "5",
+  "web": "https://100cznia.pl/",
+  "hours": "Tu-Th 13:00-24:00; Fr 13:00-02:00; Sa 12:00-02:00; Su 12:00-24:00",
+  "lat": 54.3643366,
+  "lon": 18.6455916
+ },
+ {
+  "name": "Żuraw M3",
+  "kind": "bar",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3641145,
+  "lon": 18.6540075
+ },
+ {
+  "name": "Poterna - część dolna",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3443729,
+  "lon": 18.6429813
+ },
+ {
+  "name": "Bastion Piaskowy",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3492702,
+  "lon": 18.6377683
+ },
+ {
+  "name": "Bastion Vigilance",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3473369,
+  "lon": 18.6396986
+ },
+ {
+  "name": "Luneta Delzous",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3477761,
+  "lon": 18.6353687
+ },
+ {
+  "name": "Luneta Cafarellego",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3465905,
+  "lon": 18.6334902
+ },
+ {
+  "name": "Bastion Ostroróg",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.345248,
+  "lon": 18.6382821
+ },
+ {
+  "name": "Bastion Pośredni",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3433512,
+  "lon": 18.6375477
+ },
+ {
+  "name": "Bastion Zbawiciel",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3414669,
+  "lon": 18.6390971
+ },
+ {
+  "name": "Bastion Jerozolimski",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3577839,
+  "lon": 18.6403345
+ },
+ {
+  "name": "Bastion Neubauer'a",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3534431,
+  "lon": 18.6369579
+ },
+ {
+  "name": "Luneta Senarmont'a",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.356238,
+  "lon": 18.6361079
+ },
+ {
+  "name": "Wysokie Skrzydło Kurkowe",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3556818,
+  "lon": 18.639303
+ },
+ {
+  "name": "Niskie Czoło Kurkowe",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.355211,
+  "lon": 18.6376359
+ },
+ {
+  "name": "Wysokie Czoło Kurkowe",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3566111,
+  "lon": 18.638975
+ },
+ {
+  "name": "Reduta Napoleońska",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3560119,
+  "lon": 18.6411115
+ },
+ {
+  "name": "Szaniec Jezuicki",
+  "kind": "attraction",
+  "street": "",
+  "num": "",
+  "web": "",
+  "hours": "",
+  "lat": 54.3364755,
+  "lon": 18.6322694
+ }
+]
