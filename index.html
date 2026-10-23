@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gdańsk · 24–26 Oct 2026 · 5 friends</title>
+<meta name="description" content="A weather-proofed 3-day Gdańsk plan for five friends: hour-by-hour forecast, 63 mapped places with prices and October opening hours, transport costs, and bar routes.">
+<meta name="theme-color" content="#0a0c11">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="og:title" content="Gdańsk · 24–26 Oct 2026">
+<meta property="og:description" content="Three days, five friends, one storm on Sunday. The full plan, map, prices and bars.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23f5b13d'/%3E%3Ctext x='50' y='72' font-size='62' font-family='Helvetica,Arial,sans-serif' font-weight='bold' fill='%231a1205' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<style>*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#0a0c11;--bg2:#0e1118;--panel:#141922;--panel2:#1a2029;--line:#242c3a;
+  --txt:#eef2f8;--mut:#9aa6b8;--amber:#f5b13d;--amber2:#ffd27a;--teal:#4fd1c5;
+  --red:#ff6b6b;--green:#5ad98c;--blue:#8ab4f8;--pink:#ff7ab6;--purple:#c084fc;
+  --shadow:0 10px 30px rgba(0,0,0,.35);--r:16px;
+}
+[data-theme="light"]{
+  --bg:#f6f7f9;--bg2:#eef1f5;--panel:#fff;--panel2:#f2f4f8;--line:#dfe4ec;
+  --txt:#131820;--mut:#5a6577;--shadow:0 8px 24px rgba(20,30,50,.10);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--txt);max-width:100vw;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:16px;line-height:1.55;letter-spacing:-.01em;padding-bottom:48px}
+img{max-width:100%}
+a{color:var(--amber);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0 0 .5em;line-height:1.15;letter-spacing:-.025em}
+h1{font-size:clamp(28px,7vw,46px);font-weight:800}
+h2{font-size:clamp(21px,4.5vw,30px);font-weight:800}
+h3{font-size:18px;font-weight:700}
+p{margin:0 0 1em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.mut{color:var(--mut)}
+.small{font-size:13.5px}
+.tiny{font-size:12px}
+.mono{font-variant-numeric:tabular-nums}
+
+/* header */
+header.top{position:sticky;top:0;z-index:60;background:rgba(10,12,17,.88);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line)}
+[data-theme="light"] header.top{background:rgba(246,247,249,.9)}
+.topbar{display:flex;align-items:center;gap:10px;padding:10px 16px;max-width:1080px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.03em;font-size:15px}
+.logo .dot{width:26px;height:26px;border-radius:9px;background:linear-gradient(140deg,var(--amber),#e0782d);
+  display:grid;place-items:center;font-size:14px;color:#1a1205}
+.topbar .spacer{flex:1}
+.iconbtn{background:var(--panel);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;
+  border-radius:11px;display:grid;place-items:center;font-size:16px;cursor:pointer}
+.iconbtn:active{transform:scale(.95)}
+
+/* tabs */
+nav.tabs{position:sticky;top:59px;z-index:55;background:var(--bg);border-bottom:1px solid var(--line)}
+nav.tabs::after{content:"";position:absolute;right:0;top:0;bottom:0;width:30px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,var(--bg) 80%)}
+.tabscroll{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:8px 12px;max-width:1080px;margin:0 auto}
+.tabscroll::-webkit-scrollbar{display:none}
+.tab{white-space:nowrap;padding:8px 14px;border-radius:999px;border:1px solid var(--line);
+  background:var(--panel);color:var(--mut);font-size:13.5px;font-weight:650;cursor:pointer;flex:0 0 auto}
+.tab.on{background:var(--amber);color:#1a1205;border-color:var(--amber)}
+
+/* sections */
+section.page{display:none;padding:22px 0 40px}
+section.page.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-radius:22px;padding:26px 20px 20px;margin:18px 0 6px;
+  background:radial-gradient(120% 120% at 15% 0%,#2a2114 0%,#141922 45%,#0e1118 100%);
+  border:1px solid #2b2416}
+[data-theme="light"] .hero{background:radial-gradient(120% 120% at 15% 0%,#ffeccb 0%,#fff 55%,#f2f4f8 100%);
+  border-color:#f0dfc0}
+.hero .kicker{font-size:12.5px;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.hero h1{margin:8px 0 6px}
+.hero .sub{color:var(--mut);font-size:15px;max-width:46ch}
+.hero .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);border:1px solid var(--line);
+  padding:6px 11px;border-radius:999px;font-size:12.5px;font-weight:600;color:var(--txt)}
+[data-theme="light"] .pill{background:#fff}
+
+/* cards */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:12px 0;min-width:0}
+.grid>*{min-width:0}
+.card.tight{padding:13px}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:1fr}
+.g3{grid-template-columns:1fr}
+@media(min-width:680px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+.hd{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.hd .em{font-size:20px}
+.hd h3{margin:0}
+.badge{display:inline-block;font-size:11.5px;font-weight:750;letter-spacing:.04em;text-transform:uppercase;
+  padding:3px 8px;border-radius:6px;background:var(--panel2);color:var(--mut);border:1px solid var(--line)}
+.badge.good{background:rgba(90,217,140,.14);color:var(--green);border-color:rgba(90,217,140,.3)}
+.badge.bad{background:rgba(255,107,107,.14);color:var(--red);border-color:rgba(255,107,107,.3)}
+.badge.warn{background:rgba(245,177,61,.14);color:var(--amber);border-color:rgba(245,177,61,.3)}
+
+/* weather */
+.wx-day{position:relative;overflow:hidden}
+.wx-day .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.wx-day .temp{font-size:34px;font-weight:800;letter-spacing:-.04em;line-height:1}
+.wx-day .temp span{font-size:15px;color:var(--mut);font-weight:600}
+.wx-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}
+.wx-meta div{background:var(--panel2);border-radius:10px;padding:8px 10px;font-size:13px}
+.wx-meta b{display:block;font-size:15px;font-variant-numeric:tabular-nums}
+.hours{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:12px;text-align:center}
+.hours div{background:var(--panel2);border-radius:9px;padding:6px 2px;font-size:11px;line-height:1.35}
+.hours b{display:block;font-size:13px}
+.hours .r{color:var(--blue)}
+.hours .rr{color:#7cc4ff}
+
+/* timeline */
+.tl{position:relative;margin:14px 0 0;padding-left:22px}
+.tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding:0 0 18px}
+.tl-item::before{content:"";position:absolute;left:-21px;top:6px;width:10px;height:10px;border-radius:50%;
+  background:var(--amber);box-shadow:0 0 0 3px var(--bg)}
+.tl-time{font-size:12.5px;font-weight:800;color:var(--amber);letter-spacing:.03em}
+.tl-item h4{margin:2px 0 4px;font-size:16.5px}
+.tl-item p{margin:0 0 6px;font-size:14.5px;color:var(--mut)}
+.tl-meta{display:flex;flex-wrap:wrap;gap:6px;font-size:12px;color:var(--mut)}
+.tl-meta span{background:var(--panel2);padding:2px 7px;border-radius:6px}
+.tl-item.alt::before{background:var(--teal)}
+.tl-item.alt .tl-time{color:var(--teal)}
+
+/* tables */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:12px;max-width:100%}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:520px}
+th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);font-weight:750}
+tr:last-child td{border-bottom:none}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.hi td{background:rgba(245,177,61,.07)}
+.yes{color:var(--green);font-weight:700}.no{color:var(--red);font-weight:700}
+
+/* places */
+.filters{display:flex;gap:6px;overflow-x:auto;padding:4px 0 10px;scrollbar-width:none;position:sticky;top:110px;
+  background:var(--bg);z-index:20}
+.filters::-webkit-scrollbar{display:none}
+.fchip{white-space:nowrap;padding:9px 13px;border-radius:999px;border:1px solid var(--line);background:var(--panel);
+  color:var(--mut);font-size:13px;font-weight:650;cursor:pointer;flex:0 0 auto;display:inline-flex;align-items:center;gap:5px}
+.fchip .i{width:14px;height:14px}
+.fchip.on{background:var(--txt);color:var(--bg);border-color:var(--txt)}
+.search{width:100%;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:var(--panel);
+  color:var(--txt);font-size:15px;margin-bottom:10px;outline:none}
+.search:focus{border-color:var(--amber)}
+.place{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px}
+.place .ph{display:flex;gap:10px;align-items:flex-start}
+.place .ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:18px;
+  background:var(--panel2);flex:0 0 38px}
+.place .nm{font-size:16px;font-weight:750;line-height:1.25;margin:0}
+.place .ar{font-size:12.5px;color:var(--mut);margin-top:2px}
+.place .ds{font-size:14px;margin:9px 0 8px;color:var(--txt);opacity:.92}
+.place .why{font-size:13.5px;border-left:2px solid var(--amber);padding-left:10px;margin:8px 0;color:var(--mut)}
+.place .why b{color:var(--amber2);font-weight:700}
+.place .tip{font-size:13px;background:var(--panel2);border-radius:9px;padding:8px 10px;margin:8px 0 0}
+.place .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.place .meta span{font-size:11.5px;background:var(--panel2);padding:3px 8px;border-radius:6px;color:var(--mut)}
+.place .links{display:flex;gap:8px;margin-top:11px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:9px;font-size:13px;
+  font-weight:700;border:1px solid var(--line);background:var(--panel2);color:var(--txt)}
+.btn.pri{background:var(--amber);color:#1a1205;border-color:var(--amber)}
+.btn:active{transform:scale(.98)}
+
+/* map */
+.mapwrap{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);margin-top:10px}
+#map{height:68vh;min-height:420px;width:100%;background:var(--panel2)}
+.maplegend{position:absolute;left:10px;bottom:10px;z-index:500;background:rgba(10,12,17,.86);backdrop-filter:blur(8px);
+  border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:10.5px;color:#dbe3ee;
+  display:grid;grid-template-columns:1fr 1fr;gap:1px 10px;max-width:200px;line-height:1.5}
+[data-theme="light"] .maplegend{background:rgba(255,255,255,.92);color:#222}
+.maplegend b{display:flex;align-items:center;gap:5px;font-weight:600;margin-bottom:2px}
+.maplegend i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.pin{display:grid;place-items:center;border-radius:50% 50% 50% 8px;transform:rotate(-45deg);
+  border:2px solid #0a0c11;box-shadow:0 3px 8px rgba(0,0,0,.45);font-size:13px}
+.pin span{transform:rotate(45deg);line-height:1}
+.pin.home{border-color:#fff;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(245,177,61,.6)}50%{box-shadow:0 0 0 10px rgba(245,177,61,0)}}
+.leaflet-popup-content-wrapper{background:var(--panel);color:var(--txt);border-radius:12px;border:1px solid var(--line)}
+.leaflet-popup-content{margin:12px 14px;font-size:13px;line-height:1.45}
+.leaflet-popup-tip{background:var(--panel);border:1px solid var(--line)}
+.pop h4{margin:0 0 3px;font-size:14.5px}
+.pop .m{color:var(--mut);font-size:12px;margin-bottom:6px}
+.pop a{display:inline-block;margin-right:8px;font-size:12.5px;font-weight:700}
+.leaflet-container{font-family:inherit}
+.mapbtns{position:absolute;right:10px;top:10px;z-index:500;display:flex;flex-direction:column;gap:6px}
+.mapbtns button{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:var(--panel);
+  color:var(--txt);font-size:16px;cursor:pointer}
+
+/* callouts */
+.callout{border-radius:12px;padding:13px 14px;margin:12px 0;font-size:14px;border:1px solid}
+.callout.warn{background:rgba(255,107,107,.07);border-color:rgba(255,107,107,.25)}
+.callout.ok{background:rgba(90,217,140,.07);border-color:rgba(90,217,140,.25)}
+.callout.info{background:rgba(138,180,248,.07);border-color:rgba(138,180,248,.25)}
+.callout.gold{background:rgba(245,177,61,.08);border-color:rgba(245,177,61,.28)}
+.callout b{color:var(--txt)}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0}
+summary{cursor:pointer;font-weight:700;font-size:15px}
+details[open] summary{margin-bottom:8px}
+ul,ol{margin:0 0 1em;padding-left:20px}
+li{margin-bottom:5px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}
+.kv dt{color:var(--mut)}
+.kv dd{margin:0;font-weight:600}
+.stat{display:flex;gap:12px;flex-wrap:wrap}
+.stat .s{flex:1 1 120px;background:var(--panel2);border-radius:12px;padding:11px 13px}
+.stat .s b{display:block;font-size:21px;letter-spacing:-.03em}
+.stat .s span{font-size:11.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--mut);font-size:12.5px}
+.dayhead{display:flex;align-items:center;gap:10px;margin:18px 0 4px}
+.dayhead .d{width:42px;height:42px;border-radius:12px;background:var(--panel2);display:grid;place-items:center;
+  font-weight:800;font-size:15px;flex:0 0 42px;border:1px solid var(--line)}
+.dayhead h3{margin:0;font-size:17px}
+.dayhead .s{font-size:12.5px;color:var(--mut)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* svg icons */
+.i{width:1em;height:1em;display:inline-block;vertical-align:-.14em;flex:0 0 auto}
+.tab{display:inline-flex;align-items:center;gap:6px}
+.tab .i{width:15px;height:15px;opacity:.85}
+.place .ic svg{width:19px;height:19px}
+.place .meta b{font-weight:800;opacity:.55;text-transform:uppercase;font-size:10.5px;letter-spacing:.06em;margin-right:4px}
+.btn .i{width:15px;height:15px}
+.pin svg{width:15px;height:15px;stroke:#0a0c11;stroke-width:2.1;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.pin a{pointer-events:none}
+/* maplibre */
+.maplibregl-popup-content{background:var(--panel);color:var(--txt);border-radius:12px;border:1px solid var(--line);padding:12px 14px;box-shadow:var(--shadow)}
+.maplibregl-popup-tip{border-top-color:var(--panel)!important;border-bottom-color:var(--panel)!important;border-left-color:var(--panel)!important;border-right-color:var(--panel)!important}
+.maplibregl-popup-close-button{color:var(--mut);font-size:18px;padding:2px 6px}
+.maplibregl-ctrl-group{background:var(--panel)!important;border:1px solid var(--line)!important;border-radius:10px!important;overflow:hidden}
+.maplibregl-ctrl-group button+button{border-top:1px solid var(--line)!important}
+.maplibregl-ctrl-group button span{filter:invert(1)}
+[data-theme="light"] .maplibregl-ctrl-group button span{filter:none}
+.maplibregl-ctrl-attrib{background:rgba(10,12,17,.7)!important;color:#9aa6b8!important;font-size:10px!important}
+.maplibregl-ctrl-attrib a{color:#c8d2e0!important}
+[data-theme="light"] .maplibregl-ctrl-attrib{background:rgba(255,255,255,.8)!important;color:#5a6577!important}
+[data-theme="light"] .maplibregl-ctrl-attrib a{color:#33415a!important}
+
+/* map clusters */
+.clusters{display:grid;place-items:center;border-radius:50%;background:rgba(245,177,61,.95);color:#1a1205;
+  font-weight:800;font-size:13px;border:2px solid #0a0c11;box-shadow:0 4px 14px rgba(0,0,0,.45);cursor:pointer;
+  transition:transform .15s ease}
+.clusters span{font-variant-numeric:tabular-nums}
+.clusters:active{transform:scale(.94)}
+[data-theme="light"] .clusters{border-color:#fff;box-shadow:0 3px 10px rgba(20,30,50,.3)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="topbar">
+    <div class="logo"><span class="dot">G</span><span>GDAŃSK · 24–26 OCT</span></div>
+    <div class="spacer"></div>
+    <button class="iconbtn" id="theme" title="Light / dark" aria-label="Toggle theme"></button>
+  </div>
+</header>
+<nav class="tabs"><div class="tabscroll"><button class="tab on" data-tab="plan"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="4.4" r="1.9"/><path d="M12 21l1.6-5.6-3.1-3 2.1-5.6 3.6 3 3 1M9.4 9.4L7 14l3 1.6"/></svg>Plan</button><button class="tab" data-tab="weather"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>Weather</button><button class="tab" data-tab="map"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22"/></svg>Map</button><button class="tab" data-tab="places"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.4s7-6.6 7-11.4a7 7 0 10-14 0c0 4.8 7 11.4 7 11.4z"/><circle cx="12" cy="10" r="2.5"/></svg>Places</button><button class="tab" data-tab="eat"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16l-8 8v6M8 20h8M6.4 8h11.2"/></svg>Eat & Drink</button><button class="tab" data-tab="transport"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="13" rx="2.4"/><path d="M5 10h14M8.6 20l2-4M15.4 20l-2-4"/></svg>Transport</button><button class="tab" data-tab="costs"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.4"/></svg>Budget</button><button class="tab" data-tab="info"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11.2v5M12 7.9v.2"/></svg>Info</button></div></nav>
+<main>
+<!-- ============ PLAN ============ -->
+<section class="page on" id="plan">
+<div class="wrap">
+<div class="hero">
+<div class="kicker">Trip brief · 5 friends · Gdańsk</div>
+<h1>Three days in Gdańsk,<br>weather-proofed.</h1>
+<p class="sub">24–26 October 2026. Five guys, one flat at ul. Jacka Malczewskiego 89, and a Sunday forecast with 62 km/h gusts. This plan is built around that, not against it.</p>
+<div class="row">
+<span class="pill">Sat 24 → Mon 26, late flight</span>
+<span class="pill">5–12 °C, feels like 1–9 °C</span>
+<span class="pill">~700–850 zł pp on the ground</span>
+<span class="pill">63 places mapped</span>
+</div>
+</div>
+
+<div class="card">
+<div class="hd"><h3>The short version</h3></div>
+<div class="stat">
+<div class="s"><b>Sat</b><span>Dry · sunset 17:27</span></div>
+<div class="s"><b>Sun</b><span>Rain PM · gale</span></div>
+<div class="s"><b>Mon</b><span>Dry · free museums</span></div>
+<div class="s"><b>18 zł</b><span>24 h tram pass</span></div>
+</div>
+<ul style="margin-top:14px;margin-bottom:0">
+<li><b>Saturday is your only reliable outdoor day.</b> Dry from morning to night, cloud breaks after 19:00. Do the Old Town on foot, catch the 17:27 sunset on the water, then crawl the bars.</li>
+<li><b>Sunday is a write-off outdoors.</b> Rain from 14:00, 100% at 18:00, gusts to 62 km/h. Book the WWII Museum for 10:00, then go indoors: bowling, axe throwing or shooting, then a concert or a long dinner.</li>
+<li><b>Monday is free-museum day.</b> Every Muzeum Gdańska branch (Amber Museum, Town Hall) is free on Mondays. Do Oliwa's organ at 11:00, the free museums in the afternoon, sunset on a hill, then the airport.</li>
+<li><b>Do not rent a car.</b> Trams + SKM cover everything you need, and parking in the centre is 7.50 zł for the first hour. The one exception is Malbork — and that does not fit this trip.</li>
+<li><b>Arrive by Uber XL, not two taxis.</b> One 6-seat car is ~114 zł door-to-door versus ~200–240 zł for two official taxis.</li>
+</ul>
+</div>
+
+<div class="card tight">
+<div class="hd"><h3>How to use this page</h3></div>
+<p class="small mut" style="margin-bottom:8px">Tabs: <b>Plan</b> (this), <b>Weather</b> (hour-by-hour), <b>Map</b> (interactive, filter by category), <b>Places</b> (all 63 with prices &amp; hours), <b>Eat &amp; Drink</b>, <b>Transport</b>, <b>Budget</b>, <b>Info</b> (closures, numbers, rules).</p>
+<p class="small mut" style="margin:0">Every place has a <b>Google Maps</b> button that opens walking directions from the flat on your phone. Tap the name in the itinerary to jump to its card.</p>
+</div>
+
+<!-- DAY 1 -->
+<div class="dayhead">
+<div class="d">24</div>
+<div><h3>Saturday — arrive, walk the Old Town, sunset, bars</h3>
+<div class="s">Dry all day · 8 11.7 °C · wind 14 km/h, gusts 32 · sunset 17:27</div></div>
+</div>
+<div class="callout ok"><b>Weather verdict: go outside.</b> Zero precipitation forecast, cloud cover drops to 7% by 20:00. The evening will be clear and cold — perfect for the waterfront and the first night out. Bring a jacket; the riverfront wind is real.</div>
+
+<div class="tl">
+<div class="tl-item">
+<div class="tl-time">09:30 — LAND AT GDN</div>
+<h4>Airport → flat</h4>
+<p>Two good options. With <b>cabin bags only</b>: the SKM train from the station 5 minutes' covered walk from arrivals, then tram 10/12 — 24–30 zł for all five, ~60 min door-to-door. With <b>checked luggage</b>: one <b>Uber/Bolt XL</b> (6 seats), ~114 zł, 18 minutes to the door. Two normal taxis would cost 198–240 zł.</p>
+<div class="tl-meta"><span>18–60 min</span><span>24–130 zł total</span><span>see Transport tab</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">11:15 — DROP THE BAGS</div>
+<h4>Flat + first shop</h4>
+<p>Check-in may be 15:00 — message the host now and ask to leave bags. Then walk 4 minutes to <b>Lewiatan</b> (open Sat until 22:00) for breakfast, water, coffee and beers: ~120 zł for five. <b>Shop today, not tomorrow</b> — Sunday 25 October is a trading ban and the big supermarkets are closed.</p>
+<div class="tl-meta"><span>45 min</span><span>~120 zł group</span><span>Lewiatan 07:00–22:00</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">12:15 — INTO TOWN</div>
+<h4>Tram 10 / 12 from Zakopiańska</h4>
+<p>300 m from the flat. Buy an <b>18 zł 24-hour pass</b> each in the Jakdojade or GoPay app — it pays for itself after three rides and covers trams, buses and city-zone SKM. Get off at <b>Brama Wyżynna</b> or <b>Hucisko</b>.</p>
+<div class="tl-meta"><span>10–12 min</span><span>18 zł pp / 24 h</span><span>validate on boarding</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">12:45 — LUNCH</div>
+<h4><a href="#pl-neptun" data-go="places">Bar mleczny Neptun</a> — 25 zł for a full hot meal</h4>
+<p>A genuine communist-era milk bar on Długa: borscht, pierogi, breaded pork, compote. Order at the counter, pay at the till, collect at the hatch. It is the best-value meal in the middle of the tourist zone. If you would rather have the famous pierogi, go to <a href="#pl-mandu" data-go="places">Mandu</a> instead — but book, or queue 40 minutes.</p>
+<div class="tl-meta"><span>40 min</span><span>20–30 zł pp</span><span>cash &amp; card</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">13:45 — OLD TOWN CORE</div>
+<h4>Długi Targ → Artus Court → Green Gate → Mariacka</h4>
+<p>The whole Hanseatic set piece in 400 metres: the <b>Neptune Fountain</b> (your group's meeting point), the <b>Artus Court</b> facade, the <b>Green Gate</b>, then the most beautiful street in the city, <b>ul. Mariacka</b> — amber workshops, stone stoops, gargoyles. All free, all outdoors.</p>
+<div class="tl-meta"><span>75 min</span><span>free</span><span>~1.5 km walk</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">15:00 — ST MARY'S</div>
+<h4><a href="#pl-mariacka" data-go="places">St Mary's Basilica</a> + tower</h4>
+<p>The largest brick church in the world. Entry free; the <b>tower is 20 zł</b> (10 zł reduced) and 400 steps for the best rooftop view in Gdańsk. The astronomical clock performs daily at <b>11:57</b> — you will miss it today, so come back Monday if you care. Tower closes in high wind.</p>
+<div class="tl-meta"><span>60 min</span><span>0–20 zł pp</span><span>tower 10:00–18:00</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">16:15 — WATERFRONT</div>
+<h4><a href="#pl-zuraw" data-go="places">The Crane</a> &amp; Długie Pobrzeże</h4>
+<p>Walk the embankment past the medieval crane and the granaries, then coffee. This is the postcard shot — but the light gets good later, so treat this as a scouting pass and come back for sunset.</p>
+<div class="tl-meta"><span>45 min</span><span>free</span><span>coffee 12–16 zł</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">17:00 — SUNSET 17:27</div>
+<h4><a href="#pl-olowianka" data-go="places">Ołowianka loop</a> or <a href="#pl-hevelianum" data-go="places">Góra Gradowa</a></h4>
+<p><b>Option A (city + water):</b> cross the footbridge to Ołowianka, look back at the illuminated Old Town, walk back over the other bridge — 25 minutes, free, flat. <b>Option B (best panorama):</b> walk up Góra Gradowa behind the station for a 360° view over the cranes and roofs; take a couple of beers up. <b>Option C (42 zł):</b> the <a href="#pl-ambersky" data-go="places">AmberSky wheel</a> at dusk.</p>
+<div class="tl-meta"><span>45–60 min</span><span>0–42 zł pp</span><span>sunset 17:27</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">18:30 — RESET</div>
+<h4>Back to the flat to change (optional)</h4>
+<p>20 minutes each way by tram. If you would rather not lose the momentum, skip it and go straight to dinner — nobody in Gdańsk cares what you wear, except maybe Sassy after 23:00.</p>
+<div class="tl-meta"><span>45 min</span><span>18 zł pass covers it</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">19:30 — DINNER</div>
+<h4><a href="#pl-brovarnia" data-go="places">Brovarnia</a> — brewery on the water</h4>
+<p>Copper brewing tanks, river views, big tables, pork knuckle and duck. Book for five at 19:30 and ask for a window table. Own beer ~14 zł, mains 45–75 zł. It is the safest "everyone will be happy" dinner in the city.</p>
+<div class="tl-meta"><span>2 h</span><span>70–90 zł pp</span><span>book ahead</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">21:00 — THE CRAWL</div>
+<h4>Five stops, all within 10 minutes' walk</h4>
+<p><b>1.</b><a href="#pl-flisak" data-go="places">Flisak'76</a> — cocktails on Chlebnicka (30 zł). <b>2.</b><a href="#pl-jozefk" data-go="places">Józef K.</a> — Piwna street institution, cheap beer. <b>3.</b><a href="#pl-ministerstwo" data-go="places">Ministerstwo Śledzia i Wódki</a> — a herring plate and an ice-cold shot. <b>4.</b><a href="#pl-pijalnia" data-go="places">Pijalnia Wódki i Piwa</a> — 8 zł shots, standing room, communist decor. <b>5.</b><a href="#pl-pixel" data-go="places">Pixel</a> — proper cocktails to finish.</p>
+<div class="tl-meta"><span>3–4 h</span><span>100–150 zł pp</span><span>~1 km total</span></div>
+</div>
+<div class="tl-item alt">
+<div class="tl-time">00:30 — IF YOU STILL HAVE LEGS</div>
+<h4><a href="#pl-cooltura" data-go="places">Cooltura</a> (until 06:00) or <a href="#pl-sassy" data-go="places">Sassy</a> (club from 22:00)</h4>
+<p>Cooltura is the cheap, alternative, open-late option 5 minutes from the centre. Sassy is the dressed-up rooftop-turned-club on the waterfront. Pick based on how the night is going, not on a plan.</p>
+<div class="tl-meta"><span>whenever</span><span>0–40 zł entry</span></div>
+</div>
+</div>
+
+<details>
+<summary>Saturday alternatives (if you land late, or hate queues)</summary>
+<ul>
+<li><b>Landing after 12:00?</b> Skip lunch and go straight to the Old Town; move dinner to 20:00 and cut the crawl to three stops.</li>
+<li><b>Want the water instead of the tower?</b> The <a href="#pl-motlawa" data-go="places">Motława boat loop</a> leaves from the embankment, ~50–80 zł, 50–90 min. Last boats go around 17:00–18:00 in October.</li>
+<li><b>Big concert instead of bars:</b> Ergo Arena has "Królowie Życia" at 18:30 (tickets ~120–250 zł) — but it eats your whole first evening and it is 25 minutes away.</li>
+<li><b>Wrecked from travel?</b> Neptun St Mary's sunset Mandu takeaway flat. Still a good day.</li>
+</ul>
+</details>
+
+<!-- DAY 2 -->
+<div class="dayhead">
+<div class="d">25</div>
+<div><h3>Sunday — the storm day: museums, then indoors</h3>
+<div class="s">Rain 14:00–19:00 · 5.3 9.6 °C, feels 1–5 °C · gusts 62 km/h</div></div>
+</div>
+<div class="callout warn"><b>Weather verdict: stay off the water and out of the wind.</b> Sustained 22–24 km/h with 62 km/h gusts is gale-force — the water tram, the ferris wheel, the St Mary's tower and anything on an exposed pier will likely be closed or genuinely unpleasant. Rain arrives at 14:00 and peaks at 18:00 (100%). This is the day the museums earn their ticket.</div>
+
+<div class="tl">
+<div class="tl-item">
+<div class="tl-time">09:00 — SLOW START</div>
+<h4>Breakfast at the flat</h4>
+<p>Everything big is closed today (trading ban). You bought groceries yesterday, so this costs nothing. Coffee, eggs, whatever — then tram in at 09:45. <b>Do not go to Sopot:</b> the Sopot Half Marathon closes the promenade and roads this morning.</p>
+<div class="tl-meta"><span>1 h</span><span>free</span><span>shops closed</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">10:00 — MUSEUM No.1</div>
+<h4><a href="#pl-miiws" data-go="places">Museum of the Second World War</a> — 33 zł</h4>
+<p>The main event of the day: 2.5–3.5 hours underground, in a building that leans over you. Book the <b>10:00 timed slot online tonight</b> — Sunday slots sell out and walk-up queues are long. Audio guide 12 zł is worth it. Open 10:00–18:00 on Sundays; Monday it is <b>closed</b>, so today is the day.</p>
+<div class="tl-meta"><span>3 h</span><span>33 zł pp</span><span>book online</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">13:15 — LUNCH</div>
+<h4><a href="#pl-mandu" data-go="places">Pierogarnia Mandu</a></h4>
+<p>Book a table for five at 13:15. Hand-folded pierogi, baked and boiled, 28–45 zł a portion, big enough that two kinds feed a hungry person. It is 6 minutes' walk from the museum.</p>
+<div class="tl-meta"><span>1 h</span><span>35–45 zł pp</span><span>book online</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">14:30 — PICK YOUR INDOOR FIGHT</div>
+<h4>Four good options, all warm and dry</h4>
+<p><b>A. <a href="#pl-bowling" data-go="places">U7 Bowling &amp; Pool</a></b> — under Plac Dominikański, 8 lanes, 10 pool tables, bar. 150 zł/h before 17:00, then <b>120 zł/h</b>; split five ways it is ~24 zł each per hour. Zero booking stress.<br>
+<b>B. <a href="#pl-axe" data-go="places">Axe throwing</a></b> — 1.5 h with an instructor and a tournament, ~85 zł pp. Book ahead; Sunday slots go.<br>
+<b>C. <a href="#pl-shooting" data-go="places">Shooting range</a></b> — pistols and rifles, pay per round, ~100–150 zł pp. Bring passports.<br>
+<b>D. <a href="#pl-gameover" data-go="places">Game Over</a> / <a href="#pl-cybermachina" data-go="places">Cybermachina</a></b> — consoles and board games with beer, 40–60 zł pp for a long session.</p>
+<div class="tl-meta"><span>2–3 h</span><span>24–150 zł pp</span><span>book A/B/C</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">17:00 — OPTIONAL CULTURE</div>
+<h4><a href="#pl-amber" data-go="places">Amber Museum</a> (open to 18:00, 35 zł)</h4>
+<p>If bowling ends early: the amber collection in the medieval Wielki Młyn is compact (1–1.5 h), beautiful, and indoors. It is <b>free tomorrow</b>, so only pay today if you want it now — better to save it for Monday and use this slot for a warm-up coffee instead.</p>
+<div class="tl-meta"><span>1 h</span><span>0–35 zł pp</span><span>free on Monday</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">19:00 — EVENING</div>
+<h4><a href="#pl-philharmonic" data-go="places">Philharmonic: Joanna Knitter &amp; Baltic Banda</a></h4>
+<p>Film music and pop standards in a converted power station on the water — warm, dry, 90 minutes, ~60–120 zł. The best use of a stormy Sunday evening. <b>Alternative:</b> a second bowling session at U7 (120 zł/h after 17:00) or a film.</p>
+<div class="tl-meta"><span>2 h</span><span>60–120 zł pp</span><span>check tickets</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">21:15 — DINNER</div>
+<h4><a href="#pl-ministerstwo" data-go="places">Ministerstwo Śledzia i Wódki</a></h4>
+<p>Herring five ways and flavoured vodka, in a wood-panelled room. Order 3–4 plates to share plus a vodka flight, 45–60 zł pp. It is the most Polish dinner you can have and it is 4 minutes from the Philharmonic.</p>
+<div class="tl-meta"><span>1.5 h</span><span>45–60 zł pp</span><span>book for 5</span></div>
+</div>
+<div class="tl-item alt">
+<div class="tl-time">22:30 — NIGHTCAP</div>
+<h4><a href="#pl-pixel" data-go="places">Pixel</a> or <a href="#pl-cybermachina" data-go="places">Cybermachina</a></h4>
+<p>Cocktails if you want to talk, board games if you want to compete. Both are open late and both are 5 minutes' walk.</p>
+<div class="tl-meta"><span>1–2 h</span><span>30–50 zł pp</span></div>
+</div>
+</div>
+
+<details>
+<summary>Sunday alternatives — swap the museum if you want</summary>
+<ul>
+<li><b><a href="#pl-ecs" data-go="places">European Solidarity Centre</a></b> (40 zł, Sun 10:00–18:00) instead of the WWII Museum — same weight of history, more about 1980 and the shipyard, less about 1939. Do one, not both; two heavy museums in one day is too much.</li>
+<li><b>Sleep in?</b> Museum at 12:00, late lunch, bowling at 16:00, dinner at 20:00. Cut the concert.</li>
+<li><b>Hate museums?</b> Axe throwing at 11:00, long lunch, shooting at 15:00, bowling at 18:00, dinner. A perfectly good Sunday.</li>
+<li><b>Want a big night?</b> Skip the concert, dinner at 20:00, then <a href="#pl-elektrykow" data-go="places">Elektryków street</a> in the shipyard from 22:00 — but dress for wind and rain, it is outdoors between venues.</li>
+</ul>
+</details>
+
+<!-- DAY 3 -->
+<div class="dayhead">
+<div class="d">26</div>
+<div><h3>Monday — free museums, Oliwa's organ, then a midnight flight</h3>
+<div class="s">Dry · 7.7 12.1 °C · wind 18 km/h, gusts 46 · sunset 17:22</div></div>
+</div>
+<div class="callout ok"><b>Weather verdict: the best day of the three.</b> Warmest (12.1 °C), dry, and the cloud thins to 29% by 18:00. The catch is the clock: you need to be at the airport by ~21:30 for a 23:59 flight, so the day ends at 20:00.</div>
+
+<div class="tl">
+<div class="tl-item">
+<div class="tl-time">08:30 — PACK &amp; OUT</div>
+<h4>Check out, leave bags</h4>
+<p>Check-out is usually 10:00–11:00. Ask the host to keep the bags until 18:00 — most Gdańsk flats do. If not, use the lockers at <b>Gdańsk Główny</b> station (a few zł per locker) and travel light.</p>
+<div class="tl-meta"><span>45 min</span><span>lockers ~10–20 zł</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">09:30 — TO OLIWA</div>
+<h4>SKM to Gdańsk Oliwa (or tram 12)</h4>
+<p>SKM from Gdańsk Główny is 12 minutes; then a 10-minute walk up to the cathedral. Or tram 12 from the centre, ~35 minutes, no changes. Your 24h pass from Saturday has expired — buy a 75-minute ticket (6 zł) or another 24h pass (18 zł) if you will ride three times.</p>
+<div class="tl-meta"><span>30–40 min</span><span>6–18 zł pp</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">10:15 — THE ORGAN</div>
+<h4><a href="#pl-oliwa" data-go="places">Oliwa Cathedral</a> — demo at 11:00</h4>
+<p>7,896 pipes, moving angels, trumpeting figures — a 20-minute mechanical theatre, not a church service. October schedule: <b>Mon–Sat 11:00 and 12:00</b>. Arrive 10:45, sit centre-front. Entry is free; the demo is a small ticket/donation (~10–15 zł). Then walk the <a href="#pl-oliwapark" data-go="places">Oliwa Park</a> behind it — autumn colours, clipped hedges, almost nobody on a Monday.</p>
+<div class="tl-meta"><span>1.5 h</span><span>~10–15 zł pp</span><span>11:00 sharp</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">12:15 — LUNCH IN OLIWA</div>
+<h4>Local milk bar / pizza slice</h4>
+<p>Cheap and quick near the station, 25–35 zł. You are eating early because the afternoon is packed. <b>Optional:</b> the <a href="#pl-zoo" data-go="places">zoo</a> is 10 minutes away and only 30 zł in October — but it is 2–3 h of hilly walking and would kill the museum plan. Pick one.</p>
+<div class="tl-meta"><span>45 min</span><span>25–35 zł pp</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">13:30 — FREE MONDAY</div>
+<h4><a href="#pl-amber" data-go="places">Amber Museum</a> + <a href="#pl-ratusz" data-go="places">Town Hall</a> — 0 zł</h4>
+<p>Every Muzeum Gdańska branch waives its ticket on Mondays. The Amber Museum (10:00–18:00) is the one to do: 1–1.5 hours, the largest amber collection in Poland. The Town Hall (10:00–16:00, free) has the Red Hall and the tower view down Długa. Both would cost 70 zł together on any other day.</p>
+<div class="tl-meta"><span>2 h</span><span>free (save 70 zł)</span><span>Mon only</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">15:45 — THE LAST CHOICE</div>
+<h4>Westerplatte by boat, or Brzeźno pier?</h4>
+<p><b>Boat:</b> water tram to Westerplatte, 80 zł one-way / 100 zł return, 40 min each way, last departures around 16:00–18:00. Doable but tight with a 23:59 flight — you would be back in the centre at ~18:30. <b>Pier:</b> Brzeźno beach and pier, 20 minutes by Uber (~35 zł), free, and sunset is at 17:22. <b>Honest recommendation:</b> pier and a beer, not the boat. Missing a flight to see a monument is a bad trade.</p>
+<div class="tl-meta"><span>1.5 h</span><span>0–100 zł pp</span><span>sunset 17:22</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">18:15 — LAST DINNER</div>
+<h4>Neptun or Mandu, near the centre</h4>
+<p>Fast and good: Neptun (25 zł) if you want speed, Mandu (40 zł) if you want a proper last meal. Be done by 19:45.</p>
+<div class="tl-meta"><span>1 h</span><span>25–45 zł pp</span></div>
+</div>
+<div class="tl-item">
+<div class="tl-time">20:00 — AIRPORT</div>
+<h4>Uber to GDN — target 21:15 arrival</h4>
+<p><b>Uber/Bolt XL:</b> 18 minutes, ~55–70 zł for the car — call it 20:00, at the airport 20:25. <b>SKM:</b> Gdańsk Główny Gdańsk Port Lotniczy, ~25 min, 4.80 zł pp, last trains around 22:30 (check that day). For a 23:59 departure, be inside security by <b>22:15</b> — the airport gets busy late evening.</p>
+<div class="tl-meta"><span>20–60 min</span><span>5–70 zł</span><span>be there 21:30</span></div>
+</div>
+</div>
+
+<div class="callout info"><b>If your "midnight" flight actually departs at 00:05 on 27 October</b>, the plan above still works — just shift the airport leg 30 minutes later and keep the 22:30 security target. If it departs 23:00, leave the flat at 19:45 and skip the pier.</div>
+
+<details>
+<summary>Monday alternatives — the "big swing" version</summary>
+<ul>
+<li><b>Malbork Castle</b> (UNESCO, largest brick castle in the world): train 40–50 min, ticket ~70 zł, 4–5 hours on site. It would replace Oliwa and the free museums entirely, and you would need to be back by 18:30. Exhausting before a midnight flight, but unforgettable.</li>
+<li><b>Gdynia:</b> SKM 25 min, ORP Błyskawica + Dar Pomorza ~30–35 zł combined, then back. A good half-day if you have already seen Gdańsk's museums.</li>
+<li><b>Rain contingency:</b> if Monday turns wet, swap Oliwa for ECS (open Mon 10:00–17:00, 40 zł) and do the free museums — all indoors, all central.</li>
+</ul>
+</details>
+
+<div class="card">
+<div class="hd"><h3>What to actually pack (late October, Baltic)</h3></div>
+<div class="grid g2">
+<ul style="margin:0">
+<li><b>Waterproof shell</b> — not an umbrella. 62 km/h gusts turn umbrellas inside out.</li>
+<li><b>Warm mid-layer</b> + a hoodie for bars (Polish interiors are warm, streets are not).</li>
+<li><b>Beanie and thin gloves</b> — feels-like 1 °C on Sunday morning.</li>
+<li><b>Waterproof shoes with grip</b> — cobbles + rain = slick.</li>
+</ul>
+<ul style="margin:0">
+<li><b>Power bank</b> — maps + camera + tickets all day.</li>
+<li><b>Passport/ID</b> — required at the shooting range, and for tax-free.</li>
+<li><b>One smart-casual shirt</b> — for Sassy/Philharmonic, if you care.</li>
+<li><b>Small backpack</b> — no bags allowed in some museums; lockers are limited.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ WEATHER ============ -->
+<section class="page" id="weather">
+<div class="wrap">
+<h2>Weather analysis</h2>
+<p class="mut">Three days, three completely different problems: a dry cold Saturday, a gale on Sunday, and a mild dry Monday. Source: Open-Meteo hourly model blend, 0.25° grid, fetched 23 Oct 2026 07:35 EEST. Re-check the night before — 48-hour forecasts in October shift by 1–2 °C and a few hours of rain.</p>
+
+<div id="wxcards" class="grid g3"></div>
+
+<div class="card">
+<div class="hd"><h3>What the numbers actually mean</h3></div>
+<ul>
+<li><b>"Feels like" is the number to plan around.</b> Saturday's 11.7 °C feels like 8.8 in the afternoon and 4.8 in the morning. Sunday's 9.6 °C feels like 5.2 — and on an exposed pier or the Westerplatte peninsula, add another 5 °C of wind chill. Dress for the "feels" column, not the headline.</li>
+<li><b>Sunday's gusts are the real story.</b> 62 km/h is not "breezy" — it is the threshold where ferris wheels stop, towers close, boats stay in port, and walking along the Motława stops being fun. The sustained wind is 22–24 km/h for six hours (10:00–16:00).</li>
+<li><b>Sunday's rain has a schedule.</b> 0% until 13:00, then 23% at 14:00, 46% at 15:00, 75% at 16:00, 100% at 18:00, easing to 64% by 21:00. So: do your outdoor move in the morning, be indoors by 14:00, and do not plan a walk home at 18:00.</li>
+<li><b>Saturday's evening is the golden window.</b> Cloud cover falls from 92% at 18:00 to 7% at 20:00 and 0% at 21:00. Sunset at 17:27, blue hour to ~17:55, then clear sky and city lights. This is when you want to be on the water.</li>
+<li><b>Daylight is short.</b> 9h56m on Saturday, shrinking to 9h47m by Monday. Effectively: usable daylight 08:00–17:00. Anything outdoors after 17:00 is a sunset/night activity, not a sightseeing one.</li>
+<li><b>UV is negligible</b> (0.95–1.8). No sunscreen needed; the risk is cold and wet, not sun.</li>
+<li><b>No snow, no frost</b> in the forecast — lows stay at 5–8 °C. The "Baltic in October" horror scenario is not happening this weekend.</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="hd"><h3>Best outdoor windows, day by day</h3></div>
+<div class="tw">
+<table>
+<thead><tr><th>Day</th><th>Best window</th><th>Why</th><th>Use it for</th></tr></thead>
+<tbody>
+<tr class="hi"><td><b>Sat 24</b></td><td class="num">11:00–17:00</td><td>Dry, cloud thinning, 11 °C, wind 13–14 km/h</td><td>Old Town on foot, tower, waterfront, sunset</td></tr>
+<tr><td><b>Sat 24</b></td><td class="num">19:00–22:00</td><td>Cloud 7% 0%, clear and cold (9–10 °C)</td><td>Ołowianka lights, bar crawl between venues</td></tr>
+<tr><td><b>Sun 25</b></td><td class="num">09:00–13:00</td><td>Dry but 5–6 °C and wind building to 20 km/h</td><td>Short walk to the museum only — nothing exposed</td></tr>
+<tr style="background:rgba(255,107,107,.06)"><td><b>Sun 25</b></td><td class="num">14:00–21:00</td><td>Rain, 100% at 18:00, gusts 55–62 km/h</td><td>Indoors only: museums, bowling, axe, concert</td></tr>
+<tr class="hi"><td><b>Mon 26</b></td><td class="num">10:00–16:00</td><td>Dry, 9–12 °C, cloud 50–94%, gusts 46</td><td>Oliwa, park, free museums, a hill viewpoint</td></tr>
+<tr><td><b>Mon 26</b></td><td class="num">16:30–17:30</td><td>Dry, cloud down to 29%, sunset 17:22</td><td>Brzeźno pier or Góra Gradowa — then airport</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="card">
+<div class="hd"><h3>Clothing plan, per day</h3></div>
+<div class="grid g3">
+<div><span class="badge good">Sat</span><p class="small" style="margin-top:8px">Base layer + hoodie + <b>light waterproof shell</b> (for wind, not rain). Jeans fine. Trainers OK. Beanie for the evening — it drops to 9 °C and clear skies mean radiant heat loss.</p></div>
+<div><span class="badge bad">Sun</span><p class="small" style="margin-top:8px"><b>Full waterproof jacket with a hood</b>, warm mid-layer, waterproof shoes. Umbrella is useless. Gloves. Assume you will get wet between venues — plan taxi/Uber hops of 15–25 zł rather than 15-minute walks.</p></div>
+<div><span class="badge good">Mon</span><p class="small" style="margin-top:8px">Same as Saturday but warmer: 12 °C, dry. You will carry bags in the evening — wear the heaviest layer, pack the rest. Comfortable shoes for Oliwa park and the airport.</p></div>
+</div>
+</div>
+
+<div class="callout info"><b>Forecast confidence.</b> Saturday and Monday are high-confidence (dry, stable pattern). Sunday's wind is high-confidence — all models agree on 55–65 km/h gusts. The exact rain start time (13:00–15:00) is the least certain part; assume it starts at 13:00 and you will not be caught out.</div>
+</div>
+</section>
+
+<!-- ============ MAP ============ -->
+<section class="page" id="map">
+<div class="wrap">
+<h2>Everything on a map</h2>
+<p class="mut small">Tap a pin for price, hours, website and a Google Maps link. Filter by category or by the day you need it. The amber pin is your flat.</p>
+<div class="filters" id="mapfilters"></div>
+<div class="mapwrap">
+<div id="map"></div>
+<div class="mapbtns">
+<button id="locate" title="Find me">◎</button>
+<button id="fitall" title="Show everything">⤢</button>
+</div>
+<div class="maplegend" id="legend"></div>
+</div>
+<p class="tiny mut" style="margin-top:8px">Map data © OpenStreetMap contributors. Pins are the actual coordinates of each place; distances shown on cards are straight-line from the flat, walking times estimated at 4.5 km/h.</p>
+</div>
+</section>
+
+<!-- ============ PLACES ============ -->
+<section class="page" id="places">
+<div class="wrap">
+<h2>All places</h2>
+<p class="mut small" id="placecount">Loading…</p>
+<input class="search" id="q" placeholder="Search: amber, pierogi, museum, bowling…" autocomplete="off">
+<div class="filters" id="catfilters"></div>
+<div class="filters" id="dayfilters" style="top:150px"></div>
+<div id="placelist"></div>
+</div>
+</section>
+
+<!-- ============ EAT & DRINK ============ -->
+<section class="page" id="eat">
+<div class="wrap">
+<h2>Eat &amp; drink</h2>
+<p class="mut">Gdańsk is cheap by Western European standards: a full meal in a milk bar is 25 zł, a good dinner is 60–80 zł, a cocktail 30 zł, a beer 12–15 zł, a vodka shot 8 zł. Tipping is 10% in sit-down restaurants, rounded up in bars.</p>
+
+<div class="card">
+<div class="hd"><h3>The five meals you should not skip</h3></div>
+<ol style="margin:0">
+<li><b>Pierogi at Mandu</b> (28–45 zł) — the one dish everyone will ask about afterwards. Book.</li>
+<li><b>A milk-bar lunch at Neptun</b> (~25 zł) — borscht, croquettes, plum pierogi. A cultural experience disguised as cheap food.</li>
+<li><b>Herring and vodka at Ministerstwo Śledzia i Wódki</b> (45–60 zł) — five kinds of herring, ice-cold shots.</li>
+<li><b>Baltic fish at Ryba Piła</b> (40–65 zł) — cod, herring, halibut, simply cooked.</li>
+<li><b>Brewery dinner at Brovarnia</b> (70–90 zł) — pork knuckle, own beer, river views.</li>
+</ol>
+</div>
+
+<div class="card">
+<div class="hd"><h3>The crawl (Saturday night, 5 stops, 1 km)</h3></div>
+<p class="small">Start 21:00 on ul. Chlebnicka, end on Wyspa Spichrzów. Order one drink per stop — the point is the route, not the volume.</p>
+<div class="tw">
+<table>
+<thead><tr><th>#</th><th>Stop</th><th>What to order</th><th>Damage</th><th>Vibe</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td><b>Flisak'76</b></td><td>Signature cocktail</td><td class="num">30 zł</td><td>Candle-lit, tiny, best street in town</td></tr>
+<tr><td class="num">2</td><td><b>Józef K.</b></td><td>Local craft beer</td><td class="num">15 zł</td><td>Piwna street institution, no dress code</td></tr>
+<tr><td class="num">3</td><td><b>Ministerstwo Śledzia</b></td><td>Herring plate + vodka shot</td><td class="num">35 zł</td><td>Very Polish, sit-down, order food</td></tr>
+<tr><td class="num">4</td><td><b>Pijalnia Wódki i Piwa</b></td><td>Shot + herring snack</td><td class="num">10 zł</td><td>Standing room, communist decor, 2 minutes</td></tr>
+<tr><td class="num">5</td><td><b>Pixel</b></td><td>Smoky whisky cocktail</td><td class="num">32 zł</td><td>Proper cocktail bar, loud after 22:00</td></tr>
+</tbody>
+</table>
+</div>
+<p class="small mut" style="margin:10px 0 0">Total ~120 zł pp. Alternative finish: <b>Cooltura</b> (open to 06:00, cheap, alternative) or <b>Sassy</b> (club, 22:00–05:00, smart-ish).</p>
+</div>
+
+<h3 style="margin-top:26px">Bars &amp; restaurants — all details</h3>
+<p class="mut small">Hours are as published in October 2026; bars change them often, so check the link if you are going early or on a weekday.</p>
+<div id="eatlist"></div>
+</div>
+</section>
+
+<!-- ============ TRANSPORT ============ -->
+<section class="page" id="transport">
+<div class="wrap">
+<h2>Getting there &amp; getting around</h2>
+<p class="mut">Your base is at <b>ul. Jacka Malczewskiego 89, Siedlce</b> — a residential district 2.5 km south-west of the Old Town and 2.6 km from Gdańsk Główny. It is not a walk-to-everything location; it is a 10-minute tram ride or a 25–35 zł Uber.</p>
+
+<h3>1. Airport → the flat, five people</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Option</th><th>Door to door</th><th>Cost for 5</th><th>Best for</th><th>Verdict</th></tr></thead>
+<tbody>
+<tr class="hi"><td><b>Uber / Bolt XL</b><br><span class="tiny mut">6-seat van, one car</span></td><td class="num">18–25 min</td><td class="num">~110–130 zł</td><td>5 people + luggage, arrival at night</td><td><span class="yes">BEST</span>— one car, door to door, cheaper than two taxis</td></tr>
+<tr><td><b>SKM/PKM train + tram</b><br><span class="tiny mut">Gdańsk Port Lotniczy → Główny → tram 10</span></td><td class="num">55–65 min</td><td class="num">24–30 zł</td><td>Cabin bags only, daytime</td><td><span class="yes">CHEAPEST</span>— 5× cheaper, but 3 legs with bags</td></tr>
+<tr><td><b>Bus 210 + tram</b></td><td class="num">60–75 min</td><td class="num">24–30 zł</td><td>Backup when trains are off</td><td>OK, slower, less luggage space</td></tr>
+<tr><td><b>UberX × 2 cars</b></td><td class="num">20–30 min</td><td class="num">~110–130 zł</td><td>If no XL available</td><td>Fine, but you split the group</td></tr>
+<tr><td><b>Official taxi (Neptun) × 2</b></td><td class="num">18–25 min</td><td class="num">198–240 zł</td><td>No app / no data</td><td><span class="no">EXPENSIVE</span>— fixed 99 zł day, 120 zł night, per car</td></tr>
+<tr><td><b>Rental car at airport</b></td><td class="num">30–45 min</td><td class="num">100–300 zł/day + fuel</td><td>Malbork / Gdynia day trip</td><td>Only worth it if you leave the city</td></tr>
+</tbody>
+</table>
+</div>
+<div class="callout gold"><b>Recommendation:</b> book an <b>Uber XL</b> as you walk out of arrivals. 114 zł for the car, 18 minutes, everyone and every bag in one vehicle, dropped at the door. On the way back to the airport at 20:00, do the same (~55–70 zł).</div>
+
+<details open>
+<summary>Step-by-step: the train route (if you take it)</summary>
+<ol>
+<li><b>Arrivals station:</b> exit the terminal and follow signs to <i>Gdańsk Port Lotniczy</i> — a covered walkway, about 5 minutes.</li>
+<li><b>Ticket:</b> buy in the <b>Jakdojade</b> or <b>GoPay</b> app, or from the machine. A single is <b>4.80 zł</b>; a 75-minute transfer ticket is <b>6.00 zł</b> and covers the tram leg too. A <b>24h pass is 18 zł</b> and is the best deal if you will ride 3+ times.</li>
+<li><b>Train:</b> take any SKM/PKM service towards Gdańsk Główny (some require a change at Gdańsk Wrzeszcz — check the board, it is the same platform). ~25 minutes.</li>
+<li><b>Tram:</b> from Gdańsk Główny take <b>tram 10</b> towards Siedlce/Emaus and get off at <b>Zakopiańska</b> (4 stops, 6 min), then walk 300 m. Or walk 25 minutes.</li>
+<li><b>Validate</b> every ticket on boarding. Inspectors fine on the spot (~150 zł) and show no mercy to tourists.</li>
+</ol>
+</details>
+
+<h3 style="margin-top:28px">2. Getting around the city</h3>
+<div class="grid g2">
+<div class="card tight">
+<h3>Trams &amp; buses (ZTM)</h3>
+<dl class="kv" style="margin-top:10px">
+<dt>Single</dt><dd>4.80 zł</dd>
+<dt>75-min transfer</dt><dd>6.00 zł</dd>
+<dt>24-hour pass</dt><dd>18.00 zł</dd>
+<dt>72-hour pass</dt><dd>32.00 zł</dd>
+</dl>
+<p class="small mut" style="margin:10px 0 0">Trams <b>10 and 12</b> from Zakopiańska/Siedlce go to the centre and Gdańsk Główny in 10–12 min. Buy in Jakdojade, GoPay, mPay or SkyCash; validate on boarding. Night buses run after ~23:00 on the same tickets.</p>
+</div>
+<div class="card tight">
+<h3>SKM (Tricity train)</h3>
+<dl class="kv" style="margin-top:10px">
+<dt>Gdańsk Sopot</dt><dd>10–13 min · 4.80 zł</dd>
+<dt>Gdańsk Gdynia</dt><dd>25–30 min · ~6 zł</dd>
+<dt>Gdańsk airport</dt><dd>25 min · 4.80 zł</dd>
+<dt>Gdańsk Malbork</dt><dd>40–50 min · ~15–20 zł</dd>
+</dl>
+<p class="small mut" style="margin:10px 0 0">The fast way to Sopot/Gdynia — faster and cheaper than driving, and it drops you in the centre. Runs roughly 05:00–23:30.</p>
+</div>
+<div class="card tight">
+<h3>Uber / Bolt / FreeNow</h3>
+<dl class="kv" style="margin-top:10px">
+<dt>Flat Old Town</dt><dd>25–35 zł</dd>
+<dt>Flat airport</dt><dd>55–70 zł</dd>
+<dt>Old Town Sopot</dt><dd>70–90 zł</dd>
+<dt>Night surcharge</dt><dd>+20–30%</dd>
+</dl>
+<p class="small mut" style="margin:10px 0 0">Uber and Bolt are both active and cheap. For five, always select <b>XL</b>. Bolt is often 10–15% cheaper; compare both.</p>
+</div>
+<div class="card tight">
+<h3>Bikes &amp; scooters</h3>
+<p class="small" style="margin-top:10px">Mevo and Lime/Bolt scooters are everywhere in the centre. <b>Not this weekend:</b> 9 °C, rain and 60 km/h gusts. Skip.</p>
+<p class="small mut" style="margin:0">Walking is the main mode inside the Old Town — everything is within 15 minutes on foot.</p>
+</div>
+</div>
+
+<h3 style="margin-top:28px">3. Should you rent a car?</h3>
+<div class="callout warn"><b>No — not for this trip.</b> Everything you are doing is inside a 4 km radius served by trams, and the one thing a car helps with (Malbork, 45 min away) does not fit your departure day. A car in the centre means 7.50 zł for the first hour of parking, one-way streets, and a driver who cannot drink.</div>
+<div class="tw">
+<table>
+<thead><tr><th>Cost item</th><th>Price</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Economy car rental</td><td class="num">90–150 zł/day</td><td>Airport pickup, unlimited km typical</td></tr>
+<tr><td>Estate / 7-seat van</td><td class="num">180–300 zł/day</td><td>Needed for 5 + luggage</td></tr>
+<tr><td>Fuel</td><td class="num">~6.5 zł/litre</td><td>Gdańsk Malbork Gdańsk ≈ 60 km ≈ 30 zł</td></tr>
+<tr><td>Parking, city centre (ŚSPP)</td><td class="num">7.50 zł 1st hour</td><td>Charged 09:00–20:00, every day incl. Sunday</td></tr>
+<tr><td>Parking, private garage</td><td class="num">5–8 zł/h · 60–90 zł/day</td><td>Safer for a rental</td></tr>
+<tr><td>Parking at the flat (Siedlce)</td><td class="num">free/street</td><td>Outside the paid zone, but crowded in the evening</td></tr>
+</tbody>
+</table>
+</div>
+
+<details>
+<summary>Driving times from the flat (if you do rent)</summary>
+<div class="tw" style="margin-top:10px">
+<table>
+<thead><tr><th>Destination</th><th>Distance</th><th>Drive</th></tr></thead>
+<tbody>
+<tr><td>Old Town (Długi Targ)</td><td class="num">3.8 km</td><td class="num">8 min</td></tr>
+<tr><td>Gdańsk Główny station</td><td class="num">2.6 km</td><td class="num">5 min</td></tr>
+<tr><td>Airport (GDN)</td><td class="num">13.7 km</td><td class="num">18 min</td></tr>
+<tr><td>Westerplatte</td><td class="num">14.1 km</td><td class="num">21 min</td></tr>
+<tr><td>Oliwa Cathedral</td><td class="num">11.8 km</td><td class="num">21 min</td></tr>
+<tr><td>Brzeźno pier</td><td class="num">9.5 km</td><td class="num">18 min</td></tr>
+<tr><td>Sopot pier</td><td class="num">15.1 km</td><td class="num">27 min</td></tr>
+<tr><td>Gdynia</td><td class="num">~22 km</td><td class="num">30 min</td></tr>
+<tr><td>Malbork Castle</td><td class="num">~55 km</td><td class="num">45–55 min</td></tr>
+</tbody>
+</table>
+</div>
+</details>
+
+<h3 style="margin-top:28px">4. The midnight flight — timing</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Leave the flat</th><th>Mode</th><th>At the airport</th><th>Comment</th></tr></thead>
+<tbody>
+<tr class="hi"><td class="num">20:00</td><td>Uber/Bolt XL</td><td class="num">20:25</td><td>Safest. 3.5 h buffer, dinner before.</td></tr>
+<tr><td class="num">20:15</td><td>SKM from Główny</td><td class="num">20:55</td><td>4.80 zł pp; tram to the station first.</td></tr>
+<tr><td class="num">20:45</td><td>Uber X</td><td class="num">21:10</td><td>Fine if security is quick.</td></tr>
+<tr style="background:rgba(255,107,107,.06)"><td class="num">21:30</td><td>anything</td><td class="num">21:55</td><td><span class="no">Too late</span>for a 23:59 departure in a busy evening.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="callout info" style="margin-top:14px"><b>Install before you fly:</b> Jakdojade (trams/buses, live times), Bolt + Uber (compare prices), Google Maps offline area for Gdańsk, and the PKP/SKM app or just use the machines. Buy tickets in-app and skip the machines entirely.</div>
+</div>
+</section>
+
+<!-- ============ COSTS ============ -->
+<section class="page" id="costs">
+<div class="wrap">
+<h2>What it costs</h2>
+<p class="mut">Per person, excluding flights and accommodation. Two scenarios: <b>Lean</b> (milk bars, trams, free sights, cheap bars) and <b>Comfortable</b> (restaurants, Ubers, a paid activity a day, proper cocktails).</p>
+<div class="tw">
+<table>
+<thead><tr><th>Item</th><th>Lean</th><th>Comfortable</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><b>Day 1</b> transport</td><td class="num">6 zł</td><td class="num">30 zł</td><td>Train+walk vs Uber XL share + 24h pass</td></tr>
+<tr><td>Day 1 food</td><td class="num">55 zł</td><td class="num">95 zł</td><td>Milk bar + Brovarnia</td></tr>
+<tr><td>Day 1 drinks</td><td class="num">60 zł</td><td class="num">150 zł</td><td>3 beers vs full crawl</td></tr>
+<tr><td>Day 1 sights</td><td class="num">0 zł</td><td class="num">62 zł</td><td>Tower 20 + AmberSky 42</td></tr>
+<tr><td><b>Day 2</b> museum</td><td class="num">33 zł</td><td class="num">33 zł</td><td>WWII Museum, both scenarios</td></tr>
+<tr><td>Day 2 food</td><td class="num">60 zł</td><td class="num">95 zł</td><td>Mandu + Ministerstwo</td></tr>
+<tr><td>Day 2 activity</td><td class="num">24 zł</td><td class="num">120 zł</td><td>Bowling share vs axe/shooting</td></tr>
+<tr><td>Day 2 evening</td><td class="num">30 zł</td><td class="num">150 zł</td><td>Games + beers vs concert + cocktails</td></tr>
+<tr><td><b>Day 3</b> transport</td><td class="num">12 zł</td><td class="num">30 zł</td><td>Trams/SKM vs Ubers</td></tr>
+<tr><td>Day 3 sights</td><td class="num">10 zł</td><td class="num">10 zł</td><td>Organ demo (museums are free)</td></tr>
+<tr><td>Day 3 food</td><td class="num">50 zł</td><td class="num">80 zł</td><td>Lunch + last dinner</td></tr>
+<tr><td>Airport transfer</td><td class="num">5 zł</td><td class="num">14 zł</td><td>SKM vs Uber XL share</td></tr>
+<tr class="hi"><td><b>Total per person</b></td><td class="num"><b>~345 zł</b></td><td class="num"><b>~870 zł</b></td><td>Add ~100 zł buffer for taxis, coffee, souvenirs</td></tr>
+<tr><td><b>Total for 5</b></td><td class="num">~1,725 zł</td><td class="num">~4,350 zł</td><td>Realistic middle: ~600–700 zł pp</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="grid g2" style="margin-top:14px">
+<div class="card tight">
+<h3>Price cheat-sheet</h3>
+<dl class="kv" style="margin-top:8px">
+<dt>Beer (0.5 l)</dt><dd>12–18 zł</dd>
+<dt>Vodka shot</dt><dd>8–12 zł</dd>
+<dt>Cocktail</dt><dd>28–38 zł</dd>
+<dt>Coffee</dt><dd>12–16 zł</dd>
+<dt>Milk-bar meal</dt><dd>20–28 zł</dd>
+<dt>Restaurant main</dt><dd>45–75 zł</dd>
+<dt>Pierogi portion</dt><dd>28–45 zł</dd>
+<dt>Tram single / 24h</dt><dd>4.80 / 18 zł</dd>
+<dt>Museum</dt><dd>30–40 zł</dd>
+<dt>Uber across centre</dt><dd>25–35 zł</dd>
+</dl>
+</div>
+<div class="card tight">
+<h3>What is genuinely free</h3>
+<ul style="margin:0;padding-left:18px">
+<li>Old Town: Długi Targ, Neptune, Artus Court, Green Gate</li>
+<li>St Mary's church (tower is 20 zł)</li>
+<li>Oliwa Park + cathedral entry</li>
+<li>Góra Gradowa / Hevelianum grounds — best viewpoint</li>
+<li>Shipyard walk, cranes, ECS rooftop terrace</li>
+<li>Ołowianka island loop</li>
+<li>Brzeźno pier &amp; beach</li>
+<li>Sopot pier (free after 30 September)</li>
+<li>Zaspa murals</li>
+<li><b>All Muzeum Gdańska branches on Monday</b></li>
+<li>WWII Museum on Tuesdays (not your dates)</li>
+<li>Sopot Half Marathon spectating (Sunday morning)</li>
+</ul>
+</div>
+</div>
+
+<div class="callout gold"><b>Money practicalities.</b> Poland is card-first — Apple/Google Pay works in bars, trams (via app), museums and taxis. Carry 100–200 zł cash for small bars, tip jars and the odd milk bar. Currency is <b>PLN</b> (złoty), roughly 4.3 zł = €1. Do not use airport exchange desks; use an ATM (Santander/Euronet are near the flat) and decline "conversion to your currency". Tipping: 10% in restaurants, round up in bars, nothing in milk bars.</div>
+</div>
+</section>
+
+<!-- ============ INFO ============ -->
+<section class="page" id="info">
+<div class="wrap">
+<h2>Practical info</h2>
+
+<div class="card">
+<div class="hd"><h3>Opening-hours matrix — the thing that ruins trips</h3></div>
+<p class="small mut">Polish museums have brutal weekly closing days and they do not align. This is the verified picture for your exact dates.</p>
+<div class="tw">
+<table>
+<thead><tr><th>Place</th><th>Sat 24</th><th>Sun 25</th><th>Mon 26</th><th>Ticket</th></tr></thead>
+<tbody>
+<tr><td>WWII Museum</td><td class="num">10–18</td><td class="num">10–18</td><td class="num"><span class="no">CLOSED</span></td><td class="num">33 zł</td></tr>
+<tr><td>European Solidarity Centre</td><td class="num">10–18</td><td class="num">10–18</td><td class="num">10–17</td><td class="num">40 zł</td></tr>
+<tr><td>Amber Museum</td><td class="num">10–18</td><td class="num">10–18</td><td class="num">10–18 <b>FREE</b></td><td class="num">35 zł / 0</td></tr>
+<tr><td>Town Hall</td><td class="num">10–16</td><td class="num">10–16</td><td class="num">10–16 <b>FREE</b></td><td class="num">35 zł / 0</td></tr>
+<tr><td>St Mary's</td><td class="num">08:30–17:30</td><td class="num">from 11:00</td><td class="num">08:30–17:30</td><td class="num">free / 20 zł</td></tr>
+<tr><td>Oliwa organ demo</td><td class="num">11:00, 12:00</td><td class="num">15:00</td><td class="num">11:00, 12:00</td><td class="num">~10 zł</td></tr>
+<tr><td>Gdańsk Zoo</td><td class="num">09–16</td><td class="num">09–16</td><td class="num">09–16</td><td class="num">30 zł</td></tr>
+<tr><td>Westerplatte</td><td class="num">24/7</td><td class="num">gale</td><td class="num">24/7</td><td class="num">free / 80 zł boat</td></tr>
+<tr><td>Sopot pier</td><td class="num">24/7</td><td class="num">marathon AM</td><td class="num">24/7</td><td class="num">free</td></tr>
+<tr><td>Philharmonic</td><td class="num">18:00 concert</td><td class="num">19:00 concert</td><td class="num">—</td><td class="num">60–120 zł</td></tr>
+<tr><td>U7 Bowling</td><td class="num">10–01</td><td class="num">10–24</td><td class="num">10–24</td><td class="num">120–170 zł/h</td></tr>
+<tr><td>E1GOKART</td><td class="num">~10–22</td><td class="num">~10–22</td><td class="num">~10–22</td><td class="num">75 zł/ride</td></tr>
+<tr><td>Shooting range (GCS)</td><td class="num">10–22</td><td class="num">check</td><td class="num">check</td><td class="num">~120 zł</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="grid g2">
+<div class="card tight">
+<h3>Sunday 25 October = trading ban</h3>
+<p class="small">Big shops (Biedronka, Lidl, shopping centres) are <b>closed</b>. Open: Żabka corner shops (06:00–23:00), the <b>Lewiatan</b> near your flat (09:00–19:00), pharmacies on duty, restaurants, bars, museums. <b>Buy breakfast, water and beer on Saturday.</b></p>
+</div>
+<div class="card tight">
+<h3>Emergency &amp; health</h3>
+<dl class="kv" style="margin-top:8px">
+<dt>Emergency</dt><dd>112</dd>
+<dt>Ambulance</dt><dd>999</dd>
+<dt>Police</dt><dd>997</dd>
+<dt>Fire</dt><dd>998</dd>
+<dt>Nearest pharmacy</dt><dd>Kartuska, 4 min from flat (Mon–Fri 08–19, Sat 08–15)</dd>
+</dl>
+<p class="small mut" style="margin:8px 0 0">EU citizens: free healthcare with an EHIC card. Tap water is drinkable everywhere.</p>
+</div>
+<div class="card tight">
+<h3>Five phrases that help</h3>
+<ul class="small" style="margin:0;padding-left:18px">
+<li><b>Dziękuję</b> — thank you (jen-KOO-yeh)</li>
+<li><b>Proszę</b> — please / here you go</li>
+<li><b>Poproszę piwo</b> — one beer, please</li>
+<li><b>Rachunek</b> — the bill</li>
+<li><b>Na zdrowie</b> — cheers (nah ZDRO-vyeh)</li>
+</ul>
+<p class="small mut" style="margin:8px 0 0">English is widely spoken by anyone under 40.</p>
+</div>
+<div class="card tight">
+<h3>Local etiquette &amp; safety</h3>
+<ul class="small" style="margin:0;padding-left:18px">
+<li>Gdańsk is very safe; the usual tram pickpocket advice applies around Główny at night.</li>
+<li>No alcohol on the street in theory — in practice, drinking on the embankment or a park bench is normal and unenforced. Do not carry open bottles on trams.</li>
+<li>Clubs: no flip-flops or sports shorts; Sassy enforces it, others do not.</li>
+<li>Ask before photographing people; churches require quiet and covered shoulders.</li>
+<li>Smoking is banned indoors in bars and restaurants — most have heated outdoor areas.</li>
+</ul>
+</div>
+</div>
+
+<div class="card">
+<div class="hd"><h3>Three things that will actually go wrong (and the fix)</h3></div>
+<ol style="margin:0">
+<li><b>You will be colder than you think.</b> 9 °C with 40 km/h wind on a waterfront feels like 2 °C. Fix: waterproof shell + beanie, and plan bar-to-bar hops under 10 minutes.</li>
+<li><b>Sunday afternoon will be dead outdoors.</b> Fix: book the museum slot and the indoor activity on Saturday night, not Sunday morning. Axe throwing and shooting need 24 h notice.</li>
+<li><b>You will cut it fine for the flight.</b> A 23:59 departure means security by 22:15. Fix: leave the flat at 20:00, eat before 19:45, bags packed by 18:00 — and put the airport Uber on someone's phone with a 19:55 alarm.</li>
+</ol>
+</div>
+
+<div class="callout info"><b>Sources.</b> Tickets and hours: muzeum1939.pl, ecs.gda.pl, muzeumgdansk.pl, bazylikamariacka.gdansk.pl, zoo.gdansk.pl, archikatedraoliwa.pl, zegluga.pl, filharmonia.gda.pl, u7.pl, e1gokart.pl, gcs-strzelanie.com. Fares: ZTM Gdańsk / MZKZG. Weather: Open-Meteo. Map: OpenStreetMap contributors. Prices verified 23 October 2026 — re-check anything you are booking.</div>
+</div>
+</section>
+
+</main>
+<footer><div class="wrap">
+  <p style="margin:0 0 6px"><b>Built for five friends, 24–26 October 2026.</b> Prices and opening hours verified 23 Oct 2026 from official sites; forecasts from Open-Meteo; map data © OpenStreetMap contributors.</p>
+  <p style="margin:0">Not a booking site — links go to the venues' own pages. Re-check anything you are about to pay for: Polish museums change hours on public holidays and bars change them weekly.</p>
+</div></footer>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script>
+const PLACES=[{"id":"cybermachina","name":"Cybermachina Game Pub","cat":"bar","area":"Stare Przedmieście","lat":54.34905,"lon":18.64627,"addr":"ul. Okopowa (corner)","price":"Beer ~12–16 zł · board games free with a drink","priceNum":14,"hours":"Mon–Thu 16:00–24:00 · Fri–Sat 16:00–02:00 (check)","dur":"2–4 h","indoor":true,"day":["d1","d2"],"web":"https://cybermachina.pl","desc":"Board games, retro consoles, arcade machines and craft beer. Bookshelves of games you can take to your table for free.","why":"The single best bar for five friends in Gdańsk: you can actually talk, compete, and nobody cares how long you sit. Cheap.","tip":"Grab a big table at the back, order a round, and ask staff to recommend a 20-minute party game. Budget ~40–60 zł pp for a long session.","km":1.8,"walk":24,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34905,18.64627","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34905,18.64627&travelmode=walking"},{"id":"cooltura","name":"Cooltura club","cat":"bar","area":"Stare Przedmieście","lat":54.34879,"lon":18.64663,"addr":"ul. Okopowa 7","price":"Entry usually free/10 zł · drinks 12–20 zł","priceNum":15,"hours":"Daily 16:00–06:00 (club part later)","dur":"2–4 h","indoor":true,"day":["d1"],"web":"","desc":"A big multi-room club/bar with alternative, rock and electronic nights, open until 6 a.m. Student crowd, cheap drinks.","why":"If the Old Town bars close at 1, this is where the night continues. Five minutes from the centre, no dress code.","tip":"Go after 23:30 on Saturday. Check the event on Facebook that day — the music changes nightly.","km":1.8,"walk":24,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34879,18.64663","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34879,18.64663&travelmode=walking"},{"id":"gameover","name":"Game Over","cat":"bar","area":"Stare Przedmieście","lat":54.34885,"lon":18.64729,"addr":"ul. Podgarbary 10","price":"Beer 12–16 zł · hourly gaming 10–20 zł","priceNum":15,"hours":"Mon–Thu 14:00–24:00 · Fri–Sat 14:00–02:00","dur":"2–3 h","indoor":true,"day":["d2"],"web":"","desc":"Video-game bar: consoles, PCs, retro arcades, tournaments, and beer at the table.","why":"Five guys, one FIFA/Mario Kart tournament, four hours gone. Indoor, cheap, and reliably fun in bad weather.","tip":"Book a console station for 5 in advance on weekends. Ask about the tournament schedule.","km":1.9,"walk":25,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34885,18.64729","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34885,18.64729&travelmode=walking"},{"id":"jozefk","name":"Józef K.","cat":"bar","area":"Old Town","lat":54.35035,"lon":18.64972,"addr":"ul. Piwna 1/2","price":"Beer 12–18 zł · cocktails ~30 zł","priceNum":18,"hours":"Mon–Thu & Sun 10:00–02:00 · Fri–Sat 10:00–03:00","dur":"1–2 h","indoor":true,"day":["d1"],"web":"","desc":"A long-running Piwna-street institution: wooden interior, posters, a mixed crowd of students, locals and tourists, open until the small hours.","why":"Piwna is the bar street of Gdańsk and Józef K. is its living room. Cheap, unpretentious, no dress code.","tip":"Great 'second stop' — after cocktails, before the club. Ask for a local craft beer on tap.","km":2.0,"walk":27,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35035,18.64972","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35035,18.64972&travelmode=walking"},{"id":"winston","name":"Winston Bar","cat":"bar","area":"Old Town","lat":54.34939,"lon":18.64993,"addr":"ul. Długa","price":"Cocktails ~30–35 zł","priceNum":32,"hours":"Mon–Thu 17:00–24:00 · Fri–Sat 17:00–02:00","dur":"1–2 h","indoor":true,"day":["d1"],"web":"","desc":"Smart little cocktail bar just off Długa with a British-club feel — dark wood, low light, proper glassware.","why":"Best cocktail quality-to-crowd ratio in the centre. Good for the 'we are dressed slightly better tonight' moment.","tip":"If full, Flisak'76 and Pixel are within 4 minutes' walk.","km":2.0,"walk":27,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34939,18.64993","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34939,18.64993&travelmode=walking"},{"id":"ogarna107","name":"107 Ogarna","cat":"bar","area":"Old Town","lat":54.34843,"lon":18.65129,"addr":"ul. Ogarna 107D","price":"Cocktails 28–36 zł","priceNum":30,"hours":"Mon–Thu 18:00–01:00 · Fri–Sat 16:00–03:00","dur":"1–2 h","indoor":true,"day":["d1"],"web":"","desc":"A narrow, brick-vaulted cocktail bar on Ogarna street with a serious drinks list and a young crowd.","why":"Ogarna is the second bar street of the Old Town — less touristy than Piwna, better cocktails per złoty.","tip":"Standing room only after 22:00. Good stop between Winston and Pixel.","km":2.1,"walk":28,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34843,18.65129","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34843,18.65129&travelmode=walking"},{"id":"tiki","name":"Tiki Jungle","cat":"bar","area":"Old Town","lat":54.34999,"lon":18.65158,"addr":"ul. Piwna","price":"Tiki cocktails 30–40 zł","priceNum":35,"hours":"Sun–Thu 17:00–24:00 · Fri–Sat 17:00–02:00","dur":"1–2 h","indoor":true,"day":["d1"],"web":"","desc":"Tropical tiki bar with flaming bowls, carved wood and rum-heavy cocktails — deliberately ridiculous.","why":"The one bar where ordering a giant shared bowl for five actually makes sense. Good photos, good mood.","tip":"Order one 'volcano bowl' to share rather than five separate drinks — cheaper and more fun.","km":2.1,"walk":28,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34999,18.65158","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34999,18.65158&travelmode=walking"},{"id":"redlight","name":"Red Light Pub","cat":"bar","area":"Old Town","lat":54.34938,"lon":18.65216,"addr":"ul. Piwna 28/31","price":"Beer 10–15 zł · shots 8–12 zł","priceNum":12,"hours":"Daily 17:00–02:00 (to 03:00 Fri–Sat)","dur":"1–2 h","indoor":true,"day":["d1"],"web":"","desc":"A basement rock pub on Piwna: loud music, cheap beer, darts, no pretension.","why":"The classic late-night Piwna stop. If you want a proper Polish 'piwnica' (cellar) night, this is it.","tip":"Cash is handy. Music is loud — not the place for a deep conversation.","km":2.2,"walk":29,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34938,18.65216","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34938,18.65216&travelmode=walking"},{"id":"flisak","name":"Flisak'76","cat":"bar","area":"Old Town","lat":54.34877,"lon":18.6546,"addr":"ul. Chlebnicka 9/10","price":"Cocktails ~28–35 zł","priceNum":30,"hours":"Mon–Thu & Sun 18:00–01:00 · Fri–Sat 18:00–03:00","dur":"1–2 h","indoor":true,"day":["d1"],"web":"","desc":"Tiny, candle-lit cocktail bar on the prettiest street in the Old Town. No menu theatre, just excellent drinks.","why":"Chlebnicka is 30 metres of perfect Hanseatic facades — you drink outside in the street when it is dry. Very Gdańsk.","tip":"It is small: 5 people may have to stand or split. Perfect first stop of the crawl at 20:00.","km":2.3,"walk":31,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34877,18.6546","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34877,18.6546&travelmode=walking"},{"id":"pijalnia","name":"Pijalnia Wódki i Piwa","cat":"bar","area":"Old Town","lat":54.34857,"lon":18.65429,"addr":"ul. Długi Targ 35/38","price":"Shots 6–10 zł · beer ~10 zł","priceNum":9,"hours":"Daily ~11:00–02:00 (busy late)","dur":"45–90 min","indoor":true,"day":["d1"],"web":"","desc":"A Polish institution: cheap vodka shots, herring and bread, communist-era decor, standing room only.","why":"The authentic Polish drinking experience, at absurd prices. Five guys, five shots, five złoty each — it is a rite of passage.","tip":"Order 'set' of shots + a herring snack. Do it EARLY in the night, not at 1 a.m. — pace matters.","km":2.3,"walk":31,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34857,18.65429","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34857,18.65429&travelmode=walking"},{"id":"lawendowa","name":"Pub Lawendowa","cat":"bar","area":"Old Town","lat":54.3528,"lon":18.65281,"addr":"ul. Lawendowa 8","price":"Beer 10–16 zł · pub food 25–40 zł","priceNum":14,"hours":"Daily ~12:00–24:00 (later Fri–Sat)","dur":"1–2 h","indoor":true,"day":["d1","d3"],"web":"","desc":"A relaxed corner pub with a small garden, pub grub and cheap draught beer — the antidote to cocktail-bar prices.","why":"Where you go when the group wants to sit, eat something fried and argue about football without shouting.","tip":"Kitchen closes earlier than the bar — order food before 21:00.","km":2.3,"walk":31,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.3528,18.65281","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.3528,18.65281&travelmode=walking"},{"id":"labeerynt","name":"LAbeerYNT","cat":"bar","area":"Old Town","lat":54.35121,"lon":18.6545,"addr":"ul. Szeroka 97","price":"Craft beer 15–25 zł (0.4 l)","priceNum":20,"hours":"Mon–Thu 15:00–01:00 · Fri–Sat 12:00–02:00 (check)","dur":"1–2 h","indoor":true,"day":["d1","d2"],"web":"","desc":"Craft-beer bar with a rotating wall of Polish taps — IPAs, stouts, sours — and staff who actually know them.","why":"Poland's craft beer scene is one of Europe's best and this is the place to taste it. Flights available.","tip":"Ask for a tasting flight of 4 × 100 ml. ~25–30 zł. Sour beers here are excellent and unusual.","km":2.4,"walk":32,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35121,18.6545","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35121,18.6545&travelmode=walking"},{"id":"bunkier","name":"Klubogaleria Bunkier","cat":"bar","area":"Stare Miasto","lat":54.35449,"lon":18.6547,"addr":"ul. Olejarna 3","price":"Entry 10–20 zł · drinks 12–18 zł","priceNum":15,"hours":"Sun–Thu 16:00–02:00 · Fri–Sat 16:00–04:00 (events)","dur":"2–3 h","indoor":true,"day":["d1"],"web":"","desc":"A concrete bunker turned club/gallery: techno, alternative concerts, art on the walls, cigarette smoke and cheap beer.","why":"The most 'underground' venue in central Gdańsk, in a genuine WWII-era shelter. For a group that wants a real night out, not a tourist bar.","tip":"Check the programme first — on non-event nights it is just a bar. Saturday usually has something.","km":2.5,"walk":33,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35449,18.6547","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35449,18.6547&travelmode=walking"},{"id":"sassy","name":"Sassy / Roof Top by Sassy","cat":"bar","area":"Targ Rybny","lat":54.34899,"lon":18.65798,"addr":"ul. Targ Rybny","price":"Cocktails 30–40 zł · club entry 20–40 zł","priceNum":35,"hours":"Club Fri–Sat 22:00–05:00 · rooftop bar from 13:00","dur":"2–4 h","indoor":true,"day":["d1"],"web":"","desc":"Rooftop bar by day with a view over the Motława, club by night with commercial house and a dressed-up crowd.","why":"The only real 'rooftop + club' combo in the centre. Good for the final stop when the pub crawl needs a finish line.","tip":"Saturday entry after 23:00 may have a queue and a face-control vibe. Go as a group of 5 and you will be fine.","km":2.5,"walk":33,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34899,18.65798","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34899,18.65798&travelmode=walking"},{"id":"zappio","name":"Pub Zappio","cat":"bar","area":"Old Town","lat":54.35165,"lon":18.65698,"addr":"ul. Świętojańska 49","price":"Beer 12–18 zł · food 30–50 zł","priceNum":16,"hours":"Daily 12:00–24:00","dur":"1–2 h","indoor":true,"day":["d1","d3"],"web":"","desc":"A big, busy pub with sports screens, burgers and a garden — the 'watch the match' option in the centre.","why":"If there is a football or rugby match on, this is where to watch it with a beer and a burger.","tip":"Ask them to put the game on a specific screen; they will.","km":2.5,"walk":33,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35165,18.65698","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35165,18.65698&travelmode=walking"},{"id":"pixel","name":"Pixel","cat":"bar","area":"Wyspa Spichrzów","lat":54.34713,"lon":18.65829,"addr":"ul. Chmielna area (Wyspa Spichrzów)","price":"Cocktails ~30–38 zł · beer ~15 zł","priceNum":32,"hours":"Evenings, Tue–Sat typically 18:00–02:00 (check Instagram)","dur":"1.5–3 h","indoor":true,"day":["d1","d2"],"web":"https://instagram.com/pixelcocktail","desc":"Gdańsk's best-known cocktail bar: dark, low ceilings, serious bartenders, long list of signature drinks.","why":"The cocktails are actually good, not just strong. It is where locals take visiting friends, and it fits a group of 5 at the bar.","tip":"Go early (20:00) — after 22:00 it is packed and standing. Try the smoky/whisky signatures, skip the sweet ones.","km":2.6,"walk":35,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34713,18.65829","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34713,18.65829&travelmode=walking"},{"id":"mechpomar","name":"Mechaniczna Pomarańcza","cat":"bar","area":"Wrzeszcz (near your flat)","lat":54.36979,"lon":18.61016,"addr":"ul. Do Studzienki 61","price":"Beer 10–14 zł · entry 0–15 zł","priceNum":12,"hours":"Mon–Thu 10:00–01:00 · Fri–Sat to 03:00","dur":"2–3 h","indoor":true,"day":["d1"],"web":"","desc":"A legendary student club at Gdańsk University of Technology — cheap beer, indie/rock nights, sticky floors, zero tourists.","why":"It is 10 minutes from your flat and it is where actual Gdańsk students drink. If you want a local night, this is it.","tip":"Student ID gets a discount; otherwise still cheap. Best on Thursday–Saturday.","km":2.6,"walk":35,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.36979,18.61016","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.36979,18.61016&travelmode=walking"},{"id":"poolsalon","name":"Pool Salon","cat":"bar","area":"Targ Rybny","lat":54.35277,"lon":18.65751,"addr":"ul. Targ Rybny 10A","price":"Pool table ~40–60 zł/h · beer 12–18 zł","priceNum":20,"hours":"Daily 16:00–24:00","dur":"1.5–2.5 h","indoor":true,"day":["d2"],"web":"","desc":"Pool hall and bar by the river with several tables, darts and a big screen.","why":"Competitive, cheap, indoors, and right on the waterfront. A good pre-club or rainy-evening stop.","tip":"Book a table for 5 after 19:00 — it gets busy. Winner stays on is the only fair format.","km":2.6,"walk":35,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35277,18.65751","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35277,18.65751&travelmode=walking"},{"id":"elektrykow","name":"Ulica Elektryków (Elektryków Street)","cat":"bar","area":"Shipyard","lat":54.36451,"lon":18.64832,"addr":"ul. Elektryków","price":"Beer 12–18 zł · club entry 0–40 zł","priceNum":18,"hours":"Venues mostly Thu–Sat from ~16:00 to 03:00","dur":"2–4 h","indoor":false,"day":["d1"],"web":"","desc":"A street of bars, food trucks and clubs inside the shipyard — B90 (biggest concert club in the region), Drizzly Grizzly, W4 food hall — under giant cranes.","why":"Drinking under 21 shipyard cranes at night is a Gdańsk-only experience. It is the alternative to the Old Town crawl and it is 10 minutes' walk from ECS.","tip":"Saturday is the night. It is industrial and windy — wear the jacket. B90 had no show on 24/10, so check the smaller venues' socials that day.","km":2.7,"walk":36,"catName":"Bars","emoji":"🍸","color":"#ff7ab6","gmaps":"https://www.google.com/maps/search/?api=1&query=54.36451,18.64832","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.36451,18.64832&travelmode=walking"},{"id":"krzywy","name":"Krzywy Domek & Monte Cassino","cat":"daytrip","area":"Sopot","lat":54.44438,"lon":18.56659,"addr":"ul. Bohaterów Monte Cassino 53","price":"Free outside · Muzeum Iluzji inside ~35–45 zł","priceNum":0,"hours":"Street 24/7 · Muzeum Iluzji daily ~10:00–18:00","dur":"1–2 h","indoor":false,"day":["d1","d3"],"web":"https://bilety.amazeworld.pl","desc":"The 'crooked house' — a surreal, melting building on Sopot's pedestrian main street, with shops and an illusion museum inside.","why":"It is the most photographed building in Poland after the Gdańsk crane, and Monte Cassino is a good street for coffee and people-watching.","tip":"Sopot is 20 min by SKM and the pier, the crooked house and the beach are all within 15 minutes' walk of each other.","km":11.3,"walk":151,"catName":"Day trips","emoji":"🚆","color":"#57d38c","gmaps":"https://www.google.com/maps/search/?api=1&query=54.44438,18.56659","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.44438,18.56659&travelmode=walking"},{"id":"sopotmolo","name":"Sopot Pier (Molo)","cat":"daytrip","area":"Sopot","lat":54.44811,"lon":18.57632,"addr":"Sopot, Plac Zdrojowy","price":"FREE in October (paid 10 zł only 10 Apr–30 Sep)","priceNum":0,"hours":"24/7 · 20 min SKM from Gdańsk Główny (4.80 zł)","dur":"Half day (3–5 h with Sopot)","indoor":false,"day":["d1","d3"],"web":"https://visit.sopot.pl","desc":"The longest wooden pier in Europe — 511 metres out into the Baltic, with a marina, sailing boats and the beach on both sides.","why":"It is free in your dates (the 10 zł charge ends 30 September), and the walk out over the water at sunset is the classic Tricity moment.","tip":"Sunday 25 Oct is the Sopot Half Marathon — roads and the promenade are closed in the morning. Go Saturday or Monday instead.","km":11.5,"walk":153,"catName":"Day trips","emoji":"🚆","color":"#57d38c","gmaps":"https://www.google.com/maps/search/?api=1&query=54.44811,18.57632","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.44811,18.57632&travelmode=walking"},{"id":"gdynia","name":"Gdynia: ORP Błyskawica & Dar Pomorza","cat":"daytrip","area":"Gdynia","lat":54.51956,"lon":18.55119,"addr":"Nabrzeże Pomorskie, Gdynia","price":"Combined museum ticket ~30–35 zł","priceNum":32,"hours":"Tue–Sun ~10:00–17:00 (check; Mon closed)","dur":"Half day","indoor":true,"day":["d3"],"web":"https://muzeummarynarki.pl","desc":"Two floating museums side by side: a WWII destroyer that fought at Narvik, and the tall ship 'Dar Pomorza' that trained generations of Polish sailors.","why":"You can walk the decks, the gun turrets and the engine rooms of a real warship. Gdynia is 25 min by SKM and feels completely different from Gdańsk.","tip":"SKM Gdańsk Główny → Gdynia Główna, 25 min, ~6 zł. Both ships are 10 min walk from the station. Check Monday opening — many Gdynia museums close.","km":19.7,"walk":263,"catName":"Day trips","emoji":"🚆","color":"#57d38c","gmaps":"https://www.google.com/maps/search/?api=1&query=54.51956,18.55119","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.51956,18.55119&travelmode=walking"},{"id":"malbork","name":"Malbork Castle (day trip)","cat":"daytrip","area":"Malbork","lat":54.04002,"lon":19.02782,"addr":"ul. Starościńska 1, Malbork","price":"Castle ticket ~70 zł (reduced ~45 zł) · train ~20–30 zł return","priceNum":70,"hours":"Daily ~09:00–16:00 in October (last entry ~15:00) · train 40–50 min from Gdańsk Główny","dur":"Full day (6–8 h)","indoor":true,"day":[],"web":"https://zamek.malbork.pl","desc":"The largest brick castle in the world and a UNESCO site — the headquarters of the Teutonic Order, with massive walls, chapter house, and the Grand Masters' palace.","why":"It is one of the great castles of Europe, 45 minutes by train, and it is the best 'big day out' if you want one. Do it only if you are happy to sacrifice a Gdańsk day.","tip":"Trains from Gdańsk Główny take 40–50 min. Book the castle online — English tours sell out. It is a LOT of walking; 4–5 hours minimum. Not realistic on departure day.","km":43.3,"walk":577,"catName":"Day trips","emoji":"🚆","color":"#57d38c","gmaps":"https://www.google.com/maps/search/?api=1&query=54.04002,19.02782","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.04002,19.02782&travelmode=walking"},{"id":"ryba","name":"Ryba Piła","cat":"food","area":"Grodzisko","lat":54.35471,"lon":18.64598,"addr":"ul. Elżbietańska","price":"Fish mains 40–65 zł","priceNum":50,"hours":"Mon–Thu 12:00–22:00 · Fri–Sat 12:00–23:00","dur":"1.5 h","indoor":true,"day":["d1","d2"],"web":"","desc":"Baltic fish done simply — herring, cod, flounder, halibut — grilled or fried, with good bread and local beer.","why":"You are on the Baltic; eat the fish. Less heavy than the pork-and-dumplings circuit.","tip":"Ask what came in that morning. Order the fried cod and a herring starter to share.","km":1.9,"walk":25,"catName":"Food","emoji":"🍽️","color":"#ffb86b","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35471,18.64598","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35471,18.64598&travelmode=walking"},{"id":"ministerstwo","name":"Ministerstwo Śledzia i Wódki","cat":"food","area":"Old Town","lat":54.35256,"lon":18.64827,"addr":"Targ Drzewny 3–7","price":"Herring plates 25–40 zł · shots 10–15 zł","priceNum":35,"hours":"Daily ~12:00–24:00","dur":"1–1.5 h","indoor":true,"day":["d1","d3"],"web":"","desc":"'Ministry of Herring and Vodka' — a whole menu of cured herring preparations and flavoured vodkas, in a wood-panelled room.","why":"Extremely Polish and genuinely delicious: herring five ways with ice-cold vodka. A great pre-dinner stop for five friends.","tip":"Order 3–4 herring plates to share plus a vodka flight. ~45–60 zł pp. Book a table for 5 — it fills up.","km":2.0,"walk":27,"catName":"Food","emoji":"🍽️","color":"#ffb86b","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35256,18.64827","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35256,18.64827&travelmode=walking"},{"id":"mandu","name":"Pierogarnia Mandu","cat":"food","area":"Old Town","lat":54.35367,"lon":18.64684,"addr":"ul. Elżbietańska 4/8","price":"Pierogi 28–45 zł · mains ~40 zł","priceNum":38,"hours":"Daily ~11:00–22:00 (queue at peak)","dur":"1–1.5 h","indoor":true,"day":["d1","d2"],"web":"https://pierogarnia-mandu.pl","desc":"Gdańsk's famous pierogi restaurant: hand-folded, baked and boiled, with fillings from classic potato-cheese to duck and cherry.","why":"The best pierogi in the city and the one meal everybody remembers. Portions are big, prices are fair, and it is a 10-minute walk from the flat's tram stop.","tip":"Book online for 5 — walk-ins wait 30–60 min at dinner. Order 2 different kinds per person and share. Try the baked ones.","km":2.0,"walk":27,"catName":"Food","emoji":"🍽️","color":"#ffb86b","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35367,18.64684","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35367,18.64684&travelmode=walking"},{"id":"neptun","name":"Bar mleczny Neptun","cat":"food","area":"Old Town","lat":54.34875,"lon":18.65161,"addr":"ul. Długa 32","price":"Dumplings/soup 10–22 zł · full meal ~25 zł","priceNum":22,"hours":"Mon–Fri 07:30–20:00 · Sat–Sun 10:00–19:00","dur":"30–45 min","indoor":true,"day":["d1","d3"],"web":"","desc":"A proper communist-era milk bar: canteen trays, laminated menu, pierogi, borscht, kotlet schabowy, kvass. Locals, pensioners, students.","why":"Eating a full hot meal for 25 zł in the middle of the tourist Old Town is the best value in Gdańsk. It is also a genuine cultural experience.","tip":"Order at the counter, pay at the till, collect at the hatch. Try borscht with croquettes and the plum pierogi.","km":2.1,"walk":28,"catName":"Food","emoji":"🍽️","color":"#ffb86b","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34875,18.65161","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34875,18.65161&travelmode=walking"},{"id":"100cznia","name":"100cznia (street-food yard)","cat":"food","area":"Shipyard","lat":54.361,"lon":18.647,"addr":"ul. ks. Jerzego Popiełuszki 5","price":"Street food 20–40 zł · beer 12 zł","priceNum":30,"hours":"In season Tue–Sun 13:00–24:00 · late Oct: limited '100cznia Inside' — CHECK before going","dur":"1–2 h","indoor":false,"day":["d1"],"web":"https://100cznia.pl","desc":"A yard of shipping containers, food trucks, picnic tables and a stage, built on a former shipyard site. In winter it shrinks to an indoor version.","why":"The best casual group lunch/dinner in Gdańsk when it is running — everyone picks their own food, no booking, cheap.","tip":"It is seasonal (May–Sept full, October reduced). If closed, go to Elektryków bars or Mandu instead.","km":2.4,"walk":32,"catName":"Food","emoji":"🍽️","color":"#ffb86b","gmaps":"https://www.google.com/maps/search/?api=1&query=54.361,18.647","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.361,18.647&travelmode=walking"},{"id":"brovarnia","name":"Brovarnia (brewery restaurant)","cat":"food","area":"Ołowianka","lat":54.34917,"lon":18.66048,"addr":"ul. Szafarnia 9","price":"Mains 45–75 zł · beer brewed on site ~14 zł","priceNum":60,"hours":"Daily 13:00–23:00 (kitchen to ~22:00)","dur":"1.5–2 h","indoor":true,"day":["d1"],"web":"https://brovarnia.pl","desc":"A brewery-restaurant in a converted granary on the water, with copper tanks visible through glass and solid Polish cooking (pierogi, duck, pork knuckle).","why":"Big tables, river views, own beer, and food that soaks up the evening. The safest 'everyone will be happy' dinner for five.","tip":"Book a table for 5 at 19:00 and ask for the window side. Try the wheat beer and the pork knuckle to share.","km":2.7,"walk":36,"catName":"Food","emoji":"🍽️","color":"#ffb86b","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34917,18.66048","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34917,18.66048&travelmode=walking"},{"id":"axe","name":"Axe Throwing","cat":"fun","area":"Central (meeting point on booking)","lat":54.352,"lon":18.648,"addr":"Meeting point confirmed on booking","price":"~18 €/person (~85 zł)","priceNum":85,"hours":"Sessions by booking, daily ~10:00–20:00","dur":"1.5 h","indoor":true,"day":["d2"],"web":"https://www.xperiencepoland.com/en/tour/axe-throwing-gdansk/","desc":"1.5 hours of coaching and competition with real axes, a proper instructor, and a tournament at the end. Built for groups of friends.","why":"Perfect rainy-Sunday activity for five guys: competitive, indoor, no skill needed, and it ends with a winner and a lot of trash talk.","tip":"Book the day before — Sunday slots fill. ~85 zł pp for 5 = ~425 zł total. Ask for pickup if the venue is outside the centre.","km":2.0,"walk":27,"catName":"Fun","emoji":"🎯","color":"#c084fc","gmaps":"https://www.google.com/maps/search/?api=1&query=54.352,18.648","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.352,18.648&travelmode=walking"},{"id":"bowling","name":"U7 Bowling & Pool","cat":"fun","area":"Old Town","lat":54.35323,"lon":18.65235,"addr":"Plac Dominikański 7 (level −1)","price":"Lane: 120 zł/h (Mon–Wed, Sun 17–24) · 170 zł/h (Sat 17–01) · shoes 6 zł","priceNum":120,"hours":"Daily ~10:00–24:00 (Fri–Sat to 01:00)","dur":"1.5–2 h","indoor":true,"day":["d2"],"web":"https://www.u7.pl/u7-gdansk/","desc":"8 bowling lanes, 10 pool tables, darts, table football, a bar and a big screen — right under the Old Town.","why":"Zero logistics, central, and handles a group of 5 perfectly: one lane, beers, pool between turns.","tip":"Sunday 17:00–24:00 is 120 zł/h per lane — split 5 ways that is ~24 zł/hour each. Shoes 6 zł. Cheapest indoor fun in the centre.","km":2.3,"walk":31,"catName":"Fun","emoji":"🎯","color":"#c084fc","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35323,18.65235","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35323,18.65235&travelmode=walking"},{"id":"motlawa","name":"Motława River Cruise","cat":"fun","area":"Waterfront","lat":54.34992,"lon":18.65719,"addr":"Długie Pobrzeże (near Green Gate)","price":"~50–80 zł (short loop) · Westerplatte 80/100 zł","priceNum":60,"hours":"Departures through the day; last boats ~17:00–18:00 in late Oct","dur":"50–90 min","indoor":false,"day":["d1","d3"],"web":"https://www.zegluga.pl","desc":"Small white boats and galleon replicas leave from the embankment for a loop around the Old Port, the shipyard and the islands.","why":"Gdańsk was built by sea trade; seeing it from the water explains the whole city in an hour. Cheap, and you sit down.","tip":"Boats are open-deck — pick a dry, calm day (Sat or Mon), not Sunday's 62 km/h gusts. Buy at the pier, no booking needed.","km":2.5,"walk":33,"catName":"Fun","emoji":"🎯","color":"#c084fc","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34992,18.65719","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34992,18.65719&travelmode=walking"},{"id":"shooting","name":"Gdańsk Shooting Centre (GCS)","cat":"fun","area":"Wrzeszcz","lat":54.36448,"lon":18.59002,"addr":"ul. Wrzeszcz Górny (check address on site)","price":"Per round: from ~1.50 zł (.22LR) to ~5 zł (.45 ACP) + weapon rental","priceNum":120,"hours":"Mon–Sat ~10:00–22:00 (check current schedule)","dur":"1–1.5 h","indoor":true,"day":["d2"],"web":"https://gcs-strzelanie.com","desc":"Indoor range with pistols and rifles, instructors, and group packages. You pay per round of ammunition plus rental.","why":"Poland is relaxed about sport shooting and this is a professional, safe range — a genuinely different afternoon for a group of friends.","tip":"Budget ~100–150 zł pp for 30–50 rounds. Bring ID/passport — required for foreigners. Book ahead and say you are a group of 5 beginners.","km":2.7,"walk":36,"catName":"Fun","emoji":"🎯","color":"#c084fc","gmaps":"https://www.google.com/maps/search/?api=1&query=54.36448,18.59002","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.36448,18.59002&travelmode=walking"},{"id":"philharmonic","name":"Polish Baltic Philharmonic concert","cat":"fun","area":"Ołowianka","lat":54.3519,"lon":18.6599,"addr":"ul. Ołowianka 1","price":"~60–120 zł depending on event","priceNum":90,"hours":"Sun 25/10/2026, 19:00 — Joanna Knitter & Baltic Banda 'From Hollywood to the charts'","dur":"~1.5–2 h","indoor":true,"day":["d2"],"web":"https://www.filharmonia.gda.pl","desc":"A converted 19th-century power station on the water, now one of Poland's best concert halls. Sunday's programme is film music and pop standards, not stiff classical.","why":"Rainy Sunday evening, warm hall, water views, live band — a much better use of the storm than another pub.","tip":"Check the site for tickets (some events sell via bilety24). Dress is smart-casual; nobody will mind jeans.","km":2.7,"walk":36,"catName":"Fun","emoji":"🎯","color":"#c084fc","gmaps":"https://www.google.com/maps/search/?api=1&query=54.3519,18.6599","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.3519,18.6599&travelmode=walking"},{"id":"ergo","name":"Ergo Arena: 'Królowie Życia' concert","cat":"fun","area":"Gdańsk/Sopot border","lat":54.42581,"lon":18.58101,"addr":"Plac Dwóch Miast 1","price":"Tickets ~120–250 zł (check availability)","priceNum":150,"hours":"Sat 24/10/2026, 18:30","dur":"2.5 h","indoor":true,"day":["d1"],"web":"https://ergoarena.pl","desc":"Big Polish rock/pop show — Skawiński & Tkaczyk, '50 years on stage'. Arena holds ~10,000.","why":"If you want a big-concert night instead of a bar crawl, this is the only arena show in your window. Very Polish, very loud.","tip":"It clashes with your first evening. Only choose it if you land early and skip the Old Town crawl — otherwise stick to the bars.","km":9.1,"walk":121,"catName":"Fun","emoji":"🎯","color":"#c084fc","gmaps":"https://www.google.com/maps/search/?api=1&query=54.42581,18.58101","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.42581,18.58101&travelmode=walking"},{"id":"zoo","name":"Gdańsk Zoo (Oliwa)","cat":"fun","area":"Oliwa","lat":54.41444,"lon":18.53081,"addr":"ul. Karwieńska 3","price":"October low season: 30 zł (reduced 20 zł)","priceNum":30,"hours":"October: entry 09:00–16:00, grounds until 17:00 · open daily","dur":"2–3 h","indoor":false,"day":["d3"],"web":"https://zoo.gdansk.pl","desc":"One of the largest zoos in Poland, set in a forested valley — giraffes, lions, elephants, and a lot of walking uphill.","why":"Cheap in October (30 zł vs 45 zł in summer) and the autumn forest setting is beautiful. Only worth it if you want a nature half-day; skip if you prefer the city.","tip":"It is a 15-min drive or bus from Oliwa cathedral and the terrain is hilly. Entry closes 16:00 sharp in October — go before 13:00 if you want the full loop.","km":9.4,"walk":125,"catName":"Fun","emoji":"🎯","color":"#c084fc","gmaps":"https://www.google.com/maps/search/?api=1&query=54.41444,18.53081","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.41444,18.53081&travelmode=walking"},{"id":"gokart","name":"E1GOKART Indoor Karting","cat":"fun","area":"Kokoszki","lat":54.36878,"lon":18.47276,"addr":"ul. Rakietowa 11","price":"75 zł / 8-min ride (2 rides 145 zł, 3 rides 215 zł)","priceNum":75,"hours":"Daily ~10:00–22:00 (check), indoor track","dur":"1.5–2 h","indoor":true,"day":["d2"],"web":"https://gdansk.e1gokart.pl","desc":"A proper indoor karting hall with fast electric karts, lap timing and a Grand Prix format for groups.","why":"Real racing, real lap times, and a leaderboard with your names on it. The classic 'lads trip' activity, and it is indoors.","tip":"Near the airport — do it on the way in or out, or combine with a taxi (18 min from the flat). 3 rides each = 215 zł pp; the 2-ride option is the sweet spot.","km":9.8,"walk":131,"catName":"Fun","emoji":"🎯","color":"#c084fc","gmaps":"https://www.google.com/maps/search/?api=1&query=54.36878,18.47276","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.36878,18.47276&travelmode=walking"},{"id":"amber","name":"Museum of Amber (Wielki Młyn)","cat":"history","area":"Old Town","lat":54.35403,"lon":18.6499,"addr":"Wielkie Młyny 16","price":"35 zł (reduced 25 zł) — FREE on Mondays","priceNum":35,"hours":"Mon 10:00–18:00 (free entry) · Tue CLOSED · Wed–Sun 10:00–18:00","dur":"1–1.5 h","indoor":true,"day":["d3"],"web":"https://muzeumgdansk.pl","desc":"Baltic amber in a 14th-century mill: inclusions, 'sun stones', amber rooms, and how the amber trade built Gdańsk. Compact, beautifully lit, very photogenic.","why":"Amber is Gdańsk's thing — this is the largest amber collection in Poland, in a medieval water mill. Perfect indoor filler on a cold day.","tip":"GO MONDAY 26 OCT: entry is free. This is the single best free cultural deal of your trip. Arrive before 11:00 to avoid school groups.","km":2.1,"walk":28,"catName":"History","emoji":"🏛️","color":"#f5b13d","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35403,18.6499","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35403,18.6499&travelmode=walking"},{"id":"mariacka","name":"St Mary's Basilica & Mariacka Street","cat":"history","area":"Old Town","lat":54.34981,"lon":18.65301,"addr":"Podkramarska 5","price":"Church free · tower 20 zł (reduced 10 zł)","priceNum":20,"hours":"Church Mon–Sat 8:30–17:30, Sun from 11:00 · tower 10:00–18:00","dur":"45–90 min","indoor":true,"day":["d1","d3"],"web":"https://bazylikamariacka.gdansk.pl","desc":"The largest brick church in the world — 30,000 people fit inside, and it took 160 years to build. Climb ~400 steps for the best rooftop panorama of the Old Town.","why":"The astronomical clock does a mechanical show every day at 11:57 sharp (free, one minute). Mariacka Street outside is a cobbled canyon of amber workshops and stone terraces — the most atmospheric street in Gdańsk.","tip":"Tower closes in storms — check before climbing. The 11:57 clock show is free and only takes a minute; time your visit around it.","km":2.2,"walk":29,"catName":"History","emoji":"🏛️","color":"#f5b13d","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34981,18.65301","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34981,18.65301&travelmode=walking"},{"id":"artus","name":"Artus Court & Green Gate","cat":"history","area":"Old Town","lat":54.34863,"lon":18.65344,"addr":"Długi Targ 43/44","price":"Outside free · Artus Court interior ~20 zł","priceNum":0,"hours":"Exterior 24/7 · interior Tue–Sun ~10:00–16:00","dur":"30–45 min","indoor":false,"day":["d1"],"web":"https://muzeumgdansk.pl","desc":"The guildhall of the merchant brotherhoods, with a monumental tiled stove and ship models, plus the Green Gate that was meant to be a royal palace.","why":"This is the exact centre of Hanseatic Gdańsk — the fountain, the court, the gate, all in one 100-metre square.","tip":"Free to walk around outside. The Neptune Fountain in front is the meeting point everyone uses — pick it as your group rendezvous.","km":2.2,"walk":29,"catName":"History","emoji":"🏛️","color":"#f5b13d","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34863,18.65344","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34863,18.65344&travelmode=walking"},{"id":"ecs","name":"European Solidarity Centre","cat":"history","area":"Shipyard (Stocznia)","lat":54.36136,"lon":18.64942,"addr":"Plac Solidarności 1","price":"40 zł (reduced 35 zł) · 'Shipyard' exhibition 15 zł","priceNum":40,"hours":"Mon, Wed–Fri 10:00–17:00 · Sat–Sun 10:00–18:00 · Tue CLOSED (technical day)","dur":"1.5–2.5 h","indoor":true,"day":["d2","d3"],"web":"https://ecs.gda.pl","desc":"The story of Solidarity, the 1980 strikes and the fall of communism, told inside the rust-coloured former shipyard building. Rooftop terrace has one of the best free views of the shipyard cranes.","why":"You literally walk through the gate where Lech Wałęsa climbed the wall in 1980. The building itself (rusty steel, ship-plate textures) is an architectural landmark.","tip":"The rooftop terrace and the building lobby are FREE — you only pay for exhibitions. Combine with a walk down ul. Elektryków and the 21 cranes.","km":2.5,"walk":33,"catName":"History","emoji":"🏛️","color":"#f5b13d","gmaps":"https://www.google.com/maps/search/?api=1&query=54.36136,18.64942","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.36136,18.64942&travelmode=walking"},{"id":"soldek","name":"SS Sołdek (museum ship)","cat":"history","area":"Ołowianka","lat":54.35145,"lon":18.65864,"addr":"ul. Ołowianka 9–13","price":"~20–25 zł (check)","priceNum":22,"hours":"Tue–Sun ~10:00–16:00 · Mon closed","dur":"45–60 min","indoor":true,"day":["d2","d3"],"web":"https://nmm.pl","desc":"A 1949 coal-fired steamship, the first ship built entirely in Gdańsk after the war, now a museum you can walk through — engine room, hold, bridge.","why":"You can climb into the engine room of a real steam ship. Kids love it, adults quietly love it more.","tip":"Small and quick — 45 minutes. Combine with the Ołowianka walk and the Philharmonic.","km":2.6,"walk":35,"catName":"History","emoji":"🏛️","color":"#f5b13d","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35145,18.65864","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35145,18.65864&travelmode=walking"},{"id":"miiws","name":"Museum of the Second World War","cat":"history","area":"Wiadrowiec / Old Town riverfront","lat":54.35594,"lon":18.66112,"addr":"Plac Władysława Bartoszewskiego 1","price":"33 zł (reduced 23 zł)","priceNum":33,"hours":"Wed–Sun 10:00–18:00 · Tue 10:00–16:00 (free) · Mon CLOSED","dur":"2.5–3.5 h","indoor":true,"day":["d2"],"web":"https://www.muzeum1939.pl","desc":"The most visited museum in Poland and the reason many people come to Gdańsk. A huge underground exhibition that walks you through 1939–1945 from a Polish and European perspective — occupation, everyday life, the Holocaust, the resistance.","why":"It is built UNDERGROUND, under the tilted tower. You descend and the floor shakes with bomber engines. Few museums in Europe hit this hard. Audio guide 12 zł, genuinely worth it.","tip":"Sunday is NOT free (Tuesday is). Book a timed slot online the night before — weekend slots sell out. Last tickets 30 min before closing, and those cost only 17 zł.","km":2.9,"walk":39,"catName":"History","emoji":"🏛️","color":"#f5b13d","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35594,18.66112","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35594,18.66112&travelmode=walking"},{"id":"wisla","name":"Wisłoujście Fortress","cat":"history","area":"Przeróbka","lat":54.39507,"lon":18.67789,"addr":"ul. Stara Twierdza 1","price":"~20–30 zł (seasonal)","priceNum":25,"hours":"Seasonal — usually closed late Oct, CHECK before going","dur":"1–1.5 h","indoor":false,"day":[],"web":"https://muzeumgdansk.pl","desc":"A 17th-century fortress guarding the harbour mouth, with a circular brick tower and star-shaped earthworks.","why":"Genuinely atmospheric and almost empty — but only if it is open. It pairs with Westerplatte by car.","tip":"Ring ahead or check the Muzeum Gdańska site. If closed, skip it — the drive there is industrial and not worth it alone.","km":6.5,"walk":87,"catName":"History","emoji":"🏛️","color":"#f5b13d","gmaps":"https://www.google.com/maps/search/?api=1&query=54.39507,18.67789","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.39507,18.67789&travelmode=walking"},{"id":"westerplatte","name":"Westerplatte","cat":"history","area":"Harbour peninsula","lat":54.4075,"lon":18.671,"addr":"Westerplatte","price":"Site free · water tram 80 zł one-way / 100 zł return","priceNum":0,"hours":"Open 24/7 · water tram daily 10:00–18:00 (to 30 Nov)","dur":"2–3 h + 40 min each way","indoor":false,"day":["d3"],"web":"https://www.zegluga.pl/rejs-gdansk-westerplatte","desc":"Where World War II in Europe began at 04:48 on 1 September 1939. Ruined barracks, the Monument to the Defenders, and a windswept peninsula between the harbour and the open sea.","why":"The water tram ride there is half the attraction — you sail past the shipyards, the container terminal and the huge cranes. It is the only 'sea' experience that fits a short city break.","tip":"Do it on a dry, low-wind day — this is a flat, exposed peninsula, brutally cold in wind. Monday gusts 46 km/h: take the 14:00 boat and the 16:00 back, or skip it if you feel the flight pressure.","km":7.5,"walk":100,"catName":"History","emoji":"🏛️","color":"#f5b13d","gmaps":"https://www.google.com/maps/search/?api=1&query=54.4075,18.671","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.4075,18.671&travelmode=walking"},{"id":"oliwa","name":"Oliwa Cathedral & Organ Demonstration","cat":"history","area":"Oliwa","lat":54.41076,"lon":18.557,"addr":"ul. Cystersów 2","price":"Free entry · organ demo ~10–15 zł donation/ticket","priceNum":10,"hours":"Organ demos in October: Mon–Sat 11:00 & 12:00, Sun 15:00 (20 min)","dur":"1–1.5 h","indoor":true,"day":["d3"],"web":"https://www.archikatedraoliwa.pl","desc":"A vast Cistercian cathedral with a famous 18th-century organ — 7,896 pipes, moving angels and trumpeting figures. The 20-minute demonstration is a proper 'wow' moment, not a church service.","why":"The only place in Poland where the organ itself performs a mechanical theatre. It costs almost nothing and takes 20 minutes — the best value cultural experience in Gdańsk.","tip":"Monday 26 Oct: demo at 11:00 AND 12:00. Get there 10:45, sit near the front centre. Then walk the Oliwa Park (free, gorgeous autumn colours) behind the cathedral.","km":8.1,"walk":108,"catName":"History","emoji":"🏛️","color":"#f5b13d","gmaps":"https://www.google.com/maps/search/?api=1&query=54.41076,18.557","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.41076,18.557&travelmode=walking"},{"id":"flat","name":"YOUR FLAT","cat":"practical","area":"Siedlce","lat":54.34727,"lon":18.61882,"addr":"ul. Jacka Malczewskiego 89, 80-112 Gdańsk","price":"—","priceNum":0,"hours":"—","dur":"—","indoor":true,"day":["d1","d2","d3"],"web":"","desc":"Your base: a residential street in Siedlce, 2.5 km south-west of the Old Town, 2.6 km from Gdańsk Główny station.","why":"Quiet, local, cheap shops and trams on the doorstep — but not walkable to the Old Town with a hangover. Plan on tram 10/12 or a 30–40 zł Uber.","tip":"Nearest tram stops: Zakopiańska (300 m) and Siedlce (600 m). Trams 10 and 12 go to the centre and to Gdańsk Główny.","km":0.0,"walk":1,"catName":"Practical","emoji":"📍","color":"#94a3b8","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34727,18.61882","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34727,18.61882&travelmode=walking"},{"id":"zabka","name":"Żabka (corner shop)","cat":"practical","area":"Siedlce","lat":54.34764,"lon":18.61758,"addr":"ul. Jacka Malczewskiego area","price":"Beer 4–6 zł · snacks","priceNum":0,"hours":"Daily 06:00–23:00","dur":"5 min","indoor":true,"day":["d1","d2","d3"],"web":"","desc":"The Polish corner shop: cold beer, hot dogs, coffee, SIM cards, and open every day including Sunday.","why":"Two minutes from the flat and open when everything else is closed. Also sells bus tickets? No — use the app.","tip":"Hot dogs and coffee are actually decent. Cash and card both fine.","km":0.1,"walk":1,"catName":"Practical","emoji":"📍","color":"#94a3b8","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34764,18.61758","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34764,18.61758&travelmode=walking"},{"id":"tram","name":"Zakopiańska tram stop","cat":"practical","area":"Siedlce","lat":54.3488,"lon":18.61912,"addr":"ul. Kartuska / Zakopiańska","price":"4.80 zł single · 18 zł / 24 h","priceNum":5,"hours":"Runs ~05:00–23:00; night buses replace trams","dur":"—","indoor":false,"day":["d1","d2","d3"],"web":"https://ztm.gda.pl","desc":"Your nearest stop, 3 minutes' walk from the flat. Trams 10 and 12 towards the centre / Gdańsk Główny.","why":"This is your default way into town: 10–12 minutes to the Old Town, no parking, no traffic.","tip":"Buy tickets in the Jakdojade or GoPay app (or the ticket machine on board). Validate on boarding — inspectors do fine.","km":0.2,"walk":3,"catName":"Practical","emoji":"📍","color":"#94a3b8","gmaps":"https://www.google.com/maps/search/?api=1&query=54.3488,18.61912","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.3488,18.61912&travelmode=walking"},{"id":"apteka","name":"Pharmacy (Apteka)","cat":"practical","area":"Siedlce","lat":54.34872,"lon":18.61979,"addr":"ul. Kartuska","price":"—","priceNum":0,"hours":"Mon–Fri 08:00–19:00 · Sat 08:00–15:00 · Sun closed","dur":"—","indoor":true,"day":[],"web":"","desc":"Nearest pharmacy, 4 minutes from the flat. There is also a 24-hour pharmacy in the city centre.","why":"Hangover cures, plasters, cold medicine — worth knowing where it is.","tip":"For anything urgent at night, search 'apteka całodobowa Gdańsk' or call 112.","km":0.2,"walk":3,"catName":"Practical","emoji":"📍","color":"#94a3b8","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34872,18.61979","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34872,18.61979&travelmode=walking"},{"id":"lewiatan","name":"Lewiatan supermarket","cat":"practical","area":"Siedlce","lat":54.34941,"lon":18.6126,"addr":"ul. Kartuska area","price":"Beer 3–5 zł · groceries","priceNum":0,"hours":"Mon–Sat 07:00–22:00 · Sun 09:00–19:00","dur":"15 min","indoor":true,"day":["d1"],"web":"","desc":"The closest proper supermarket to the flat, and it is OPEN ON SUNDAY (09:00–19:00).","why":"Sunday 25 October is a trading ban — Biedronka and Lidl are closed. This is your lifeline for breakfast and beers.","tip":"Do a big shop Saturday evening. On Sunday use Lewiatan or the Żabka corner shops (06:00–23:00).","km":0.5,"walk":7,"catName":"Practical","emoji":"📍","color":"#94a3b8","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34941,18.6126","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34941,18.6126&travelmode=walking"},{"id":"glowny","name":"Gdańsk Główny station","cat":"practical","area":"Śródmieście","lat":54.356,"lon":18.644,"addr":"ul. Podwale Grodzkie 2","price":"—","priceNum":0,"hours":"24/7","dur":"—","indoor":true,"day":["d1","d3"],"web":"https://www.pkp.pl","desc":"The main railway station — a fairy-tale red-brick building. SKM trains to Sopot, Gdynia, the airport and Malbork leave from here.","why":"Your gateway for every day trip, and the cheapest way back to the airport.","tip":"SKM platforms are downstairs/underground. Buy tickets from machines or the app; validate before boarding.","km":1.9,"walk":25,"catName":"Practical","emoji":"📍","color":"#94a3b8","gmaps":"https://www.google.com/maps/search/?api=1&query=54.356,18.644","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.356,18.644&travelmode=walking"},{"id":"airport","name":"Gdańsk Airport (GDN)","cat":"practical","area":"Matarnia","lat":54.3762,"lon":18.4745,"addr":"ul. Juliusza Słowackiego 200","price":"—","priceNum":0,"hours":"24/7","dur":"—","indoor":true,"day":["d1","d3"],"web":"https://www.airport.gdansk.pl","desc":"Lech Wałęsa Airport, 14 km west of the city. Train station 'Gdańsk Port Lotniczy' is a 5-minute covered walk from arrivals.","why":"Small, fast, and connected by train — you do not need a taxi unless you have a lot of luggage.","tip":"Security is quick but the airport is busy in the evening. Be inside 90 minutes before a midnight flight.","km":9.9,"walk":132,"catName":"Practical","emoji":"📍","color":"#94a3b8","gmaps":"https://www.google.com/maps/search/?api=1&query=54.3762,18.4745","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.3762,18.4745&travelmode=walking"},{"id":"hevelianum","name":"Hevelianum & Góra Gradowa","cat":"views","area":"Grodzisko","lat":54.35641,"lon":18.63885,"addr":"Gradowa Hill","price":"Hill & fort grounds FREE · exhibitions ~30 zł","priceNum":0,"hours":"Grounds 24/7 · exhibitions Tue–Sun ~10:00–17:00 (closed 1 Nov)","dur":"45–90 min","indoor":false,"day":["d1","d3"],"web":"https://hevelianum.pl","desc":"A 19th-century Prussian fort on a hill 5 minutes from the Old Town, now a science centre. The grassy ramparts and the big wooden cross give a 360° panorama over the cranes, the Old Town and the harbour.","why":"The best FREE sunset viewpoint in central Gdańsk, and almost no tourists. You see the whole shipyard skyline from above.","tip":"Walk up from ul. Gradowa, 10 min from the flat. Take beers up for sunset at 17:27 — legal, normal, and locals do it.","km":1.6,"walk":21,"catName":"Views","emoji":"🌅","color":"#4fd1c5","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35641,18.63885","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35641,18.63885&travelmode=walking"},{"id":"ratusz","name":"Main Town Hall & Tower","cat":"views","area":"Old Town","lat":54.34889,"lon":18.65264,"addr":"Długa 46/47","price":"Free on Mondays · normally 35 zł","priceNum":0,"hours":"Mon 10:00–16:00 (free) · Tue CLOSED · Wed–Sun 10:00–16:00, Thu to 18:00","dur":"45–75 min","indoor":true,"day":["d3"],"web":"https://muzeumgdansk.pl","desc":"Renaissance town hall with the Red Hall, gilded sculptures, and a tower view straight down ul. Długa to the Green Gate and the river.","why":"The classic postcard view of Gdańsk, plus the tower clock and carillon. Free on Monday — same ticket logic as the Amber Museum.","tip":"The tower is a climb, not a lift. If it is windy, the tower may close — in that case just do the Red Hall interiors.","km":2.2,"walk":29,"catName":"Views","emoji":"🌅","color":"#4fd1c5","gmaps":"https://www.google.com/maps/search/?api=1&query=54.34889,18.65264","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.34889,18.65264&travelmode=walking"},{"id":"ambersky","name":"AmberSky Ferris Wheel","cat":"views","area":"Ołowianka","lat":54.35272,"lon":18.66161,"addr":"ul. Ołowianka 1","price":"~42 zł (reduced ~32 zł)","priceNum":42,"hours":"Daily, roughly 11:00–20:00 — CHECK before going (closed on some days in low season)","dur":"15 min ride + queue","indoor":false,"day":["d1","d3"],"web":"https://ambersky.pl","desc":"A 50-metre observation wheel on Ołowianka island, right beside the Philharmonic. Enclosed gondolas, 3 slow loops, view over the Motława, the shipyard cranes and the Old Town roofs.","why":"The only way to see Gdańsk from above without climbing 400 stairs, and it is warm inside — a good 'cold hands' activity.","tip":"Go at dusk (17:00) for the lights coming on. It is weather-dependent: in strong wind it stops. Book nothing in advance; just walk up.","km":2.8,"walk":37,"catName":"Views","emoji":"🌅","color":"#4fd1c5","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35272,18.66161","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35272,18.66161&travelmode=walking"},{"id":"latarnia","name":"Nowy Port Lighthouse","cat":"views","area":"Nowy Port","lat":54.40508,"lon":18.65724,"addr":"ul. Przemysłowa 1","price":"~10–15 zł (check seasonal hours)","priceNum":12,"hours":"Seasonal, usually Wed–Sun ~10:00–16:00","dur":"45–60 min","indoor":false,"day":["d3"],"web":"","desc":"An 1894 lighthouse with a Time Ball and a view across the harbour mouth, the Westerplatte peninsula and the Baltic.","why":"Industrial, off-grid, and you see the whole port from above. Pairs perfectly with Westerplatte on the same trip.","tip":"Check it is open before travelling — hours shrink in late October. Combine by car with Westerplatte (5 min drive).","km":6.9,"walk":92,"catName":"Views","emoji":"🌅","color":"#4fd1c5","gmaps":"https://www.google.com/maps/search/?api=1&query=54.40508,18.65724","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.40508,18.65724&travelmode=walking"},{"id":"brzezno","name":"Brzeźno Pier & Beach","cat":"views","area":"Brzeźno","lat":54.41338,"lon":18.62616,"addr":"Brzeźno (tram 3/10 area)","price":"Free","priceNum":0,"hours":"24/7 · best at sunset 17:27","dur":"1–1.5 h","indoor":false,"day":["d1","d3"],"web":"","desc":"A 136-metre wooden pier over the Baltic, wide sandy beach, pine trees, and a promenade of fish shacks.","why":"The sea, 25 minutes from the Old Town, free. Sunset over the water with a beer from the nearby shop is the best ending to a dry day.","tip":"Tram/bus from the centre ~25 min or 18 min by Uber (~35 zł). Windy and cold — take the jacket. Fish shack 'Bar Przystań' nearby for fried cod.","km":7.4,"walk":99,"catName":"Views","emoji":"🌅","color":"#4fd1c5","gmaps":"https://www.google.com/maps/search/?api=1&query=54.41338,18.62616","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.41338,18.62616&travelmode=walking"},{"id":"zuraw","name":"The Crane (Żuraw) & Długie Pobrzeże","cat":"walk","area":"Waterfront","lat":54.35029,"lon":18.65725,"addr":"Długie Pobrzeże 22","price":"Free outside · Maritime Museum inside ~25 zł","priceNum":0,"hours":"Embankment 24/7 · museum branch Tue–Sun ~10:00–16:00","dur":"30–60 min","indoor":false,"day":["d1","d3"],"web":"https://nmm.pl","desc":"Medieval port crane with two huge wooden tread-wheels that men once walked inside to lift cargo. The whole riverside here — gates, granaries, barges — is the postcard of Gdańsk.","why":"It is the largest preserved medieval port crane in Europe, and the waterfront at dusk with the lights on the water is the single most photographed spot in the city.","tip":"Free to see from the quay. Walk it at blue hour (17:00–17:45 in late October) — sunset is 17:27, lights come on around 17:15.","km":2.5,"walk":33,"catName":"Walks","emoji":"🚶","color":"#8ab4f8","gmaps":"https://www.google.com/maps/search/?api=1&query=54.35029,18.65725","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.35029,18.65725&travelmode=walking"},{"id":"stocznia","name":"Gdańsk Shipyard & Imperial Shipyard walk","cat":"walk","area":"Młode Miasto","lat":54.36059,"lon":18.64983,"addr":"Gate No. 2, ul. Droga do Wolności","price":"Free","priceNum":0,"hours":"Public streets 24/7 · B90/Elektryków venues Thu–Sat evenings","dur":"45–90 min","indoor":false,"day":["d1","d2"],"web":"","desc":"The real, working post-industrial shipyard: 21 giant cranes, dry docks, red-brick halls, the Monument to the Fallen Shipyard Workers, and the new Imperial Shipyard development rising between them.","why":"This is where the 20th century turned — and it still smells of steel and sea. Street-art, cranes and rust: the most 'Gdańsk' walk you can do, and it is free.","tip":"Do it in daylight (before 16:30) — it is unlit in parts. Combine with ECS and then drinks on ul. Elektryków after 18:00.","km":2.5,"walk":33,"catName":"Walks","emoji":"🚶","color":"#8ab4f8","gmaps":"https://www.google.com/maps/search/?api=1&query=54.36059,18.64983","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.36059,18.64983&travelmode=walking"},{"id":"olowianka","name":"Ołowianka Island & footbridges","cat":"walk","area":"Ołowianka","lat":54.3521,"lon":18.6588,"addr":"Ołowianka","price":"Free","priceNum":0,"hours":"24/7","dur":"30–45 min","indoor":false,"day":["d1","d3"],"web":"","desc":"Two little islands joined by footbridges, holding the Philharmonic, the Sołdek ship-museum, the AmberSky wheel and the Maritime Museum granaries.","why":"The best short evening loop: cross the bridge, look back at the illuminated Old Town across the water, walk back over the other bridge.","tip":"Do it at 17:15–17:45 for sunset + city lights. Free, flat, 25 minutes end to end.","km":2.6,"walk":35,"catName":"Walks","emoji":"🚶","color":"#8ab4f8","gmaps":"https://www.google.com/maps/search/?api=1&query=54.3521,18.6588","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.3521,18.6588&travelmode=walking"},{"id":"zaspa","name":"Zaspa Murals","cat":"walk","area":"Zaspa","lat":54.387,"lon":18.607,"addr":"Zaspa estate (al. Rzeczypospolitej)","price":"Free","priceNum":0,"hours":"24/7 (daylight recommended)","dur":"1–1.5 h","indoor":false,"day":["d3"],"web":"https://monumentalart.eu","desc":"A concrete housing estate covered in 60+ giant murals by international street artists — the biggest open-air gallery of its kind in Europe.","why":"Completely off the tourist trail, free, and photogenic. Also a glimpse of how 90% of Poland actually lives.","tip":"SKM train from Gdańsk Główny to Gdańsk Zaspa, 6 minutes, 4.80 zł. Wear comfortable shoes; the murals are spread over a big estate.","km":4.5,"walk":60,"catName":"Walks","emoji":"🚶","color":"#8ab4f8","gmaps":"https://www.google.com/maps/search/?api=1&query=54.387,18.607","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.387,18.607&travelmode=walking"},{"id":"oliwapark","name":"Oliwa Park (Park Oliwski)","cat":"walk","area":"Oliwa","lat":54.4095,"lon":18.559,"addr":"ul. Opata Jacka Rybińskiego","price":"Free","priceNum":0,"hours":"Daily ~06:00–22:00","dur":"45–90 min","indoor":false,"day":["d3"],"web":"","desc":"A formal French-style garden with clipped hedges, a palm house, canals and 300-year-old trees, right behind the cathedral.","why":"Late-October colours, almost no tourists on a Monday morning, and it is free. The most peaceful hour you will have in Gdańsk.","tip":"Enter from the cathedral side, walk the main alley to the palm house, exit towards ul. Cystersów for the tram back.","km":7.9,"walk":105,"catName":"Walks","emoji":"🚶","color":"#8ab4f8","gmaps":"https://www.google.com/maps/search/?api=1&query=54.4095,18.559","dir":"https://www.google.com/maps/dir/?api=1&origin=54.34727,18.61882&destination=54.4095,18.559&travelmode=walking"}];
+const CATS={"history":["History","🏛️","#f5b13d"],"views":["Views","🌅","#4fd1c5"],"walk":["Walks","🚶","#8ab4f8"],"fun":["Fun","🎯","#c084fc"],"bar":["Bars","🍸","#ff7ab6"],"food":["Food","🍽️","#ffb86b"],"daytrip":["Day trips","🚆","#57d38c"],"practical":["Practical","📍","#94a3b8"]};
+const WEATHER={"source":"Open-Meteo hourly model blend","days":[{"key":"sat","date":"Sat 24 Oct","label":"Arrival day","code":"Overcast, dry","max":11.7,"min":8.0,"feelsMax":8.8,"feelsMin":4.8,"rain":0.0,"prob":5,"wind":14.7,"gust":32.0,"dir":"S · 171°","sunrise":"07:31","sunset":"17:27","uv":1.8,"verdict":"GOOD","vclass":"good","summary":"Dry the whole day. Cloud breaks in the evening (7% cover by 20:00) — a clear, cold sunset. Wind moderate, 14–15 km/h, gusts 32.","plan":"Old Town on foot + waterfront sunset. Perfect for the bar crawl — you will be walking between bars, not hiding from rain."},{"key":"sun","date":"Sun 25 Oct","label":"Storm day","code":"Rain PM, gale","max":9.6,"min":5.3,"feelsMax":5.2,"feelsMin":1.2,"rain":1.9,"prob":100,"wind":24.3,"gust":62.3,"dir":"S · 180°","sunrise":"07:33","sunset":"17:25","uv":1.0,"verdict":"INDOOR","vclass":"bad","summary":"Dry until ~13:00, then rain 14:00–19:00 with 100% probability at 18:00. Sustained wind 22–24 km/h with gusts to 62 km/h — gale-force at the waterfront.","plan":"Museum day: WWII Museum in the morning, indoor activity (bowling/axe/shooting) in the afternoon, concert or long dinner in the evening. NO boat, NO tower, NO Westerplatte, NO Sopot."},{"key":"mon","date":"Mon 26 Oct","label":"Departure day","code":"Partly sunny, dry","max":12.1,"min":7.7,"feelsMax":8.3,"feelsMin":5.1,"rain":0.0,"prob":27,"wind":18.4,"gust":46.1,"dir":"SW · 225°","sunrise":"07:35","sunset":"17:22","uv":1.5,"verdict":"GOOD","vclass":"good","summary":"The warmest day of the three and mostly dry. Cloud thins in the afternoon (29% by 18:00). Wind 15–18 km/h, gusts 46 — breezy but workable.","plan":"Oliwa organ + park in the morning, free Monday museums in the afternoon, sunset on a hill, then airport. Leave the flat by 20:00."}],"hourly":{"sat":[["06","8.4","5.8",0,11.8,26],["09","8.4","5.7",0,11.7,26],["12","11.2","8.3",0,13.7,31],["15","11.7","8.8",3,13.6,30],["18","10.9","8.5",0,12.3,30],["21","9.0","6.1",0,13.0,28]],"sun":[["06","5.4","1.8",0,14.5,36],["09","5.7","1.2",0,19.4,49],["12","8.9","3.7",4,22.0,56],["15","8.5","4.1",46,21.6,60],["18","8.3","4.7",100,16.8,49],["21","7.9","5.0",64,13.8,37]],"mon":[["06","8.3","5.3",0,13.0,32],["09","8.9","5.6",0,15.0,46],["12","11.3","7.3",2,18.4,46],["15","11.9","8.3",3,15.1,35],["18","10.3","7.2",3,11.6,34],["21","8.6","5.5",2,13.6,30]]}};
+window.PLACES=PLACES; window.CATS=CATS; window.WEATHER=WEATHER;
+</script>
+<script>/* Gdańsk trip planner — vanilla JS, MapLibre + OpenFreeMap (no API keys) */
+(function () {
+  "use strict";
+  const $ = (s, r) => (r || document).querySelector(s);
+  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+  const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  /* ---------- inline SVG icon set (no emoji: renders identically everywhere) ---------- */
+  const P = {
+    history: '<path d="M3 21h18M4 21V10m5 11V10m6 11V10m5 11V10M2 10L12 3l10 7"/>',
+    views: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/>',
+    walk: '<circle cx="13.5" cy="4.4" r="1.9"/><path d="M12 21l1.6-5.6-3.1-3 2.1-5.6 3.6 3 3 1M9.4 9.4L7 14l3 1.6"/>',
+    fun: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.4"/>',
+    bar: '<path d="M4 4h16l-8 8v6M8 20h8M6.4 8h11.2"/>',
+    food: '<path d="M6 3v8a2.4 2.4 0 004.8 0V3M8.4 11v10M16.6 3c-1.6 1.6-2.2 3.3-2.2 5.5s.6 3.9 2.2 5.5V21"/>',
+    daytrip: '<rect x="5" y="3" width="14" height="13" rx="2.4"/><path d="M5 10h14M8.6 20l2-4M15.4 20l-2-4"/>',
+    practical: '<path d="M12 21.4s7-6.6 7-11.4a7 7 0 10-14 0c0 4.8 7 11.4 7 11.4z"/><circle cx="12" cy="10" r="2.5"/>',
+    home: '<path d="M3 11l9-7 9 7v9.4a1 1 0 01-1 1h-5.4V15H9.4v6.4H4a1 1 0 01-1-1z"/>',
+    pin: '<path d="M12 21.4s7-6.6 7-11.4a7 7 0 10-14 0c0 4.8 7 11.4 7 11.4z"/><circle cx="12" cy="10" r="2.5"/>',
+    link: '<path d="M10.5 13.5a4.5 4.5 0 006.4 0l1.8-1.8a4.5 4.5 0 00-6.4-6.4l-1 1"/><path d="M13.5 10.5a4.5 4.5 0 00-6.4 0l-1.8 1.8a4.5 4.5 0 006.4 6.4l1-1"/>',
+    sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M19.1 4.9l-1.6 1.6M6.5 17.5l-1.6 1.6"/>',
+    moon: '<path d="M20.5 14.4A8.6 8.6 0 019.6 3.5 8.6 8.6 0 1020.5 14.4z"/>',
+    locate: '<circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22"/>',
+    expand: '<path d="M9 3.5H3.5V9M15 3.5h5.5V9M15 20.5h5.5V15M9 20.5H3.5V15"/>'
+  };
+  const icon = (k, cls) => '<svg class="i ' + (cls || '') + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (P[k] || P.practical) + '</svg>';
+
+  /* ---------- theme ---------- */
+  const root = document.documentElement;
+  const saved = localStorage.getItem("gd-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+  else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) root.setAttribute("data-theme", "light");
+  const themeBtn = $("#theme");
+  function syncThemeBtn() {
+    const light = root.getAttribute("data-theme") === "light";
+    if (themeBtn) themeBtn.innerHTML = icon(light ? "moon" : "sun");
+    if (window.__map && window.__styleUrl) {
+      window.__map.setStyle(light ? "https://tiles.openfreemap.org/styles/liberty" : "https://tiles.openfreemap.org/styles/dark");
+    }
+  }
+  if (themeBtn) themeBtn.addEventListener("click", () => {
+    const light = root.getAttribute("data-theme") === "light";
+    root.setAttribute("data-theme", light ? "dark" : "light");
+    localStorage.setItem("gd-theme", light ? "dark" : "light");
+    syncThemeBtn();
+  });
+  syncThemeBtn();
+
+  /* ---------- tabs ---------- */
+  const tabs = $$(".tab");
+  const pages = $$("section.page");
+  function show(id, push) {
+    const target = document.getElementById(id) || document.getElementById("plan");
+    pages.forEach(p => p.classList.toggle("on", p.id === target.id));
+    tabs.forEach(t => t.classList.toggle("on", t.dataset.tab === target.id));
+    if (push !== false) history.replaceState(null, "", "#" + target.id);
+    window.scrollTo(0, 0);
+    if (target.id === "map" && window.__map) {
+      [60, 250, 700].forEach(ms => setTimeout(() => { window.__map.resize(); renderMap(); }, ms));
+      setTimeout(() => { if (!window.__mapFitted && window.__fitAll) { window.__fitAll(); window.__mapFitted = true; } }, 320);
+    }
+  }
+  tabs.forEach(t => t.addEventListener("click", () => show(t.dataset.tab)));
+  document.body.addEventListener("click", (e) => {
+    const a = e.target.closest("[data-go]");
+    if (!a) return;
+    const id = a.getAttribute("href").replace("#", "");
+    e.preventDefault();
+    show(a.dataset.go);
+    const el = document.getElementById(id);
+    if (el) setTimeout(() => {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      el.style.outline = "2px solid var(--amber)";
+      setTimeout(() => el.style.outline = "", 1800);
+    }, 90);
+  });
+  const start = location.hash.replace("#", "");
+  if (start && document.getElementById(start)) show(start, false);
+
+  /* ---------- weather ---------- */
+  const wxWrap = $("#wxcards");
+  if (wxWrap && window.WEATHER) {
+    WEATHER.days.forEach(d => {
+      const hrs = WEATHER.hourly[d.key] || [];
+      const el = document.createElement("div");
+      el.className = "card wx-day";
+      el.innerHTML =
+        '<div class="top"><div><div class="badge ' + d.vclass + '">' + d.verdict + '</div>' +
+        '<h3 style="margin:8px 0 2px">' + d.date + '</h3><div class="tiny mut">' + esc(d.label) + ' · ' + esc(d.code) + '</div></div>' +
+        '<div style="text-align:right"><div class="temp">' + Math.round(d.max) + '°<span> / ' + Math.round(d.min) + '°</span></div>' +
+        '<div class="tiny mut">feels ' + Math.round(d.feelsMax) + '° / ' + Math.round(d.feelsMin) + '°</div></div></div>' +
+        '<div class="hours">' + hrs.map(h =>
+          '<div><span class="mut">' + h[0] + '</span><b>' + h[1] + '°</b><span class="' + (h[3] >= 50 ? 'rr' : 'r') + '">' + h[3] + '%</span><br><span class="tiny mut">' + h[5] + 'k</span></div>').join('') +
+        '</div>' +
+        '<div class="wx-meta">' +
+        '<div><span class="mut tiny">Rain</span><b>' + d.rain.toFixed(1) + ' mm · ' + d.prob + '%</b></div>' +
+        '<div><span class="mut tiny">Wind / gusts</span><b>' + d.wind + ' / ' + d.gust + ' km/h</b></div>' +
+        '<div><span class="mut tiny">Sunset</span><b>' + d.sunset + '</b></div>' +
+        '<div><span class="mut tiny">UV</span><b>' + d.uv + '</b></div>' +
+        '</div>' +
+        '<p class="small" style="margin:12px 0 6px">' + esc(d.summary) + '</p>' +
+        '<p class="small" style="margin:0;color:var(--amber2)"><b>Plan:</b> ' + esc(d.plan) + '</p>';
+      wxWrap.appendChild(el);
+    });
+  }
+
+  /* ---------- place card ---------- */
+  function card(p) {
+    const days = (p.day || []).filter(Boolean).map(d => ({ d1: "Sat", d2: "Sun", d3: "Mon" }[d])).join(" · ");
+    const dist = p.cat === "practical" ? "" : '<span><b>From flat</b>' + p.km + ' km · ' + p.walk + ' min walk</span>';
+    return '<article class="place" id="pl-' + p.id + '">' +
+      '<div class="ph"><div class="ic" style="color:' + p.color + '">' + icon(p.id === "flat" ? "home" : p.cat) + '</div>' +
+      '<div style="flex:1"><h3 class="nm">' + esc(p.name) + '</h3>' +
+      '<div class="ar">' + esc(p.area) + (p.addr ? ' · ' + esc(p.addr) : '') + '</div></div>' +
+      '<div style="text-align:right;white-space:nowrap"><div style="font-weight:800;font-size:13px;color:' + p.color + '">' + esc(p.price.split("·")[0].trim()) + '</div>' +
+      '<div class="tiny mut">' + (p.indoor ? "indoor" : "outdoor") + '</div></div></div>' +
+      '<p class="ds">' + esc(p.desc) + '</p>' +
+      '<div class="why"><b>Why it matters:</b> ' + esc(p.why) + '</div>' +
+      (p.tip ? '<div class="tip">' + esc(p.tip) + '</div>' : '') +
+      '<div class="meta"><span><b>Hours</b>' + esc(p.hours) + '</span><span><b>Time</b>' + esc(p.dur) + '</span>' + dist +
+      (days ? '<span><b>Best</b>' + days + '</span>' : '') + '</div>' +
+      '<div class="links">' +
+      '<a class="btn pri" href="' + p.gmaps + '" target="_blank" rel="noopener">' + icon("pin") + ' Maps</a>' +
+      '<a class="btn" href="' + p.dir + '" target="_blank" rel="noopener">' + icon("walk") + ' Walk there</a>' +
+      (p.web ? '<a class="btn" href="' + p.web + '" target="_blank" rel="noopener">' + icon("link") + ' Website</a>' : '') +
+      '</div></article>';
+  }
+
+  /* ---------- filters ---------- */
+  const listState = { cat: "all", day: "all", q: "" };
+  const mapState = { cat: "all" };
+
+  function buildChips() {
+    const catWrap = $("#catfilters"), dayWrap = $("#dayfilters");
+    if (catWrap) {
+      catWrap.innerHTML = '<button class="fchip on" data-cat="all">All (' + PLACES.length + ')</button>' +
+        Object.keys(CATS).map(c => {
+          const n = PLACES.filter(p => p.cat === c).length;
+          return '<button class="fchip" data-cat="' + c + '"><span style="color:' + CATS[c][2] + '">' + icon(c) + '</span> ' + CATS[c][0] + ' (' + n + ')</button>';
+        }).join("");
+    }
+    if (dayWrap) {
+      dayWrap.innerHTML = [["all", "All days"], ["d1", "Sat 24"], ["d2", "Sun 25"], ["d3", "Mon 26"]]
+        .map(([v, l]) => '<button class="fchip' + (v === "all" ? " on" : "") + '" data-day="' + v + '">' + l + '</button>').join("");
+    }
+    const mf = $("#mapfilters");
+    if (mf) {
+      mf.innerHTML = '<button class="fchip on" data-mcat="all">All (' + PLACES.length + ')</button>' +
+        Object.keys(CATS).map(c => '<button class="fchip" data-mcat="' + c + '"><span style="color:' + CATS[c][2] + '">' + icon(c) + '</span> ' + CATS[c][0] + '</button>').join("");
+    }
+  }
+
+  document.body.addEventListener("click", (e) => {
+    const c = e.target.closest("[data-cat]"), d = e.target.closest("[data-day]"), m = e.target.closest("[data-mcat]");
+    if (c) {
+      listState.cat = c.dataset.cat;
+      $$("[data-cat]").forEach(x => x.classList.toggle("on", x.dataset.cat === listState.cat));
+      renderList();
+    }
+    if (d) {
+      listState.day = d.dataset.day;
+      $$("[data-day]").forEach(x => x.classList.toggle("on", x.dataset.day === listState.day));
+      renderList();
+    }
+    if (m) {
+      mapState.cat = m.dataset.mcat;
+      $$("[data-mcat]").forEach(x => x.classList.toggle("on", x.dataset.mcat === mapState.cat));
+      renderMap(); fitAll();
+    }
+  });
+
+  /* ---------- lists ---------- */
+  const listEl = $("#placelist"), countEl = $("#placecount");
+  function filtered() {
+    const q = listState.q.toLowerCase();
+    return PLACES.filter(p => {
+      if (listState.cat !== "all" && p.cat !== listState.cat) return false;
+      if (listState.day !== "all" && !(p.day || []).includes(listState.day)) return false;
+      if (q && !(p.name + " " + p.area + " " + p.desc + " " + p.why + " " + p.addr).toLowerCase().includes(q)) return false;
+      return true;
+    });
+  }
+  function renderList() {
+    if (!listEl) return;
+    const rows = filtered();
+    if (countEl) countEl.textContent = rows.length + (rows.length === 1 ? " place" : " places") +
+      (listState.cat !== "all" ? " in " + CATS[listState.cat][0] : "") +
+      (listState.day !== "all" ? " · " + { d1: "Saturday", d2: "Sunday", d3: "Monday" }[listState.day] : "") +
+      " · nearest first";
+    listEl.innerHTML = rows.length ? rows.map(card).join("") :
+      '<div class="card"><b>Nothing matches.</b><p class="small mut" style="margin:6px 0 0">Clear the search or pick another category.</p></div>';
+  }
+  const eatEl = $("#eatlist");
+  function renderEat() {
+    if (!eatEl) return;
+    const bars = PLACES.filter(p => p.cat === "bar").sort((a, b) => a.km - b.km);
+    const food = PLACES.filter(p => p.cat === "food").sort((a, b) => a.km - b.km);
+    eatEl.innerHTML = '<h3 style="margin:6px 0 10px">Bars (' + bars.length + ')</h3>' + bars.map(card).join("") +
+      '<h3 style="margin:26px 0 10px">Restaurants &amp; food (' + food.length + ')</h3>' + food.map(card).join("");
+  }
+
+  /* ---------- map (MapLibre + OpenFreeMap, no key) ---------- */
+  const STYLE_DARK = "https://tiles.openfreemap.org/styles/dark";
+  const STYLE_LIGHT = "https://tiles.openfreemap.org/styles/liberty";
+
+  function initMap() {
+    const el = $("#map");
+    if (!el) return;
+    if (!window.maplibregl) { el.innerHTML = '<div style="padding:20px">Map could not load. All places are listed in the Places tab.</div>'; return; }
+    const map = new maplibregl.Map({
+      container: "map",
+      style: root.getAttribute("data-theme") === "light" ? STYLE_LIGHT : STYLE_DARK,
+      center: [18.63, 54.36], zoom: 12, attributionControl: false
+    });
+    window.__map = map;
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-left");
+    map.addControl(new maplibregl.AttributionControl({ compact: true }));
+
+    window.__byId = {};
+    window.__allMarkers = PLACES.map(p => {
+      const size = p.id === "flat" ? 34 : 28;
+      const div = document.createElement("div");
+      div.className = "pin" + (p.id === "flat" ? " home" : "");
+      div.style.width = div.style.height = size + "px";
+      div.style.background = p.color;
+      div.title = p.name;
+      div.innerHTML = '<span>' + icon(p.id === "flat" ? "home" : p.cat) + '</span>';
+      const pop = new maplibregl.Popup({ offset: size * 0.75, maxWidth: "270px", closeButton: true })
+        .setHTML('<div class="pop"><h4>' + esc(p.name) + '</h4>' +
+          '<div class="m">' + esc(p.area) + ' · ' + esc(p.price.split("·")[0].trim()) + '</div>' +
+          '<div style="margin-bottom:6px">' + esc(p.hours) + '</div>' +
+          '<a href="' + p.gmaps + '" target="_blank" rel="noopener">Maps ↗</a>' +
+          (p.web ? '<a href="' + p.web + '" target="_blank" rel="noopener">Website ↗</a>' : '') +
+          '<a href="#pl-' + p.id + '" data-go="places">Details →</a></div>');
+      const mk = new maplibregl.Marker({ element: div, anchor: "bottom" })
+        .setLngLat([p.lon, p.lat]).setPopup(pop).addTo(map);
+      mk.__p = p;
+      window.__byId[p.id] = mk;
+      return mk;
+    });
+
+    $("#fitall").addEventListener("click", fitAll);
+    $("#locate").addEventListener("click", () => {
+      if (!navigator.geolocation) return;
+      navigator.geolocation.getCurrentPosition(pos => {
+        const ll = [pos.coords.longitude, pos.coords.latitude];
+        new maplibregl.Marker({ color: "#4fd1c5" }).setLngLat(ll)
+          .setPopup(new maplibregl.Popup().setHTML("You are here")).addTo(map).togglePopup();
+        map.flyTo({ center: ll, zoom: 15 });
+      }, () => alert("Location not available — check browser permissions."), { timeout: 8000 });
+    });
+
+    window.__fitAll = fitAll;
+    map.on("load", () => { map.resize(); renderMap(); });
+    map.on("moveend", renderMap);
+    map.on("zoomend", renderMap);
+    renderMap();
+  }
+  function visible(p, st) { return st.cat === "all" || p.cat === st.cat; }
+
+  /* screen-space clustering: keeps icon pins when they fit, groups them when they don't */
+  function renderMap() {
+    const map = window.__map;
+    if (!window.__allMarkers) return;
+    window.__allMarkers.forEach(m => { if (m._map) m.remove(); });
+    (window.__clusters || []).forEach(el => el.remove());
+    window.__clusters = [];
+
+    const list = PLACES.filter(p => visible(p, mapState));
+    const tol = 46, groups = [];
+    list.forEach(p => {
+      let pt;
+      try { pt = map.project([p.lon, p.lat]); } catch (e) { pt = null; }
+      if (!pt) return;
+      let g = groups.find(g => Math.hypot(g.x - pt.x, g.y - pt.y) < tol);
+      if (!g) { g = { x: pt.x, y: pt.y, pts: [p] }; groups.push(g); }
+      else { g.pts.push(p); g.x = (g.x * (g.pts.length - 1) + pt.x) / g.pts.length; g.y = (g.y * (g.pts.length - 1) + pt.y) / g.pts.length; }
+    });
+
+    groups.forEach(g => {
+      if (g.pts.length === 1) {
+        const mk = window.__byId[g.pts[0].id];
+        if (mk) mk.addTo(map);
+      } else {
+        const lon = g.pts.reduce((s, p) => s + p.lon, 0) / g.pts.length;
+        const lat = g.pts.reduce((s, p) => s + p.lat, 0) / g.pts.length;
+        const el = document.createElement("div");
+        el.className = "clusters";
+        const sz = Math.round(Math.min(42, 28 + Math.log2(g.pts.length) * 4));
+        el.style.cssText = "width:" + sz + "px;height:" + sz + "px;font-size:" + (sz > 36 ? 13 : 12) + "px";
+        el.innerHTML = "<span>" + g.pts.length + "</span>";
+        el.title = g.pts.slice(0, 6).map(p => p.name).join(" · ") + (g.pts.length > 6 ? " …" : "");
+        el.addEventListener("click", () => map.flyTo({ center: [lon, lat], zoom: Math.min(map.getZoom() + 2, 16.5), duration: 500 }));
+        new maplibregl.Marker({ element: el, anchor: "center" }).setLngLat([lon, lat]).addTo(map);
+        window.__clusters.push(el);
+      }
+    });
+  }
+  function fitAll() {
+    const map = window.__map;
+    if (!map || !window.maplibregl) return;
+    const c = map.getContainer();
+    if (!c.clientWidth || !c.clientHeight) return;
+    let list = PLACES.filter(p => visible(p, mapState));
+    if (mapState.cat === "all") list = list.filter(p => p.km <= 8); // frame the city, not the airport/Malbork
+    if (!list.length) return;
+    const b = new maplibregl.LngLatBounds();
+    list.forEach(p => b.extend([p.lon, p.lat]));
+    map.fitBounds(b, { padding: 34, maxZoom: 13.4, duration: 500 });
+  }
+
+  /* ---------- search ---------- */
+  const q = $("#q");
+  if (q) {
+    let t;
+    q.addEventListener("input", () => {
+      clearTimeout(t);
+      t = setTimeout(() => { listState.q = q.value.trim(); renderList(); }, 120);
+    });
+  }
+
+  /* ---------- boot ---------- */
+  buildChips();
+  renderList();
+  renderEat();
+  initMap();
+})();
+</script>
+</body>
+</html>
