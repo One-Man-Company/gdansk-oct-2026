@@ -34,10 +34,7 @@
   function syncThemeBtn() {
     const light = root.getAttribute("data-theme") === "light";
     if (themeBtn) themeBtn.innerHTML = icon(light ? "moon" : "sun");
-    if (window.__map) {
-      window.__map.setStyle(light ? STYLE_LIGHT : STYLE_DARK);
-      window.__map.once("styledata", () => setTimeout(renderMap, 150));
-    }
+    /* the basemap stays light in both themes: a dark basemap loses labels and water contrast */
   }
   if (themeBtn) themeBtn.addEventListener("click", () => {
     const light = root.getAttribute("data-theme") === "light";
@@ -205,7 +202,7 @@
 
   /* ---------- map (MapLibre + OpenFreeMap, no key) ---------- */
   const STYLE_LIGHT = "https://tiles.openfreemap.org/styles/liberty";
-  const STYLE_DARK = "https://tiles.openfreemap.org/styles/dark";
+
 
   function initMap() {
     const el = $("#map");
@@ -213,7 +210,7 @@
     if (!window.maplibregl) { el.innerHTML = '<div style="padding:20px">Map could not load. All places are listed in the Places tab.</div>'; return; }
     const map = new maplibregl.Map({
       container: "map",
-      style: root.getAttribute("data-theme") === "light" ? STYLE_LIGHT : STYLE_DARK,
+      style: STYLE_LIGHT,
       center: [18.63, 54.36], zoom: 12, attributionControl: false
     });
     window.__map = map;
@@ -290,7 +287,7 @@
         const lat = g.pts.reduce((s, p) => s + p.lat, 0) / g.pts.length;
         const el = document.createElement("div");
         el.className = "clusters";
-        const sz = Math.round(Math.min(42, 28 + Math.log2(g.pts.length) * 4));
+        const sz = Math.round(Math.min(38, 26 + Math.log2(g.pts.length) * 4));
         el.style.cssText = "width:" + sz + "px;height:" + sz + "px;font-size:" + (sz > 36 ? 13 : 12) + "px";
         el.innerHTML = "<span>" + g.pts.length + "</span>";
         el.title = g.pts.slice(0, 6).map(p => p.name).join(" · ") + (g.pts.length > 6 ? " …" : "");
